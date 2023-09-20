@@ -46,6 +46,13 @@ namespace MSAMANDA_MGFPARSER
         public SortedSet<double> ImmuneMasses { get; set; }
         public Precursor Precursor { get; set; }
 
+        public Spectrum()
+        {
+            ScanNumber = 0;
+            RT = 0.0;
+            SpectrumId = 0;
+            Precursor = new Precursor();
+        }
     }
 
     public static class MGFParser
