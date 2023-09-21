@@ -7,10 +7,13 @@ namespace CandidateSearch
 
         public static void Main(string[] args)
         {
-            if (args.Length == 3) { 
-                var spectra = MGFReader.readMGF(args[0]);
-                var database = args[1];
-                var settings = args[2];
+            if (args.Length == 3) {
+                var spectraFile = args[0];
+                var databaseFile = args[1];
+                var settingsFile = args[2];
+
+                var spectra = MGFReader.readMGF(spectraFile);
+                var peptides = DatabaseReader.readFASTA(databaseFile);
 
                 return;
             }
