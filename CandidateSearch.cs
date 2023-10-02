@@ -78,7 +78,9 @@ namespace CandidateSearch
                 Console.WriteLine($"CPU search finished with code {memStat}. Search took {sw.Elapsed.TotalSeconds} seconds.");
 
                 var processedResult = new Result(ref result, ref peptides, ref spectra, TopN: 100);
-                processedResult.export(spectraFile + "_results.csv");
+                var csvStat = processedResult.export(spectraFile + "_results.csv");
+
+                Console.WriteLine($"Result file written to disk with code {csvStat}. Search finished!");
 
                 return;
             }

@@ -23,11 +23,31 @@
 
         public int export(string filename)
         {
-            int status = 1;
+            int status;
 
             try
             {
-                // code
+                var lines = new List<string>(){"ScanNumber;Peptides"};
+                foreach (var item in result) {
+                    var scanNr = item.Key;
+                    var peptides = item.Value;
+                    var line = scanNr.ToString() + ";";
+                    foreach (var peptide in peptides)
+                    {
+                        line += (peptide.toString() + ";");
+                    }
+                    lines.Add(line);
+                }
+
+                using (StreamWriter sw = new StreamWriter(filename))
+                {
+                    foreach (var line in lines)
+                    {
+                        sw.WriteLine(line);
+                    }
+                }
+
+                status = 0;
             }
             catch (Exception ex)
             {
