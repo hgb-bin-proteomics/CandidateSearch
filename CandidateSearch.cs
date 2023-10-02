@@ -1,4 +1,5 @@
 ﻿using CandidateSearch.util;
+using System.Diagnostics;
 
 namespace CandidateSearch
 {
@@ -14,6 +15,70 @@ namespace CandidateSearch
 
                 var spectra = MGFReader.readMGF(spectraFile);
                 var peptides = DatabaseReader.readFASTA(databaseFile);
+
+                int candidateValuesLength = 0;
+                foreach (var peptide in peptides)
+                {
+                    var encoding = peptide.getEnconding();
+                    candidateValuesLength += encoding.Length;
+                }
+
+                var candidateValues = new int[candidateValuesLength];
+                var candidateIdx = new int[peptides.Count];
+
+                int currentIdxCV = 0;
+                int currentIdxCI = 0;
+                foreach (var peptide in peptides)
+                {
+                    candidateIdx[currentIdxCI] = currentIdxCV;
+                    currentIdxCI++;
+                    var encoding = peptide.getEnconding();
+                    foreach (var value in encoding)
+                    {
+                        candidateValues[currentIdxCV] = value;
+                        currentIdxCV++;
+                    }
+                }
+
+                int spectraValuesLength = 0;
+                foreach (var spectrum in spectra)
+                {
+                    var encoding = spectrum.getEncoding();
+                    spectraValuesLength += encoding.Length;
+                }
+
+                var spectraValues = new int[spectraValuesLength];
+                var spectraIdx = new int[spectra.Count];
+
+                int currentIdxSV = 0;
+                int currentIdxSI = 0;
+                foreach(var spectrum in spectra)
+                {
+                    spectraIdx[currentIdxSI] = currentIdxSV;
+                    currentIdxSI++;
+                    var encoding = spectrum.getEncoding();
+                    foreach (var value in encoding)
+                    {
+                        spectraValues[currentIdxSV] = value;
+                        currentIdxSV++;
+                    }
+                }
+
+                var sw = new Stopwatch();
+                sw.Start();
+
+                int memStat;
+                var result = VectorSearchInterface.VectorSearchAPI.searchCPU(ref candidateValues, ref candidateIdx, ref spectraValues, ref spectraIdx,
+                                                                             topN: 100, tolerance: 0.02f, normalize: true, useGaussianTol: true,
+                                                                             batched: false, batchSize: 100, useSparse: false, cores: 0, verbose: 1000,
+                                                                             memStat: out memStat);
+
+                sw.Stop();
+
+                Console.WriteLine($"CPU search finished with code {memStat}. Search took {sw.Elapsed.TotalSeconds} seconds.");
+
+                var processedResult = new Result(ref result, ref peptides, ref spectra, TopN: 100);
+                processedResult.export(spectraFile + "_results.csv");
 
                 return;
             }
