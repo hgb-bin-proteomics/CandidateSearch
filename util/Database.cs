@@ -21,6 +21,22 @@
 
             return encoding.ToArray();
         }
+
+        public string toString()
+        {
+            string peptide = sequence + "[";
+            foreach (var modification in modifications)
+            {
+                peptide = peptide + $"{modification.Key}:{modification.Value},";
+            }
+
+            if (isDecoy)
+            {
+                return "_" + peptide + "]";
+            }
+
+            return peptide + "]";
+        }
     }
 
     public static class DatabaseReader
