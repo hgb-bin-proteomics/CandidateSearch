@@ -43,11 +43,8 @@
     {
         public static List<Peptide> readFASTA(string filename)
         {
-            var peptides = new List<Peptide>();
-
-            // code
-
-            return peptides;
+            // digestion parameters set in method
+            return MSAMANDA_FASTAPARSER.FASTAParser.DigestFasta(filename);
         }
     }
 }
