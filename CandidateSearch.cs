@@ -16,7 +16,7 @@ namespace CandidateSearch
                 var spectra = MGFReader.readMGF(spectraFile);
                 Console.WriteLine($"Read {spectra.Count} spectra.");
 
-                var peptides = DatabaseReader.readFASTA(databaseFile);
+                var peptides = DatabaseReader.readFASTA(databaseFile, generateDecoys: true);
                 Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
 
                 int candidateValuesLength = 0;

@@ -10,7 +10,7 @@ namespace MSAMANDA_FASTAPARSER
     public class FASTAParser
     {
         public static List<Peptide> DigestFasta(string fastaFileName, 
-                                                bool isDecoy = false, 
+                                                bool generateDecoys = false, 
                                                 double coreUsage = 0.75)
         {
             var trypsin = new Enzyme();
@@ -20,7 +20,7 @@ namespace MSAMANDA_FASTAPARSER
             trypsin.Specificity = Enzyme.CLEAVAGE_SPECIFICITY.FULL;
             trypsin.Offset = 1;
 
-            var proteins = ReadInFasta(fastaFileName, isDecoy);
+            var proteins = ReadInFasta(fastaFileName, false);
             var missedCleavages = 2;
             var useMonoisotopicMass = true;
             var minPepLength = 5;
@@ -28,10 +28,63 @@ namespace MSAMANDA_FASTAPARSER
 
             var modifications = new Dictionary<string, double>();
 
-            var opts = new ParallelOptions { MaxDegreeOfParallelism = (int) Math.Ceiling(Environment.ProcessorCount * coreUsage) };
+            var peptides = DigestProteins(proteins, 
+                                          trypsin, 
+                                          modifications, 
+                                          missedCleavages, 
+                                          useMonoisotopicMass, 
+                                          minPepLength, 
+                                          maxPepLength, 
+                                          false, 
+                                          coreUsage);
+
+            if (generateDecoys)
+            {
+                var decoyProteins = new List<DBProtein>();
+                foreach (var protein in proteins)
+                {
+                    var decoySequence = ReverseSequence(protein.Sequence);
+                    var decoyProtein = new DBProtein(protein.DbProtRef.ProtIdentifier, -protein.DbProtRef.MappingId, decoySequence, true);
+                    decoyProteins.Add(decoyProtein);
+                }
+
+                var decoyPeptides = DigestProteins(decoyProteins,
+                                                   trypsin,
+                                                   modifications,
+                                                   missedCleavages,
+                                                   useMonoisotopicMass,
+                                                   minPepLength,
+                                                   maxPepLength,
+                                                   true,
+                                                   coreUsage);
+
+                peptides.AddRange(decoyPeptides);
+            }
+
+            return peptides;
+        }
+
+        private static string ReverseSequence(string seq)
+        {
+            char[] array = seq.ToCharArray();
+            Array.Reverse(array);
+            return new String(array);
+        }
+
+        private static List<Peptide> DigestProteins(List<DBProtein> proteins, 
+                                                    Enzyme enzyme,
+                                                    Dictionary<string, double> modifications,
+                                                    int missedCleavages, 
+                                                    bool useMonoisotopicMass, 
+                                                    int minPepLength, 
+                                                    int maxPepLength,
+                                                    bool isDecoy,
+                                                    double coreUsage)
+        {
+            var opts = new ParallelOptions { MaxDegreeOfParallelism = (int)Math.Ceiling(Environment.ProcessorCount * coreUsage) };
             var concurrentPeptideList = new ConcurrentBag<List<DBPeptide>>();
             Parallel.ForEach(proteins, opts, (protein) => {
-                var digester = new ProteinDigester(trypsin, missedCleavages, useMonoisotopicMass, minPepLength, maxPepLength, protein);
+                var digester = new ProteinDigester(enzyme, missedCleavages, useMonoisotopicMass, minPepLength, maxPepLength, protein);
                 concurrentPeptideList.Add(digester.DigestProteinIntoList());
             });
 

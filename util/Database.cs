@@ -41,10 +41,10 @@
 
     public static class DatabaseReader
     {
-        public static List<Peptide> readFASTA(string filename)
+        public static List<Peptide> readFASTA(string filename, bool generateDecoys = false)
         {
             // digestion parameters set in method
-            return MSAMANDA_FASTAPARSER.FASTAParser.DigestFasta(filename);
+            return MSAMANDA_FASTAPARSER.FASTAParser.DigestFasta(filename, generateDecoys);
         }
     }
 }
