@@ -21,7 +21,7 @@ namespace MSAMANDA_FASTAPARSER
             trypsin.Offset = 1;
 
             var proteins = ReadInFasta(fastaFileName, false);
-            var missedCleavages = 2;
+            var missedCleavages = CandidateSearch.CandidateSearch.MAX_CLEAVAGES;
             var useMonoisotopicMass = true;
             var minPepLength = 5;
             var maxPepLength = 30;
@@ -81,7 +81,7 @@ namespace MSAMANDA_FASTAPARSER
                                                     bool isDecoy,
                                                     double coreUsage)
         {
-            var opts = new ParallelOptions { MaxDegreeOfParallelism = (int)Math.Ceiling(Environment.ProcessorCount * coreUsage) };
+            var opts = new ParallelOptions { MaxDegreeOfParallelism = (int) Math.Ceiling(Environment.ProcessorCount * coreUsage) };
             var concurrentPeptideList = new ConcurrentBag<List<DBPeptide>>();
             Parallel.ForEach(proteins, opts, (protein) => {
                 var digester = new ProteinDigester(enzyme, missedCleavages, useMonoisotopicMass, minPepLength, maxPepLength, protein);
@@ -109,7 +109,7 @@ namespace MSAMANDA_FASTAPARSER
         private static List<Peptide> GetPeptidoforms(DBPeptide dbPeptide, Dictionary<string, double> modifications, bool isDecoy)
         {
             var peptides = new List<Peptide>();
-            var peptide = new Peptide(dbPeptide.Sequence, new Dictionary<int, double>(), isDecoy);
+            var peptide = new Peptide(dbPeptide.Sequence, dbPeptide.Mass, new Dictionary<int, double>(), isDecoy);
             peptides.Add(peptide);
 
             if (modifications.Count > 0)

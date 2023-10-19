@@ -5,6 +5,14 @@ namespace CandidateSearch
 {
     public class CandidateSearch
     {
+        // config digestion
+        public const int MAX_CLEAVAGES = 2;
+
+        // config ion calculation
+        public const int MAX_CHARGE = 4;
+        public const int MAX_NEUTRAL_LOSSES = 1;
+        public const int MAX_NEUTRAL_LOSS_MODS = 2;
+        public const string MAX_ALLOWED_CHARGE = "+4";
 
         public static void Main(string[] args)
         {
