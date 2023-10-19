@@ -23,8 +23,8 @@ namespace MSAMANDA_FASTAPARSER
             var proteins = ReadInFasta(fastaFileName, false);
             var missedCleavages = CandidateSearch.CandidateSearch.MAX_CLEAVAGES;
             var useMonoisotopicMass = true;
-            var minPepLength = 5;
-            var maxPepLength = 30;
+            var minPepLength = CandidateSearch.CandidateSearch.MIN_PEP_LENGTH;
+            var maxPepLength = CandidateSearch.CandidateSearch.MAX_PEP_LENGTH;
 
             var modifications = new Dictionary<string, double>();
 

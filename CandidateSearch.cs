@@ -7,6 +7,8 @@ namespace CandidateSearch
     {
         // config digestion
         public const int MAX_CLEAVAGES = 2;
+        public const int MIN_PEP_LENGTH = 5;
+        public const int MAX_PEP_LENGTH = 30;
 
         // config ion calculation
         public const int MAX_CHARGE = 4;
