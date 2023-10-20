@@ -11,10 +11,10 @@ namespace CandidateSearch
         public const int MAX_PEP_LENGTH = 30;
 
         // config ion calculation
-        public const int MAX_CHARGE = 4;
+        public const int MAX_CHARGE = 3;
         public const int MAX_NEUTRAL_LOSSES = 1;
         public const int MAX_NEUTRAL_LOSS_MODS = 2;
-        public const string MAX_ALLOWED_CHARGE = "+4";
+        public const string MAX_ALLOWED_CHARGE = "+3";
 
         public static void Main(string[] args)
         {
