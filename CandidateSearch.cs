@@ -16,6 +16,12 @@ namespace CandidateSearch
         public const int MAX_NEUTRAL_LOSS_MODS = 2;
         public const string MAX_ALLOWED_CHARGE = "+3";
 
+        // config vector search
+        public const int TOP_N = 100;
+        public const float TOLERANCE = 0.02f;
+        public const bool NORMALIZE = true;
+        public const bool USE_GAUSSIAN = true;
+
         public static void Main(string[] args)
         {
             if (args.Length == 3) {
@@ -81,9 +87,19 @@ namespace CandidateSearch
                 sw.Start();
 
                 int memStat;
-                var result = VectorSearchInterface.VectorSearchAPI.searchCPU(ref candidateValues, ref candidateIdx, ref spectraValues, ref spectraIdx,
-                                                                             topN: 100, tolerance: 0.02f, normalize: true, useGaussianTol: true,
-                                                                             batched: false, batchSize: 100, useSparse: false, cores: 0, verbose: 1000,
+                var result = VectorSearchInterface.VectorSearchAPI.searchCPU(ref candidateValues, 
+                                                                             ref candidateIdx, 
+                                                                             ref spectraValues, 
+                                                                             ref spectraIdx,
+                                                                             topN: TOP_N, 
+                                                                             tolerance: TOLERANCE, 
+                                                                             normalize: NORMALIZE, 
+                                                                             useGaussianTol: USE_GAUSSIAN,
+                                                                             batched: false, 
+                                                                             batchSize: 100, 
+                                                                             useSparse: false, 
+                                                                             cores: 0, 
+                                                                             verbose: 1000,
                                                                              memStat: out memStat);
 
                 sw.Stop();
