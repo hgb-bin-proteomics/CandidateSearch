@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "CandidateSearch": {
-      "commandName": "Project",
-      "commandLineArgs": "test.mgf test.fasta settings.xml"
-    }
-  }
-}
