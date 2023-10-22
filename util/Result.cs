@@ -11,10 +11,17 @@
             int currentSearchResultIdx = 0;
             foreach (var spectrum in Spectra)
             {
-                result.Add(spectrum.scanNumber, new List<Peptide>());
-                for (int i = currentSearchResultIdx; i < currentSearchResultIdx + TopN; i++)
+                if (!result.ContainsKey(spectrum.scanNumber))
                 {
-                    result[spectrum.scanNumber].Add(Peptides[SearchResult[i]]);
+                    result.Add(spectrum.scanNumber, new List<Peptide>());
+                    for (int i = currentSearchResultIdx; i < currentSearchResultIdx + TopN; i++)
+                    {
+                        result[spectrum.scanNumber].Add(Peptides[SearchResult[i]]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Warning: Found duplicate scan number {spectrum.scanNumber}. Skipping scan number...");
                 }
 
                 currentSearchResultIdx += TopN;
