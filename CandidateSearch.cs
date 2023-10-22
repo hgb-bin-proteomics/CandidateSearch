@@ -5,23 +5,6 @@ namespace CandidateSearch
 {
     public class CandidateSearch
     {
-        // config digestion
-        public const int MAX_CLEAVAGES = 2;
-        public const int MIN_PEP_LENGTH = 5;
-        public const int MAX_PEP_LENGTH = 30;
-
-        // config ion calculation
-        public const int MAX_CHARGE = 3;
-        public const int MAX_NEUTRAL_LOSSES = 1;
-        public const int MAX_NEUTRAL_LOSS_MODS = 2;
-        public const string MAX_ALLOWED_CHARGE = "+3";
-
-        // config vector search
-        public const int TOP_N = 100;
-        public const float TOLERANCE = 0.02f;
-        public const bool NORMALIZE = true;
-        public const bool USE_GAUSSIAN = true;
-
         public static void Main(string[] args)
         {
             if (args.Length == 3) {
@@ -29,10 +12,16 @@ namespace CandidateSearch
                 var databaseFile = args[1];
                 var settingsFile = args[2];
 
+                Console.WriteLine("Starting Candidate Search...");
+
+                var settings = SettingsReader.readSettings(settingsFile);
+                Console.WriteLine($"Read settings file '{settingsFile}' with the following settings:");
+                Console.WriteLine(settings.ToString());
+
                 var spectra = MGFReader.readMGF(spectraFile);
                 Console.WriteLine($"Read {spectra.Count} spectra.");
 
-                var peptides = DatabaseReader.readFASTA(databaseFile, generateDecoys: true);
+                var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: true);
                 Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
 
                 int candidateValuesLength = 0;
@@ -91,10 +80,10 @@ namespace CandidateSearch
                                                                              ref candidateIdx, 
                                                                              ref spectraValues, 
                                                                              ref spectraIdx,
-                                                                             topN: TOP_N, 
-                                                                             tolerance: TOLERANCE, 
-                                                                             normalize: NORMALIZE, 
-                                                                             useGaussianTol: USE_GAUSSIAN,
+                                                                             topN: settings.TOP_N, 
+                                                                             tolerance: settings.TOLERANCE, 
+                                                                             normalize: settings.NORMALIZE, 
+                                                                             useGaussianTol: settings.USE_GAUSSIAN,
                                                                              batched: false, 
                                                                              batchSize: 100, 
                                                                              useSparse: false, 
@@ -106,7 +95,7 @@ namespace CandidateSearch
 
                 Console.WriteLine($"CPU search finished with code {memStat}. Search took {sw.Elapsed.TotalSeconds} seconds.");
 
-                var processedResult = new Result(ref result, ref peptides, ref spectra, TopN: TOP_N);
+                var processedResult = new Result(ref result, ref peptides, ref spectra, TopN: settings.TOP_N);
                 var csvStat = processedResult.export(spectraFile + "_results.csv");
 
                 Console.WriteLine($"Result file written to disk with code {csvStat}. Search finished!");
@@ -114,7 +103,7 @@ namespace CandidateSearch
                 return;
             }
 
-            Console.WriteLine("Incorrect number of arguments! CandidateSearch needs exactly 3 arguments: spectra.mgf database.fasta settings.xml");
+            Console.WriteLine("Incorrect number of arguments! CandidateSearch needs exactly 3 arguments: spectra.mgf database.fasta settings.txt");
             return;
         }
     }

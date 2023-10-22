@@ -9,7 +9,8 @@ namespace MSAMANDA_FASTAPARSER
 {
     public class FASTAParser
     {
-        public static List<Peptide> DigestFasta(string fastaFileName, 
+        public static List<Peptide> DigestFasta(string fastaFileName,
+                                                Settings settings,
                                                 bool generateDecoys = false, 
                                                 double coreUsage = 0.75)
         {
@@ -21,20 +22,16 @@ namespace MSAMANDA_FASTAPARSER
             trypsin.Offset = 1;
 
             var proteins = ReadInFasta(fastaFileName, false);
-            var missedCleavages = CandidateSearch.CandidateSearch.MAX_CLEAVAGES;
-            var useMonoisotopicMass = true;
-            var minPepLength = CandidateSearch.CandidateSearch.MIN_PEP_LENGTH;
-            var maxPepLength = CandidateSearch.CandidateSearch.MAX_PEP_LENGTH;
+            var missedCleavages = settings.MAX_CLEAVAGES;
+            var minPepLength = settings.MIN_PEP_LENGTH;
+            var maxPepLength = settings.MAX_PEP_LENGTH;
 
             var modifications = new Dictionary<string, double>();
 
             var peptides = DigestProteins(proteins, 
                                           trypsin, 
                                           modifications, 
-                                          missedCleavages, 
-                                          useMonoisotopicMass, 
-                                          minPepLength, 
-                                          maxPepLength, 
+                                          settings,
                                           false, 
                                           coreUsage);
 
@@ -51,10 +48,7 @@ namespace MSAMANDA_FASTAPARSER
                 var decoyPeptides = DigestProteins(decoyProteins,
                                                    trypsin,
                                                    modifications,
-                                                   missedCleavages,
-                                                   useMonoisotopicMass,
-                                                   minPepLength,
-                                                   maxPepLength,
+                                                   settings,
                                                    true,
                                                    coreUsage);
 
@@ -74,17 +68,14 @@ namespace MSAMANDA_FASTAPARSER
         private static List<Peptide> DigestProteins(List<DBProtein> proteins, 
                                                     Enzyme enzyme,
                                                     Dictionary<string, double> modifications,
-                                                    int missedCleavages, 
-                                                    bool useMonoisotopicMass, 
-                                                    int minPepLength, 
-                                                    int maxPepLength,
+                                                    Settings settings,
                                                     bool isDecoy,
                                                     double coreUsage)
         {
             var opts = new ParallelOptions { MaxDegreeOfParallelism = (int) Math.Ceiling(Environment.ProcessorCount * coreUsage) };
             var concurrentPeptideList = new ConcurrentBag<List<DBPeptide>>();
             Parallel.ForEach(proteins, opts, (protein) => {
-                var digester = new ProteinDigester(enzyme, missedCleavages, useMonoisotopicMass, minPepLength, maxPepLength, protein);
+                var digester = new ProteinDigester(enzyme, settings.MAX_CLEAVAGES, true, settings.MIN_PEP_LENGTH, settings.MAX_PEP_LENGTH, protein);
                 concurrentPeptideList.Add(digester.DigestProteinIntoList());
             });
 
@@ -98,7 +89,7 @@ namespace MSAMANDA_FASTAPARSER
                 var currentPeptides = item.Value;
                 foreach (var peptide in currentPeptides)
                 {
-                    var peptidoforms = GetPeptidoforms(peptide, modifications, isDecoy);
+                    var peptidoforms = GetPeptidoforms(peptide, modifications, settings, isDecoy);
                     peptides.AddRange(peptidoforms);
                 }
             }
@@ -106,10 +97,10 @@ namespace MSAMANDA_FASTAPARSER
             return peptides;
         }
 
-        private static List<Peptide> GetPeptidoforms(DBPeptide dbPeptide, Dictionary<string, double> modifications, bool isDecoy)
+        private static List<Peptide> GetPeptidoforms(DBPeptide dbPeptide, Dictionary<string, double> modifications, Settings settings, bool isDecoy)
         {
             var peptides = new List<Peptide>();
-            var peptide = new Peptide(dbPeptide.Sequence, dbPeptide.Mass, new Dictionary<int, double>(), isDecoy);
+            var peptide = new Peptide(dbPeptide.Sequence, dbPeptide.Mass, new Dictionary<int, double>(), settings, isDecoy);
             peptides.Add(peptide);
 
             if (modifications.Count > 0)
