@@ -5,6 +5,8 @@ namespace CandidateSearch
 {
     public class CandidateSearch
     {
+        public const string version = "0.9.1";
+
         public static void Main(string[] args)
         {
             if (args.Length == 3) {
@@ -12,7 +14,7 @@ namespace CandidateSearch
                 var databaseFile = args[1];
                 var settingsFile = args[2];
 
-                Console.WriteLine("Starting Candidate Search...");
+                Console.WriteLine($"Starting Candidate Search v{version} ...");
 
                 var settings = SettingsReader.readSettings(settingsFile);
                 Console.WriteLine($"Read settings file '{settingsFile}' with the following settings:");
