@@ -32,7 +32,7 @@
 
     public static class MGFReader
     {
-        public static List<Spectrum> readMGF(string filename)
+        public static List<Spectrum> readMGF(string filename, bool deconvolute = true)
         { 
             var MSAMANDA_spectra = MSAMANDA_MGFPARSER.MGFParser.ParseNextSpectra(filename);
 
