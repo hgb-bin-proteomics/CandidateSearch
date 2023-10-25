@@ -14,7 +14,7 @@
             Array.Sort(mz, intensity);
         }
 
-        public int[] getEncoding(int massRange = 1300, int massMultiplier = 100)
+        public int[] getEncoding(int massRange = 5000, int massMultiplier = 100)
         {
             var encoding = new List<int>();
 

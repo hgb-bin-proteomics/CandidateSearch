@@ -19,7 +19,7 @@ namespace CandidateSearch.util
             ions = getIons(Sequence, Mass, IonSettings);
         }
 
-        public int[] getEnconding(int massRange = 1300, int massMultiplier = 100)
+        public int[] getEnconding(int massRange = 5000, int massMultiplier = 100)
         {
             var encoding = new List<int>();
 
