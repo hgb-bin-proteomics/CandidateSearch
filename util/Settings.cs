@@ -15,15 +15,21 @@ namespace CandidateSearch.util
         public int MAX_NEUTRAL_LOSS_MODS { get; set; } // default: 2
         public string MAX_ALLOWED_CHARGE { get; set; } // default: "+3";
 
+        // config search parameters
+        public bool DECONVOLUTE_SPECTRA { get; set; } // default: true
+        public bool DECOY_SEARCH { get; set; } // default: true
+
         // config vector search
         public int TOP_N { get; set; } // default: 100
         public float TOLERANCE { get; set; } // default: 0.02f
         public bool NORMALIZE { get; set; } // default: true
         public bool USE_GAUSSIAN { get; set; } // default: true
+        public string MODE { get; set; } // default: CPU_DV
 
         public Settings(int MaxCleavages = 2, int MinPepLength = 5, int MaxPepLength = 30, 
                         int MaxCharge = 3, int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2, string MaxAllowedCharge = "+3",
-                        int TopN = 100, float Tolerance = 0.02f, bool Normalize = true, bool UseGaussian = true)
+                        bool DeconvoluteSpectra = true, bool DecoySearch = true,
+                        int TopN = 100, float Tolerance = 0.02f, bool Normalize = true, bool UseGaussian = true, string Mode = "CPU_DV")
         {
             MAX_CLEAVAGES = MaxCleavages;
             MIN_PEP_LENGTH = MinPepLength;
@@ -34,10 +40,14 @@ namespace CandidateSearch.util
             MAX_NEUTRAL_LOSS_MODS = MaxNeutralLossMods;
             MAX_ALLOWED_CHARGE = MaxAllowedCharge;
 
+            DECONVOLUTE_SPECTRA = DeconvoluteSpectra;
+            DECOY_SEARCH = DecoySearch;
+
             TOP_N = TopN;
             TOLERANCE = Tolerance;
             NORMALIZE = Normalize;
             USE_GAUSSIAN = UseGaussian;
+            MODE = Mode;
         }
 
         public override string ToString()
@@ -51,10 +61,13 @@ namespace CandidateSearch.util
             sb.Append($"MAX_NEUTRAL_LOSSES: {MAX_NEUTRAL_LOSSES}\n");
             sb.Append($"MAX_NEUTRAL_LOSS_MODS: {MAX_NEUTRAL_LOSS_MODS}\n");
             sb.Append($"MAX_ALLOWED_CHARGE: {MAX_ALLOWED_CHARGE}\n");
+            sb.Append($"DECONVOLUTE_SPECTRA: {DECONVOLUTE_SPECTRA}\n");
+            sb.Append($"DECOY_SEARCH: {DECOY_SEARCH}\n");
             sb.Append($"TOP_N: {TOP_N}\n");
             sb.Append($"TOLERANCE: {TOLERANCE}\n");
             sb.Append($"NORMALIZE: {NORMALIZE}\n");
             sb.Append($"USE_GAUSSIAN: {USE_GAUSSIAN}\n");
+            sb.Append($"MODE: {MODE}\n");
             sb.Append("---- SETTINGS END ----");
 
             return sb.ToString();
@@ -156,7 +169,40 @@ namespace CandidateSearch.util
                         var values = line.Split("=");
                         if (values.Length > 1)
                         {
-                            settings.MAX_ALLOWED_CHARGE = values[1].Trim();
+                            var maxAllowedCharge = values[1].Trim();
+                            if (maxAllowedCharge == "+2" || 
+                                maxAllowedCharge == "+3" ||
+                                maxAllowedCharge == "+4" ||
+                                maxAllowedCharge == "Precursor - 1")
+                            {
+                                settings.MAX_ALLOWED_CHARGE = maxAllowedCharge;
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("DECONVOLUTE_SPECTRA"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var ok = bool.TryParse(values[1], out var value);
+                            if (ok)
+                            {
+                                settings.DECONVOLUTE_SPECTRA = value;
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("DECOY_SEARCH"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var ok = bool.TryParse(values[1], out var value);
+                            if (ok)
+                            {
+                                settings.DECOY_SEARCH = value;
+                            }
                         }
                     }
 
@@ -208,6 +254,25 @@ namespace CandidateSearch.util
                             if (ok)
                             {
                                 settings.USE_GAUSSIAN = value;
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("MODE"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var mode = values[1].Trim();
+                            if (mode == "CPU_DV" ||
+                                mode == "CPU_SV" ||
+                                mode == "CPU_DM" ||
+                                mode == "CPU_SM" ||
+                                mode == "GPU_DV" ||
+                                mode == "GPU_DM" ||
+                                mode == "GPU_SM")
+                            {
+                                settings.MODE = mode;
                             }
                         }
                     }
