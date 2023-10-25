@@ -13,7 +13,7 @@ namespace CandidateSearch.util
         public int MAX_CHARGE { get; set; } // default: 3
         public int MAX_NEUTRAL_LOSSES { get; set; } // default: 1
         public int MAX_NEUTRAL_LOSS_MODS { get; set; } // default: 2
-        public string MAX_ALLOWED_CHARGE { get; set; } // default: "+3";
+        public string MAX_ALLOWED_CHARGE { get; set; } // default: "+1";
 
         // config search parameters
         public bool DECONVOLUTE_SPECTRA { get; set; } // default: true
@@ -27,7 +27,7 @@ namespace CandidateSearch.util
         public string MODE { get; set; } // default: CPU_DV
 
         public Settings(int MaxCleavages = 2, int MinPepLength = 5, int MaxPepLength = 30, 
-                        int MaxCharge = 3, int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2, string MaxAllowedCharge = "+3",
+                        int MaxCharge = 3, int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2, string MaxAllowedCharge = "+1",
                         bool DeconvoluteSpectra = true, bool DecoySearch = true,
                         int TopN = 100, float Tolerance = 0.02f, bool Normalize = true, bool UseGaussian = true, string Mode = "CPU_DV")
         {
@@ -264,8 +264,7 @@ namespace CandidateSearch.util
                         if (values.Length > 1)
                         {
                             var mode = values[1].Trim();
-                            if (mode == "CPU_DV" ||
-                                mode == "CPU_SV" ||
+                            if (mode == "CPU_SV" ||
                                 mode == "CPU_DM" ||
                                 mode == "CPU_SM" ||
                                 mode == "GPU_DV" ||
