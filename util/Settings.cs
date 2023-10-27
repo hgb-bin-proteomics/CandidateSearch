@@ -10,10 +10,10 @@ namespace CandidateSearch.util
         public int MAX_PEP_LENGTH { get; set; } // default: 30
 
         // config ion calculation
-        public int MAX_CHARGE { get; set; } // default: 3
+        public int MAX_PRECURSOR_CHARGE { get; set; } // default: 4
+        public string MAX_FRAGMENT_CHARGE { get; set; } // default: "+1";
         public int MAX_NEUTRAL_LOSSES { get; set; } // default: 1
         public int MAX_NEUTRAL_LOSS_MODS { get; set; } // default: 2
-        public string MAX_ALLOWED_CHARGE { get; set; } // default: "+1";
 
         // config search parameters
         public bool DECONVOLUTE_SPECTRA { get; set; } // default: true
@@ -27,7 +27,7 @@ namespace CandidateSearch.util
         public string MODE { get; set; } // default: CPU_DV
 
         public Settings(int MaxCleavages = 2, int MinPepLength = 5, int MaxPepLength = 30, 
-                        int MaxCharge = 3, int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2, string MaxAllowedCharge = "+1",
+                        int MaxPrecursorCharge = 4, string MaxFragmentCharge = "+1", int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2,
                         bool DeconvoluteSpectra = true, bool DecoySearch = true,
                         int TopN = 100, float Tolerance = 0.02f, bool Normalize = true, bool UseGaussian = true, string Mode = "CPU_DV")
         {
@@ -35,10 +35,10 @@ namespace CandidateSearch.util
             MIN_PEP_LENGTH = MinPepLength;
             MAX_PEP_LENGTH = MaxPepLength;
 
-            MAX_CHARGE = MaxCharge;
+            MAX_PRECURSOR_CHARGE = MaxPrecursorCharge;
+            MAX_FRAGMENT_CHARGE = MaxFragmentCharge;
             MAX_NEUTRAL_LOSSES = MaxNeutralLosses;
             MAX_NEUTRAL_LOSS_MODS = MaxNeutralLossMods;
-            MAX_ALLOWED_CHARGE = MaxAllowedCharge;
 
             DECONVOLUTE_SPECTRA = DeconvoluteSpectra;
             DECOY_SEARCH = DecoySearch;
@@ -57,10 +57,10 @@ namespace CandidateSearch.util
             sb.Append($"MAX_CLEAVAGES: {MAX_CLEAVAGES}\n");
             sb.Append($"MIN_PEP_LENGTH: {MIN_PEP_LENGTH}\n");
             sb.Append($"MAX_PEP_LENGTH: {MAX_PEP_LENGTH}\n");
-            sb.Append($"MAX_CHARGE: {MAX_CHARGE}\n");
+            sb.Append($"MAX_PRECURSOR_CHARGE: {MAX_PRECURSOR_CHARGE}\n");
+            sb.Append($"MAX_FRAGMENT_CHARGE: {MAX_FRAGMENT_CHARGE}\n");
             sb.Append($"MAX_NEUTRAL_LOSSES: {MAX_NEUTRAL_LOSSES}\n");
             sb.Append($"MAX_NEUTRAL_LOSS_MODS: {MAX_NEUTRAL_LOSS_MODS}\n");
-            sb.Append($"MAX_ALLOWED_CHARGE: {MAX_ALLOWED_CHARGE}\n");
             sb.Append($"DECONVOLUTE_SPECTRA: {DECONVOLUTE_SPECTRA}\n");
             sb.Append($"DECOY_SEARCH: {DECOY_SEARCH}\n");
             sb.Append($"TOP_N: {TOP_N}\n");
@@ -125,7 +125,7 @@ namespace CandidateSearch.util
                         }
                     }
 
-                    if (line != null && line.StartsWith("MAX_CHARGE"))
+                    if (line != null && line.StartsWith("MAX_PRECURSOR_CHARGE"))
                     {
                         var values = line.Split("=");
                         if (values.Length > 1)
@@ -133,7 +133,23 @@ namespace CandidateSearch.util
                             var ok = int.TryParse(values[1], out var value);
                             if (ok)
                             {
-                                settings.MAX_CHARGE = value;
+                                settings.MAX_PRECURSOR_CHARGE = value;
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("MAX_FRAGMENT_CHARGE"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var maxFragmentCharge = values[1].Trim();
+                            if (maxFragmentCharge == "+2" ||
+                                maxFragmentCharge == "+3" ||
+                                maxFragmentCharge == "+4" ||
+                                maxFragmentCharge == "Precursor - 1")
+                            {
+                                settings.MAX_FRAGMENT_CHARGE = maxFragmentCharge;
                             }
                         }
                     }
@@ -160,22 +176,6 @@ namespace CandidateSearch.util
                             if (ok)
                             {
                                 settings.MAX_NEUTRAL_LOSS_MODS = value;
-                            }
-                        }
-                    }
-
-                    if (line != null && line.StartsWith("MAX_ALLOWED_CHARGE"))
-                    {
-                        var values = line.Split("=");
-                        if (values.Length > 1)
-                        {
-                            var maxAllowedCharge = values[1].Trim();
-                            if (maxAllowedCharge == "+2" || 
-                                maxAllowedCharge == "+3" ||
-                                maxAllowedCharge == "+4" ||
-                                maxAllowedCharge == "Precursor - 1")
-                            {
-                                settings.MAX_ALLOWED_CHARGE = maxAllowedCharge;
                             }
                         }
                     }

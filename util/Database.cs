@@ -54,26 +54,23 @@ namespace CandidateSearch.util
         {
             var ions = new List<double>();
 
-            for (int charge = 1; charge <= IonSettings.MAX_CHARGE; charge++)
-            {
-                double[] outIonsNoNL;
-                MSAMANDA_IONCALCULATION.IonWithNL[] outIonsWithNL;
-                MSAMANDA_IONCALCULATION.Modification[] mods = new MSAMANDA_IONCALCULATION.Modification[sequence.Length + 2];
-                MSAMANDA_IONCALCULATION.IonCalculator.CalculateIons(out outIonsNoNL, 
-                                                                    out outIonsWithNL, 
-                                                                    Encoding.ASCII.GetBytes(Sequence),
-                                                                    Mass,
-                                                                    charge,
-                                                                    mods,
-                                                                    IonSettings.MAX_NEUTRAL_LOSSES,
-                                                                    IonSettings.MAX_NEUTRAL_LOSS_MODS,
-                                                                    0,
-                                                                    1300,
-                                                                    true,
-                                                                    IonSettings.MAX_ALLOWED_CHARGE);
+            double[] outIonsNoNL;
+            MSAMANDA_IONCALCULATION.IonWithNL[] outIonsWithNL;
+            MSAMANDA_IONCALCULATION.Modification[] mods = new MSAMANDA_IONCALCULATION.Modification[sequence.Length + 2];
+            MSAMANDA_IONCALCULATION.IonCalculator.CalculateIons(out outIonsNoNL, 
+                                                                out outIonsWithNL, 
+                                                                sequence: Encoding.ASCII.GetBytes(Sequence),
+                                                                mass: Mass,
+                                                                charge: IonSettings.MAX_PRECURSOR_CHARGE,
+                                                                mods: mods,
+                                                                maxNumberNeutralLoss: IonSettings.MAX_NEUTRAL_LOSSES,
+                                                                maxNumberNeutralLossModifications: IonSettings.MAX_NEUTRAL_LOSS_MODS,
+                                                                lowerBound: 0,
+                                                                upperBound: 5000,
+                                                                mono: true,
+                                                                maxAllowedChargeState: IonSettings.MAX_FRAGMENT_CHARGE);
 
-                ions.AddRange(outIonsNoNL);
-            }
+            ions.AddRange(outIonsNoNL);
 
             return ions.Distinct().OrderBy(x => x).ToList();
         }
