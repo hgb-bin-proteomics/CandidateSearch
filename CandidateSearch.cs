@@ -19,6 +19,11 @@ namespace CandidateSearch
                 Console.WriteLine($"Read settings file '{settingsFile}' with the following settings:");
                 Console.WriteLine(settings.ToString());
 
+                if (settings.DECONVOLUTE_SPECTRA)
+                {
+                    settings.MAX_FRAGMENT_CHARGE = "+1";
+                }
+
                 if (settings.MODE.Split("_").First().Trim() == "GPU")
                 {
                     CandidateSearchGPU.Search(spectraFile, databaseFile, settings);
@@ -27,6 +32,8 @@ namespace CandidateSearch
                 {
                     CandidateSearchCPU.Search(spectraFile, databaseFile, settings);
                 }
+
+                return;
             }
 
             Console.WriteLine("Incorrect number of arguments! CandidateSearch needs exactly 3 arguments: spectra.mgf database.fasta settings.txt");

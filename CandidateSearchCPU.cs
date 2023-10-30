@@ -7,7 +7,7 @@ namespace CandidateSearch
     {
         public static void Search(string spectraFile, string databaseFile, Settings settings)
         {
-            var spectra = MGFReader.readMGF(spectraFile, settings.DECONVOLUTE_SPECTRA);
+            var spectra = MGFReader.readMGF(spectraFile, settings);
             Console.WriteLine($"Read {spectra.Count} spectra.");
 
             var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: settings.DECOY_SEARCH);
