@@ -65,12 +65,15 @@
                     intensity.Add(peak.Intensity);
                 }
 
+                var mzArray = mz.ToArray();
+                var intensityArray = intensity.ToArray();
+
                 if (settings.DECONVOLUTE_SPECTRA)
                 {
-                    SpectrumPreprocessor.deconvolute(ref mz, ref intensity, spectrum.Precursor.Charge, settings.TOLERANCE);
+                    SpectrumPreprocessor.deconvolute(ref mzArray, ref intensityArray, spectrum.Precursor.Charge, settings.TOLERANCE);
                 }
 
-                spectra.Add(new Spectrum(mz.ToArray(), intensity.ToArray(), spectrum.ScanNumber));
+                spectra.Add(new Spectrum(mzArray, intensityArray, spectrum.ScanNumber));
             }
 
             return spectra;
@@ -79,8 +82,8 @@
 
     public static class SpectrumPreprocessor
     {
-        public static void deconvolute(ref List<Double> mzArray, 
-                                       ref List<Double> intensityArray, 
+        public static void deconvolute(ref double[] mzArray, 
+                                       ref double[] intensityArray, 
                                        int precursorCharge, 
                                        double tolerance,
                                        string method = "sage")
@@ -95,15 +98,15 @@
             return;
         }
 
-        public static void deconvoluteMSAndrea(ref List<Double> mzArray, 
-                                               ref List<Double> intensityArray)
+        public static void deconvoluteMSAndrea(ref double[] mzArray, 
+                                               ref double[] intensityArray)
         {
-            // todo
+            // [optional] todo
             throw new NotImplementedException("MS Andrea deconvolution not yet implemented! Use Sage deconvolution instead!");
         }
 
-        public static void deconvoluteSage(ref List<Double> mzArray, 
-                                           ref List<Double> intensityArray, 
+        public static void deconvoluteSage(ref double[] mzArray, 
+                                           ref double[] intensityArray, 
                                            int precursorCharge, 
                                            double tolerance)
         {
@@ -111,12 +114,14 @@
             double NEUTRON = 1.00335;
             var peaks = new Dictionary<int, Peak>();
 
-            for (int i = 0; i < mzArray.Count; i++)
+            Array.Sort(mzArray, intensityArray);
+
+            for (int i = 0; i < mzArray.Length; i++)
             {
                 peaks.Add(i, new Peak(mzArray[i], intensityArray[i], 0, 0));
             }
 
-            for (int i = mzArray.Count - 1; i >= 0; i--)
+            for (int i = mzArray.Length - 1; i >= 0; i--)
             {
                 int j = i.saturatedSubtraction(1);
                 while (mzArray[i] - mzArray[j] <= NEUTRON + tolerance)
@@ -150,24 +155,30 @@
             var newIntensityArray = new List<double>();
 
             int currentEnvelope = -1;
-            for (int i = 0; i < mzArray.Count; i++)
+            for (int i = 0; i < mzArray.Length; i++)
             {
                 if (peaks[i].charge != 0 && peaks[i].envelope != currentEnvelope)
                 {
-                    newMzArray.Add((peaks[i].mz - peaks[i].charge * PROTON) * peaks[i].charge + PROTON);
+                    newMzArray.Add(calculateUnchargedMass(peaks[i].mz, peaks[i].charge) + PROTON);
                     newIntensityArray.Add(peaks[i].intensity);
                     currentEnvelope = peaks[i].envelope;
                 }
 
             }
 
-            mzArray = newMzArray;
-            intensityArray = newIntensityArray;
+            mzArray = newMzArray.ToArray();
+            intensityArray = newIntensityArray.ToArray();
         }
 
         public static int saturatedSubtraction(this int x, int y)
         {
             return x - y < 0 ? 0 : x - y;
+        }
+
+        public static double calculateUnchargedMass(double mz, int charge)
+        {
+            double PROTON = 1.007276466812;
+            return ((mz * (double) charge) - ((double) charge * PROTON));
         }
     }
 }
