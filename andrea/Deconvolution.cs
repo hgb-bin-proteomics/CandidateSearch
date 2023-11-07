@@ -14,7 +14,10 @@ namespace MSANDREA_DECONVOLUTION
 
             //Dictionary<int, double> peaks = currentSpectrum.Peaks;
             var peaks = new Dictionary<int, double>();
-            // -> todo add peaks
+            for (int i = 0; i < mzArray.Length; i++)
+            {
+                peaks.Add(ChemicalUtils.GetMassIndex(mzArray[i]), intensityArray[i]);
+            }
 
             var peaksNew = new Dictionary<int, double>();
             var peaksSubset = new Dictionary<int, double>();
@@ -26,7 +29,10 @@ namespace MSANDREA_DECONVOLUTION
             // -> todo add values
 
             var masses = new SortedSet<double>();
-            // -> todo add values
+            foreach (var mz in mzArray)
+            {
+                masses.Add(mz);
+            }
 
             double protonMassDouble = ChemicalUtils.Chemicals["p"].MonoMass;
 
