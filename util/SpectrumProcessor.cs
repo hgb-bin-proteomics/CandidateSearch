@@ -2,6 +2,9 @@
 {
     public static class SpectrumPreprocessor
     {
+        public const double PROTON = 1.007276466812;
+        public const double NEUTRON = 1.00335;
+
         public static void deconvolute(ref double[] mzArray,
                                        ref double[] intensityArray,
                                        int precursorCharge,
@@ -30,8 +33,6 @@
                                        double tolerance)
         {
             // todo
-            double PROTON = 1.007276466812;
-            double NEUTRON = 1.00335;
         }
 
         public static void deconvoluteMSAndrea(ref double[] mzArray,
@@ -47,8 +48,6 @@
                                            int precursorCharge,
                                            double tolerance)
         {
-            double PROTON = 1.007276466812;
-            double NEUTRON = 1.00335;
             var peaks = new Dictionary<int, Peak>();
 
             Array.Sort(mzArray, intensityArray);
@@ -116,7 +115,6 @@
 
         public static double calculateUnchargedMass(double mz, int charge)
         {
-            double PROTON = 1.007276466812;
             return ((mz * (double) charge) - ((double) charge * PROTON));
         }
     }
