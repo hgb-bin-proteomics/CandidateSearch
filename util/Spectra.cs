@@ -90,19 +90,25 @@
         {
             if (method == "ms_andrea")
             {
-                deconvoluteMSAndrea(ref mzArray, ref intensityArray);
+                deconvoluteMSAndrea(ref mzArray, ref intensityArray, precursorCharge);
                 return;
             }
 
-            deconvoluteSage(ref mzArray, ref intensityArray, precursorCharge, tolerance);
+            if (method == "sage")
+            {
+                deconvoluteSage(ref mzArray, ref intensityArray, precursorCharge, tolerance);
+                return;
+            }
+
             return;
         }
 
         public static void deconvoluteMSAndrea(ref double[] mzArray, 
-                                               ref double[] intensityArray)
+                                               ref double[] intensityArray,
+                                               int precursorCharge)
         {
-            // [optional] todo
-            throw new NotImplementedException("MS Andrea deconvolution not yet implemented! Use Sage deconvolution instead!");
+            MSANDREA_DECONVOLUTION.Deconvolutor.deconvolute(ref mzArray, ref intensityArray, precursorCharge);
+            return;
         }
 
         public static void deconvoluteSage(ref double[] mzArray, 
