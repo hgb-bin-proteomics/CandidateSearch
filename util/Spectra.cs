@@ -132,7 +132,7 @@
                         double iso = NEUTRON / (double) charge;
                         if (Math.Abs(delta - iso) <= tolerance && intensityArray[i] < intensityArray[j])
                         {
-                            if (peaks[i].charge != charge)
+                            if (peaks[i].charge != 0)
                             {
                                 continue;
                             }
