@@ -6,35 +6,37 @@ namespace MSANDREA_DECONVOLUTION
     {
         public static void deconvolute(ref double[] mzArray, ref double[] intensityArray, int charge)
         {
-            // TODO
 
+        }
+
+        public static void chargeDeconvolute(ref double[] mzArray, ref double[] intensityArray, int charge,
+                                             ref SortedSet<double> doubleChargedMasses, ref SortedSet<double> triplyChargedMasses)
+        {
             //SortedSet<double> masses = currentSpectrum.Masses2;
             var massesNew = new SortedSet<double>();
             var massesSubset = new SortedSet<double>();
 
             //Dictionary<int, double> peaks = currentSpectrum.Peaks;
+            var masses = new SortedSet<double>();
             var peaks = new Dictionary<int, double>();
             for (int i = 0; i < mzArray.Length; i++)
             {
-                peaks.Add(ChemicalUtils.GetMassIndex(mzArray[i]), intensityArray[i]);
+                var key = ChemicalUtils.GetMassIndex(mzArray[i]);
+                if (peaks.ContainsKey(key))
+                {
+                    peaks[key] += intensityArray[i];
+                }
+                else
+                {
+                    peaks.Add(key, intensityArray[i]);
+                    masses.Add(mzArray[i]);
+                }
             }
 
             var peaksNew = new Dictionary<int, double>();
             var peaksSubset = new Dictionary<int, double>();
-
-            //SortedSet<double> doubleChargedMasses = currentSpectrum.DoublyChargedPeaks;
-            //SortedSet<double> triplyChargedMasses = currentSpectrum.TriplyChargedPeaks;
-            var doubleChargedMasses = new SortedSet<double>();
-            var triplyChargedMasses = new SortedSet<double>();
-            // -> todo add values
-
-            var masses = new SortedSet<double>();
-            foreach (var mz in mzArray)
-            {
-                masses.Add(mz);
-            }
-
-            double protonMassDouble = ChemicalUtils.Chemicals["p"].MonoMass;
+       
+            var protonMassDouble = ChemicalUtils.Chemicals["p"].MonoMass;
 
             if (charge > 1)
             {
