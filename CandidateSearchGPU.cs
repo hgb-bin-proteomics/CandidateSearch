@@ -13,31 +13,31 @@ namespace CandidateSearch
             var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: settings.DECOY_SEARCH);
             Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
 
-            int candidateValuesLength = 0;
+            int csrColIdxLength = 0;
             foreach (var peptide in peptides)
             {
                 var encoding = peptide.getEnconding();
-                candidateValuesLength += encoding.Length;
+                csrColIdxLength += encoding.Length;
             }
 
-            var candidateValues = new int[candidateValuesLength];
-            var candidateIdx = new int[peptides.Count + 1];
+            var csrColIdx = new int[csrColIdxLength];
+            var csrRowoffsets = new int[peptides.Count + 1];
 
-            int currentIdxCV = 0;
-            int currentIdxCI = 0;
+            int currentIdxCsrColIdx = 0;
+            int currentIdxCsrRowoffsets = 0;
             foreach (var peptide in peptides)
             {
-                candidateIdx[currentIdxCI] = currentIdxCV;
-                currentIdxCI++;
+                csrRowoffsets[currentIdxCsrRowoffsets] = currentIdxCsrColIdx;
+                currentIdxCsrRowoffsets++;
                 var encoding = peptide.getEnconding();
                 foreach (var value in encoding)
                 {
-                    candidateValues[currentIdxCV] = value;
-                    currentIdxCV++;
+                    csrColIdx[currentIdxCsrColIdx] = value;
+                    currentIdxCsrColIdx++;
                 }
             }
 
-            candidateIdx[peptides.Count] = candidateValuesLength;
+            csrRowoffsets[peptides.Count] = csrColIdxLength;
 
             int spectraValuesLength = 0;
             foreach (var spectrum in spectra)
@@ -66,8 +66,8 @@ namespace CandidateSearch
             var sw = new Stopwatch();
             sw.Start();
 
-            var result = VectorSearchInterface.VectorSearchAPI.searchGPU(ref candidateValues,
-                                                                         ref candidateIdx,
+            var result = VectorSearchInterface.VectorSearchAPI.searchGPU(ref csrRowoffsets,
+                                                                         ref csrColIdx,
                                                                          ref spectraValues,
                                                                          ref spectraIdx,
                                                                          topN: settings.TOP_N,
