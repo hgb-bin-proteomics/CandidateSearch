@@ -70,7 +70,11 @@
 
                 if (settings.DECONVOLUTE_SPECTRA)
                 {
-                    SpectrumPreprocessor.deconvolute(ref mzArray, ref intensityArray, spectrum.Precursor.Charge, settings.TOLERANCE);
+                    SpectrumPreprocessor.deconvolute(ref mzArray, 
+                                                     ref intensityArray, 
+                                                     spectrum.Precursor.Charge, 
+                                                     settings.TOLERANCE, 
+                                                     settings.DECONVOLUTION_ALG);
                 }
 
                 spectra.Add(new Spectrum(mzArray, intensityArray, spectrum.ScanNumber));

@@ -17,6 +17,7 @@ namespace CandidateSearch.util
 
         // config search parameters
         public bool DECONVOLUTE_SPECTRA { get; set; } // default: true
+        public string DECONVOLUTION_ALG { get; set; } // default: default
         public bool DECOY_SEARCH { get; set; } // default: true
 
         // config vector search
@@ -28,7 +29,7 @@ namespace CandidateSearch.util
 
         public Settings(int MaxCleavages = 2, int MinPepLength = 5, int MaxPepLength = 30, 
                         int MaxPrecursorCharge = 4, string MaxFragmentCharge = "+1", int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2,
-                        bool DeconvoluteSpectra = true, bool DecoySearch = true,
+                        bool DeconvoluteSpectra = true, string DeconvolutionAlg = "default", bool DecoySearch = true,
                         int TopN = 100, float Tolerance = 0.02f, bool Normalize = true, bool UseGaussian = true, string Mode = "CPU_DV")
         {
             MAX_CLEAVAGES = MaxCleavages;
@@ -41,6 +42,7 @@ namespace CandidateSearch.util
             MAX_NEUTRAL_LOSS_MODS = MaxNeutralLossMods;
 
             DECONVOLUTE_SPECTRA = DeconvoluteSpectra;
+            DECONVOLUTION_ALG = DeconvolutionAlg;
             DECOY_SEARCH = DecoySearch;
 
             TOP_N = TopN;
@@ -62,6 +64,7 @@ namespace CandidateSearch.util
             sb.Append($"MAX_NEUTRAL_LOSSES: {MAX_NEUTRAL_LOSSES}\n");
             sb.Append($"MAX_NEUTRAL_LOSS_MODS: {MAX_NEUTRAL_LOSS_MODS}\n");
             sb.Append($"DECONVOLUTE_SPECTRA: {DECONVOLUTE_SPECTRA}\n");
+            sb.Append($"DECONVOLUTION_ALG: {DECONVOLUTION_ALG}\n");
             sb.Append($"DECOY_SEARCH: {DECOY_SEARCH}\n");
             sb.Append($"TOP_N: {TOP_N}\n");
             sb.Append($"TOLERANCE: {TOLERANCE}\n");
@@ -189,6 +192,20 @@ namespace CandidateSearch.util
                             if (ok)
                             {
                                 settings.DECONVOLUTE_SPECTRA = value;
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("DECONVOLUTION_ALG"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var alg = values[1].Trim();
+                            if (alg == "andrea" ||
+                                alg == "sage")
+                            {
+                                settings.DECONVOLUTION_ALG = alg == "andrea" ? "ms_andrea" : "sage";
                             }
                         }
                     }
