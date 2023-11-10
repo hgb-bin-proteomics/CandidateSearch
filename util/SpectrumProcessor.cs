@@ -32,7 +32,43 @@
                                        int precursorCharge,
                                        double tolerance)
         {
-            // todo
+            var decharged = new List<double>();
+
+            for (int i = 0; i < mzArray.Length; i++)
+            {
+                for (int charge = precursorCharge; charge > 0; charge--)
+                {
+                    if (i > 0 && i < mzArray.Length - 1)
+                    {
+                        if ((mzArray[i] + NEUTRON / charge < mzArray[i + 1] + tolerance && mzArray[i] + NEUTRON / charge > mzArray[i + 1] - tolerance) ||
+                            (mzArray[i] - NEUTRON / charge > mzArray[i - 1] - tolerance && mzArray[i] - NEUTRON / charge < mzArray[i - 1] + tolerance))
+                        {
+                            decharged.Add(calculateUnchargedMass(mzArray[i], charge) + PROTON);
+                            break;
+                        }
+                    }
+                    else if (i == 0)
+                    {
+                        if (mzArray[i] + NEUTRON / charge < mzArray[i + 1] + tolerance && mzArray[i] + NEUTRON / charge > mzArray[i + 1] - tolerance)
+                        {
+                            decharged.Add(calculateUnchargedMass(mzArray[i], charge) + PROTON);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (mzArray[i] - NEUTRON / charge > mzArray[i - 1] - tolerance && mzArray[i] - NEUTRON / charge < mzArray[i - 1] + tolerance)
+                        {
+                            decharged.Add(calculateUnchargedMass(mzArray[i], charge) + PROTON);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            mzArray = decharged.ToArray();
+
+            // todo deisotoping
         }
 
         public static void deconvoluteMSAndrea(ref double[] mzArray,
