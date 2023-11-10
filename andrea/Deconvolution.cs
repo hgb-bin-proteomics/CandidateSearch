@@ -6,17 +6,6 @@ namespace MSANDREA_DECONVOLUTION
     {
         public static void deconvolute(ref double[] mzArray, ref double[] intensityArray, int charge)
         {
-            deisotope(ref mzArray, ref intensityArray, charge, out SortedSet<double> doublyChargedPeaks, out SortedSet<double> triplyChargedPeaks);
-            chargeDeconvolute(ref mzArray, ref intensityArray, charge, ref doublyChargedPeaks, ref triplyChargedPeaks);
-            return;
-        }
-
-        public static void deisotope(ref double[] mzArray, 
-                                     ref double[] intensityArray, 
-                                     int charge,
-                                     out SortedSet<double> doublyChargedPeaks, 
-                                     out SortedSet<double> triplyChargedPeaks)
-        {
             var masses = new SortedSet<double>();
             var peaks = new Dictionary<int, double>();
             for (int i = 0; i < mzArray.Length; i++)
@@ -33,6 +22,21 @@ namespace MSANDREA_DECONVOLUTION
                 }
             }
 
+            deisotope(ref masses, ref peaks, charge, out SortedSet<double> doublyChargedPeaks, out SortedSet<double> triplyChargedPeaks);
+            chargeDeconvolute(ref masses, ref peaks, charge, ref doublyChargedPeaks, ref triplyChargedPeaks);
+
+            mzArray = masses.ToArray();
+            intensityArray = peaks.Values.ToArray();
+
+            return;
+        }
+
+        public static void deisotope(ref SortedSet<double> masses, 
+                                     ref Dictionary<int, double> peaks, 
+                                     int charge,
+                                     out SortedSet<double> doublyChargedPeaks, 
+                                     out SortedSet<double> triplyChargedPeaks)
+        {
             doublyChargedPeaks = new SortedSet<double>();
             triplyChargedPeaks = new SortedSet<double>();
             
@@ -131,9 +135,6 @@ namespace MSANDREA_DECONVOLUTION
                     triplyChargedPeaks = tempTriplyChargedPeaks;
                 }
             }
-
-            mzArray = masses.ToArray();
-            intensityArray = peaks.Values.ToArray();
         }
 
         public static List<double> GetIsotopicDistribution(double peak, 
@@ -332,8 +333,8 @@ namespace MSANDREA_DECONVOLUTION
             return intensitySum;
         }
 
-        public static void chargeDeconvolute(ref double[] mzArray, 
-                                             ref double[] intensityArray, 
+        public static void chargeDeconvolute(ref SortedSet<double> masses, 
+                                             ref Dictionary<int, double> peaks, 
                                              int charge,
                                              ref SortedSet<double> doubleChargedMasses, 
                                              ref SortedSet<double> triplyChargedMasses)
@@ -341,23 +342,6 @@ namespace MSANDREA_DECONVOLUTION
             //SortedSet<double> masses = currentSpectrum.Masses2;
             var massesNew = new SortedSet<double>();
             var massesSubset = new SortedSet<double>();
-
-            //Dictionary<int, double> peaks = currentSpectrum.Peaks;
-            var masses = new SortedSet<double>();
-            var peaks = new Dictionary<int, double>();
-            for (int i = 0; i < mzArray.Length; i++)
-            {
-                var key = ChemicalUtils.GetMassIndex(mzArray[i]);
-                if (peaks.ContainsKey(key))
-                {
-                    peaks[key] += intensityArray[i];
-                }
-                else
-                {
-                    peaks.Add(key, intensityArray[i]);
-                    masses.Add(mzArray[i]);
-                }
-            }
 
             var peaksNew = new Dictionary<int, double>();
             var peaksSubset = new Dictionary<int, double>();
@@ -499,8 +483,8 @@ namespace MSANDREA_DECONVOLUTION
                 }
             }
    
-            mzArray = massesNew.ToArray();
-            intensityArray = peaksNew.Values.ToArray();
+            masses = massesNew;
+            peaks = peaksNew;
         }
     }
 
