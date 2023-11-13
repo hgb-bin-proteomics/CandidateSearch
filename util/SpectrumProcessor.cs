@@ -32,41 +32,33 @@
                                        int precursorCharge,
                                        double tolerance)
         {
-            var decharged = new List<double>();
+            var dechargedMz = new List<double>();
+            var dechargedIntensity = new List<double>();
 
             for (int i = 0; i < mzArray.Length; i++)
             {
                 for (int charge = precursorCharge; charge > 0; charge--)
                 {
-                    if (i > 0 && i < mzArray.Length - 1)
+                    for (int j = 0; j < mzArray.Length; j++)
                     {
-                        if ((mzArray[i] + NEUTRON / charge < mzArray[i + 1] + tolerance && mzArray[i] + NEUTRON / charge > mzArray[i + 1] - tolerance) ||
-                            (mzArray[i] - NEUTRON / charge > mzArray[i - 1] - tolerance && mzArray[i] - NEUTRON / charge < mzArray[i - 1] + tolerance))
+                        if (tolerance.equalWithTolerance(mzArray[i] - NEUTRON / charge, mzArray[j]) ||
+                            tolerance.equalWithTolerance(mzArray[i] + NEUTRON / charge, mzArray[j]))
                         {
-                            decharged.Add(calculateUnchargedMass(mzArray[i], charge) + PROTON);
-                            break;
-                        }
-                    }
-                    else if (i == 0)
-                    {
-                        if (mzArray[i] + NEUTRON / charge < mzArray[i + 1] + tolerance && mzArray[i] + NEUTRON / charge > mzArray[i + 1] - tolerance)
-                        {
-                            decharged.Add(calculateUnchargedMass(mzArray[i], charge) + PROTON);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        if (mzArray[i] - NEUTRON / charge > mzArray[i - 1] - tolerance && mzArray[i] - NEUTRON / charge < mzArray[i - 1] + tolerance)
-                        {
-                            decharged.Add(calculateUnchargedMass(mzArray[i], charge) + PROTON);
+                            var decharged = calculateUnchargedMass(mzArray[i], charge) + PROTON;
+                            if (!dechargedMz.Contains(decharged))
+                            {
+                                dechargedMz.Add(decharged);
+                                dechargedIntensity.Add(intensityArray[i]);
+                            }
+                            charge = 0;
                             break;
                         }
                     }
                 }
             }
 
-            mzArray = decharged.ToArray();
+            mzArray = dechargedMz.ToArray();
+            intensityArray = dechargedIntensity.ToArray();
 
             // todo deisotoping
         }
@@ -147,6 +139,11 @@
         public static int saturatedSubtraction(this int x, int y)
         {
             return x - y < 0 ? 0 : x - y;
+        }
+
+        public static bool equalWithTolerance(this double tolerance, double reference, double value)
+        {
+            return value > reference - tolerance && value < reference + tolerance;
         }
 
         public static double calculateUnchargedMass(double mz, int charge)
