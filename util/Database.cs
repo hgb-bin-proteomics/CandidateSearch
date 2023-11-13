@@ -50,14 +50,14 @@ namespace CandidateSearch.util
             return peptide + "]";
         }
 
-        private List<double> getIons(string Sequence, double Mass, Settings IonSettings)
+        private List<double> getIons(string Sequence, double Mass, Dictionary<int, double> Modifications, Settings IonSettings)
         {
             var ions = new List<double>();
 
             double[] outIonsNoNL;
             MSAMANDA_IONCALCULATION.IonWithNL[] outIonsWithNL;
             MSAMANDA_IONCALCULATION.Modification[] mods = new MSAMANDA_IONCALCULATION.Modification[sequence.Length + 2];
-            foreach (var mod in IonSettings.MODIFICATIONS)
+            foreach (var mod in Modifications)
             {
                 mods[mod.Key + 1] = new MSAMANDA_IONCALCULATION.Modification(title: mod.Key.ToString() + ":" + mod.Value.ToString(),
                                                                              name: mod.Key.ToString() + ":" + mod.Value.ToString(),
