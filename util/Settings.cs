@@ -14,6 +14,7 @@ namespace CandidateSearch.util
         public string MAX_FRAGMENT_CHARGE { get; set; } // default: "+1";
         public int MAX_NEUTRAL_LOSSES { get; set; } // default: 1
         public int MAX_NEUTRAL_LOSS_MODS { get; set; } // default: 2
+        public Dictionary<string, double> MODIFICATIONS { get; set; } // default: empty Dictionary
 
         // config search parameters
         public bool DECONVOLUTE_SPECTRA { get; set; } // default: true
@@ -40,6 +41,7 @@ namespace CandidateSearch.util
             MAX_FRAGMENT_CHARGE = MaxFragmentCharge;
             MAX_NEUTRAL_LOSSES = MaxNeutralLosses;
             MAX_NEUTRAL_LOSS_MODS = MaxNeutralLossMods;
+            MODIFICATIONS = new Dictionary<string, double>();
 
             DECONVOLUTE_SPECTRA = DeconvoluteSpectra;
             DECONVOLUTION_ALG = DeconvolutionAlg;
@@ -50,6 +52,21 @@ namespace CandidateSearch.util
             NORMALIZE = Normalize;
             USE_GAUSSIAN = UseGaussian;
             MODE = Mode;
+        }
+
+        public void addModification(string aminoAcid, double mass)
+        {
+            MODIFICATIONS.Add(aminoAcid, mass);
+        }
+
+        public string modificationsToString()
+        {
+            var sb = new StringBuilder();
+            foreach (var mod in MODIFICATIONS)
+            {
+                sb.Append($"{mod.Key.ToString()}:{mod.Value.ToString()};");
+            }
+            return sb.ToString();
         }
 
         public override string ToString()
@@ -63,6 +80,7 @@ namespace CandidateSearch.util
             sb.Append($"MAX_FRAGMENT_CHARGE: {MAX_FRAGMENT_CHARGE}\n");
             sb.Append($"MAX_NEUTRAL_LOSSES: {MAX_NEUTRAL_LOSSES}\n");
             sb.Append($"MAX_NEUTRAL_LOSS_MODS: {MAX_NEUTRAL_LOSS_MODS}\n");
+            sb.Append($"FIXED_MODIFICATIONS: {modificationsToString()}\n");
             sb.Append($"DECONVOLUTE_SPECTRA: {DECONVOLUTE_SPECTRA}\n");
             sb.Append($"DECONVOLUTION_ALG: {DECONVOLUTION_ALG}\n");
             sb.Append($"DECOY_SEARCH: {DECOY_SEARCH}\n");
@@ -179,6 +197,33 @@ namespace CandidateSearch.util
                             if (ok)
                             {
                                 settings.MAX_NEUTRAL_LOSS_MODS = value;
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("FIXED_MODIFICATIONS"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var mods = values[1].Split(";");
+                            foreach (var mod in mods)
+                            {
+                                var modProps = mod.Split(":");
+                                if (modProps.Length == 2)
+                                {
+                                    if (modProps[0].Trim().Length == 1)
+                                    {
+                                        var ok = double.TryParse(modProps[1], out var value);
+                                        if (ok)
+                                        {
+                                            if (!settings.MODIFICATIONS.ContainsKey(modProps[0]))
+                                            {
+                                                settings.addModification(modProps[0].Trim(), value);
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

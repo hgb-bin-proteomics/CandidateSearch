@@ -16,7 +16,7 @@ namespace CandidateSearch.util
             mass = Mass;
             modifications = Modifications;
             isDecoy = IsDecoy;
-            ions = getIons(Sequence, Mass, IonSettings);
+            ions = getIons(Sequence, Mass, Modifications, IonSettings);
         }
 
         public int[] getEnconding(int massRange = 5000, int massMultiplier = 100)
@@ -57,6 +57,21 @@ namespace CandidateSearch.util
             double[] outIonsNoNL;
             MSAMANDA_IONCALCULATION.IonWithNL[] outIonsWithNL;
             MSAMANDA_IONCALCULATION.Modification[] mods = new MSAMANDA_IONCALCULATION.Modification[sequence.Length + 2];
+            foreach (var mod in IonSettings.MODIFICATIONS)
+            {
+                mods[mod.Key + 1] = new MSAMANDA_IONCALCULATION.Modification(title: mod.Key.ToString() + ":" + mod.Value.ToString(),
+                                                                             name: mod.Key.ToString() + ":" + mod.Value.ToString(),
+                                                                             mono: mod.Value,
+                                                                             avg: mod.Value,
+                                                                             aa: Sequence[mod.Key],
+                                                                             fix: true,
+                                                                             neutralLosses: new double[0],
+                                                                             nTerminal: false,
+                                                                             cTerminal: false,
+                                                                             id: mod.Key.GetHashCode() + mod.Value.GetHashCode(),
+                                                                             protein: false,
+                                                                             maxOccurrence: 3);
+            }
             MSAMANDA_IONCALCULATION.IonCalculator.CalculateIons(out outIonsNoNL, 
                                                                 out outIonsWithNL, 
                                                                 sequence: Encoding.ASCII.GetBytes(Sequence),
