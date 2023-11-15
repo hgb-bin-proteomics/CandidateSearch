@@ -27,7 +27,7 @@ namespace CandidateSearch.util
             {
                 if (ion < massRange)
                 {
-                    encoding.Add((int) (ion * massMultiplier));
+                    encoding.Add((int) Math.Round(ion * massMultiplier));
                 }
             }
 

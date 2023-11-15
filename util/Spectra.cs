@@ -22,7 +22,7 @@
             {
                 if (mz[i] < massRange)
                 {
-                    encoding.Add((int) (mz[i] * massMultiplier));
+                    encoding.Add((int) Math.Round(mz[i] * massMultiplier));
                 }
             }
 
