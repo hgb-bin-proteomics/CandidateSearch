@@ -34,13 +34,15 @@ namespace CandidateSearch.util
             return encoding.ToArray();
         }
 
-        public string toString()
+        public override string ToString()
         {
             string peptide = sequence + "[";
             foreach (var modification in modifications)
             {
-                peptide = peptide + $"{modification.Key}:{modification.Value},";
+                peptide = peptide + $"{modification.Key}:{modification.Value}+";
             }
+
+            peptide = peptide.TrimEnd(new char[] {'+'});
 
             if (isDecoy)
             {

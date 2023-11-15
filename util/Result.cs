@@ -41,7 +41,7 @@
                     var line = scanNr.ToString() + ";";
                     foreach (var peptide in peptides)
                     {
-                        line += (peptide.toString() + ",");
+                        line += (peptide.ToString() + ",");
                     }
                     lines.Add(line);
                 }
