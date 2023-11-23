@@ -94,13 +94,13 @@ namespace MSAMANDA_FASTAPARSER
             var peptides = new List<Peptide>();
             var mods = new Dictionary<int, double>();
 
-            if (settings.MODIFICATIONS.Count > 0)
+            if (settings.FIXED_MODIFICATIONS.Count > 0)
             {
                 for (int i = 0; i < dbPeptide.Sequence.Length; i++)
                 {
-                    if (settings.MODIFICATIONS.ContainsKey(dbPeptide.Sequence[i].ToString()))
+                    if (settings.FIXED_MODIFICATIONS.ContainsKey(dbPeptide.Sequence[i].ToString()))
                     {
-                        mods.Add(i, settings.MODIFICATIONS[dbPeptide.Sequence[i].ToString()]);
+                        mods.Add(i, settings.FIXED_MODIFICATIONS[dbPeptide.Sequence[i].ToString()]);
                     }
                 }
             }
@@ -108,7 +108,80 @@ namespace MSAMANDA_FASTAPARSER
             var peptide = new Peptide(dbPeptide.Sequence, dbPeptide.Mass, mods, settings, isDecoy);
             peptides.Add(peptide);
 
+            if (settings.VARIABLE_MODIFICATIONS.Count > 0)
+            {
+                foreach (var modification in settings.VARIABLE_MODIFICATIONS)
+                {
+                    addPeptidoformsForModification(peptides, modification, settings);
+                }
+            }
+
             return peptides;
+        }
+
+        private static void addPeptidoformsForModification(List<Peptide> peptides,
+                                                           KeyValuePair<string, double> modification,
+                                                           Settings settings)
+        {
+            var peptidoforms = new List<Peptide>();
+
+            foreach (var peptide in peptides)
+            {
+                var possibleModificationSites = new List<int>();
+                for (int i = 0; i < peptide.sequence.Length; i++)
+                {
+                    if (peptide.sequence[i].ToString() == modification.Key)
+                    {
+                        possibleModificationSites.Add(i);
+                    }
+                }
+
+                var possibleCombinations = getAllPossibleCombinations(possibleModificationSites);
+
+                foreach (var combination in possibleCombinations)
+                {
+                    var peptidoform = new Peptide(peptide.sequence,
+                                                  peptide.mass,
+                                                  new Dictionary<int, double>(),
+                                                  settings,
+                                                  peptide.isDecoy);
+
+                    foreach (var mod in peptide.modifications)
+                    {
+                        peptidoform.addModification(mod.Key, mod.Value);
+                    }
+
+
+                    foreach (var position in combination)
+                    {
+                        peptidoform.addModification(position, modification.Value);
+                    }
+
+                    peptidoforms.Add(peptidoform);
+                }
+            }
+
+            peptides.AddRange(peptidoforms);
+        }
+
+        private static List<List<int>> getAllPossibleCombinations(List<int> possibleModificationSites)
+        {
+            var possibleCombinations = new List<List<int>>();
+
+            for (int i = 0; i < (1 << possibleModificationSites.Count); ++i)
+            {
+                var combination = new List<int>();
+                for (int j = 0; j < possibleModificationSites.Count; ++j)
+                {
+                    if ((i & (1 << j)) != 0)
+                    {
+                        combination.Add(possibleModificationSites[j]);
+                    }
+                }
+                possibleCombinations.Add(combination);
+            }
+
+            return possibleCombinations;
         }
 
         private static List<DBProtein> ReadInFasta(string fastaFileName, bool isDecoy)

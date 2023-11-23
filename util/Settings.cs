@@ -14,7 +14,8 @@ namespace CandidateSearch.util
         public string MAX_FRAGMENT_CHARGE { get; set; } // default: "+1";
         public int MAX_NEUTRAL_LOSSES { get; set; } // default: 1
         public int MAX_NEUTRAL_LOSS_MODS { get; set; } // default: 2
-        public Dictionary<string, double> MODIFICATIONS { get; set; } // default: empty Dictionary
+        public Dictionary<string, double> FIXED_MODIFICATIONS { get; set; } // default: empty Dictionary
+        public Dictionary<string, double> VARIABLE_MODIFICATIONS { get; set; } // default: empty Dictionary
 
         // config search parameters
         public bool DECONVOLUTE_SPECTRA { get; set; } // default: true
@@ -41,7 +42,8 @@ namespace CandidateSearch.util
             MAX_FRAGMENT_CHARGE = MaxFragmentCharge;
             MAX_NEUTRAL_LOSSES = MaxNeutralLosses;
             MAX_NEUTRAL_LOSS_MODS = MaxNeutralLossMods;
-            MODIFICATIONS = new Dictionary<string, double>();
+            FIXED_MODIFICATIONS = new Dictionary<string, double>();
+            VARIABLE_MODIFICATIONS = new Dictionary<string, double>();
 
             DECONVOLUTE_SPECTRA = DeconvoluteSpectra;
             DECONVOLUTION_ALG = DeconvolutionAlg;
@@ -54,17 +56,32 @@ namespace CandidateSearch.util
             MODE = Mode;
         }
 
-        public void addModification(string aminoAcid, double mass)
+        public void addFixedModification(string aminoAcid, double mass)
         {
-            MODIFICATIONS.Add(aminoAcid, mass);
+            FIXED_MODIFICATIONS.Add(aminoAcid, mass);
         }
 
-        public string modificationsToString()
+        public void addVariableModification(string aminoAcid, double mass)
+        {
+            VARIABLE_MODIFICATIONS.Add(aminoAcid, mass);
+        }
+
+        public string modificationsToString(bool variable = false)
         {
             var sb = new StringBuilder();
-            foreach (var mod in MODIFICATIONS)
+            if (!variable)
             {
-                sb.Append($"{mod.Key.ToString()}:{mod.Value.ToString()};");
+                foreach (var mod in FIXED_MODIFICATIONS)
+                {
+                    sb.Append($"{mod.Key.ToString()}:{mod.Value.ToString()};");
+                }
+            }
+            else
+            {
+                foreach (var mod in VARIABLE_MODIFICATIONS)
+                {
+                    sb.Append($"{mod.Key.ToString()}:{mod.Value.ToString()};");
+                }
             }
             return sb.ToString();
         }
@@ -80,7 +97,8 @@ namespace CandidateSearch.util
             sb.Append($"MAX_FRAGMENT_CHARGE: {MAX_FRAGMENT_CHARGE}\n");
             sb.Append($"MAX_NEUTRAL_LOSSES: {MAX_NEUTRAL_LOSSES}\n");
             sb.Append($"MAX_NEUTRAL_LOSS_MODS: {MAX_NEUTRAL_LOSS_MODS}\n");
-            sb.Append($"FIXED_MODIFICATIONS: {modificationsToString()}\n");
+            sb.Append($"FIXED_MODIFICATIONS: {modificationsToString(false)}\n");
+            sb.Append($"VARIABLE_MODIFICATIONS: {modificationsToString(true)}\n");
             sb.Append($"DECONVOLUTE_SPECTRA: {DECONVOLUTE_SPECTRA}\n");
             sb.Append($"DECONVOLUTION_ALG: {DECONVOLUTION_ALG}\n");
             sb.Append($"DECOY_SEARCH: {DECOY_SEARCH}\n");
@@ -217,9 +235,36 @@ namespace CandidateSearch.util
                                         var ok = double.TryParse(modProps[1], out var value);
                                         if (ok)
                                         {
-                                            if (!settings.MODIFICATIONS.ContainsKey(modProps[0]))
+                                            if (!settings.FIXED_MODIFICATIONS.ContainsKey(modProps[0]))
                                             {
-                                                settings.addModification(modProps[0].Trim(), value);
+                                                settings.addFixedModification(modProps[0].Trim(), value);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if (line != null && line.StartsWith("VARIABLE_MODIFICATIONS"))
+                    {
+                        var values = line.Split("=");
+                        if (values.Length > 1)
+                        {
+                            var mods = values[1].Split(";");
+                            foreach (var mod in mods)
+                            {
+                                var modProps = mod.Split(":");
+                                if (modProps.Length == 2)
+                                {
+                                    if (modProps[0].Trim().Length == 1)
+                                    {
+                                        var ok = double.TryParse(modProps[1], out var value);
+                                        if (ok)
+                                        {
+                                            if (!settings.VARIABLE_MODIFICATIONS.ContainsKey(modProps[0]))
+                                            {
+                                                settings.addVariableModification(modProps[0].Trim(), value);
                                             }
                                         }
                                     }
