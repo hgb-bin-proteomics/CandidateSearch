@@ -52,6 +52,15 @@ namespace CandidateSearch.util
             return peptide + "]";
         }
 
+        public bool addModification(int position, double mass)
+        {
+            if (modifications.ContainsKey(position))
+                return false;
+
+            modifications.Add(position, mass);
+            return true;
+        }
+
         private List<double> getIons(string Sequence, double Mass, Dictionary<int, double> Modifications, Settings IonSettings)
         {
             var ions = new List<double>();
