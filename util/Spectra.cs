@@ -48,7 +48,7 @@
 
     public static class MGFReader
     {
-        public static List<Spectrum> readMGF(string filename, Settings settings)
+        public static List<Spectrum> readMGF(string filename)
         { 
             var MSAMANDA_spectra = MSAMANDA_MGFPARSER.MGFParser.ParseNextSpectra(filename);
 
@@ -65,19 +65,7 @@
                     intensity.Add(peak.Intensity);
                 }
 
-                var mzArray = mz.ToArray();
-                var intensityArray = intensity.ToArray();
-
-                if (settings.DECONVOLUTE_SPECTRA)
-                {
-                    SpectrumPreprocessor.deconvolute(ref mzArray, 
-                                                     ref intensityArray, 
-                                                     spectrum.Precursor.Charge, 
-                                                     settings.TOLERANCE, 
-                                                     settings.DECONVOLUTION_ALG);
-                }
-
-                spectra.Add(new Spectrum(mzArray, intensityArray, spectrum.ScanNumber));
+                spectra.Add(new Spectrum(mz.ToArray(), intensity.ToArray(), spectrum.ScanNumber));
             }
 
             return spectra;

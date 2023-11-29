@@ -19,11 +19,6 @@ namespace CandidateSearch
                 Console.WriteLine($"Read settings file '{settingsFile}' with the following settings:");
                 Console.WriteLine(settings.ToString());
 
-                if (settings.DECONVOLUTE_SPECTRA)
-                {
-                    settings.MAX_FRAGMENT_CHARGE = "+1";
-                }
-
                 if (settings.MODE.Split("_").First().Trim() == "GPU")
                 {
                     CandidateSearchGPU.Search(spectraFile, databaseFile, settings);
