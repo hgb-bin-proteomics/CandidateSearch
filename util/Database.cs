@@ -153,14 +153,14 @@ namespace CandidateSearch.util
     }
 
     /// <summary>
-    /// Class for reading a fasta file.
+    /// Reader class to read a fasta file.
     /// </summary>
     public static class DatabaseReader
     {
         /// <summary>
         /// Reads and (tryptic) digests the given fasta file into a list of peptides.
         /// </summary>
-        /// <param name="filename">Name of the fasta file.</param>
+        /// <param name="filename">The filename of the fasta file.</param>
         /// <param name="settings">Settings for digestion.</param>
         /// <param name="generateDecoys">Whether or not decoy peptides should be generated.</param>
         /// <returns>The list of peptides resulting from the digestion of the fasta file.</returns>

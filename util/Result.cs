@@ -45,7 +45,7 @@
         /// Exports the results to csv format into a file with the given filename.
         /// </summary>
         /// <param name="filename">The output filename.</param>
-        /// <returns>0 if the export was successful, 1 if was unsuccessful.</returns>
+        /// <returns>0 if the export was successful, 1 if it was unsuccessful.</returns>
         public int export(string filename)
         {
             int status;

@@ -125,9 +125,7 @@ namespace CandidateSearch.util
         public bool addFixedModification(string aminoAcid, double mass)
         {
             if (FIXED_MODIFICATIONS.ContainsKey(aminoAcid))
-            {
                 return false;
-            }
 
             FIXED_MODIFICATIONS.Add(aminoAcid, mass);
             return true;
@@ -142,9 +140,7 @@ namespace CandidateSearch.util
         public bool addVariableModification(string aminoAcid, double mass)
         {
             if (VARIABLE_MODIFICATIONS.ContainsKey(aminoAcid))
-            {
                 return false;
-            }
 
             VARIABLE_MODIFICATIONS.Add(aminoAcid, mass);
             return true;
@@ -212,7 +208,7 @@ namespace CandidateSearch.util
         /// <summary>
         /// Reads a settings file and returns a settings instance with the adjusted parameters.
         /// </summary>
-        /// <param name="filename">The name of the settings file.</param>
+        /// <param name="filename">The filename of the settings file.</param>
         /// <returns>The settings instance generated from the specified settings file.</returns>
         public static Settings readSettings(string filename)
         {

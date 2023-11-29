@@ -1,7 +1,7 @@
 ﻿namespace CandidateSearch.util
 {
     /// <summary>
-    /// Simplified class implemention of a mass spectrum.
+    /// Simplified spectrum class implemention of a mass spectrum.
     /// </summary>
     public class Spectrum
     {
@@ -62,7 +62,7 @@
         /// <summary>
         /// Reads the specified mgf file and returns a list of spectra.
         /// </summary>
-        /// <param name="filename">The name of the mgf file.</param>
+        /// <param name="filename">The filename of the mgf file.</param>
         /// <returns>The list of spectra read from the mgf file.</returns>
         public static List<Spectrum> readMGF(string filename)
         { 
