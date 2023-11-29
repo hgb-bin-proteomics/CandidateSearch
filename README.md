@@ -6,3 +6,5 @@ Implements a search engine that uses [CandidateVectorSearch](https://github.com/
 
 - Only tryptic digestion
 - No N- or C-terminal modifications
+- Only one modification per amino acid
+- Only spectra in centroid mode
