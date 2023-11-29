@@ -4,6 +4,8 @@ namespace CandidateSearch
 {
     /// <summary>
     /// Searching for candidates using VectorSearch.
+    ///     Requires VectorSearch.dll     v1.5.1
+    ///     Requires VectorSearchCUDA.dll v1.4.7
     /// </summary>
     public class CandidateSearch
     {
