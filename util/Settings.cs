@@ -2,35 +2,99 @@
 
 namespace CandidateSearch.util
 {
+    /// <summary>
+    /// Settings for digestion, ion calculation and VectorSearch.
+    /// </summary>
     public class Settings
     {
         // config digestion
+        /// <summary>
+        /// Maximum number of missed cleavages allowed during digestion.
+        /// </summary>
         public int MAX_CLEAVAGES { get; set; } // default: 2
+        /// <summary>
+        /// Minimum peptide length.
+        /// </summary>
         public int MIN_PEP_LENGTH { get; set; } // default: 5
+        /// <summary>
+        /// Maximum peptide length.
+        /// </summary>
         public int MAX_PEP_LENGTH { get; set; } // default: 30
 
         // config ion calculation
+        /// <summary>
+        /// Maximum considered precursor ion charge.
+        /// </summary>
         public int MAX_PRECURSOR_CHARGE { get; set; } // default: 4
+        /// <summary>
+        /// Maximum considered fragment ion charge.
+        /// </summary>
         public string MAX_FRAGMENT_CHARGE { get; set; } // default: "+1";
+        /// <summary>
+        /// Maximum number of considered neutral losses.
+        /// </summary>
         public int MAX_NEUTRAL_LOSSES { get; set; } // default: 1
+        /// <summary>
+        /// Maximum number of considered neutral loss modifications.
+        /// </summary>
         public int MAX_NEUTRAL_LOSS_MODS { get; set; } // default: 2
+        /// <summary>
+        /// Dictionary for fixed modifications that maps amino acids to their possible modification masses.
+        /// </summary>
         public Dictionary<string, double> FIXED_MODIFICATIONS { get; set; } // default: empty Dictionary
+        /// <summary>
+        /// Dictionary for variable modifications that maps amino acids to their possible modification masses.
+        /// </summary>
         public Dictionary<string, double> VARIABLE_MODIFICATIONS { get; set; } // default: empty Dictionary
 
         // config search parameters
+        /// <summary>
+        /// Whether or not decoy search should be performed.
+        /// </summary>
         public bool DECOY_SEARCH { get; set; } // default: true
 
         // config vector search
-        public int TOP_N { get; set; } // default: 100
+        /// <summary>
+        /// The top n candidates that should be returned by the VectorSearch.
+        /// </summary>
+        public int TOP_N { get; set; } // default: 1000
+        /// <summary>
+        /// The tolerance used for the VectorSearch.
+        /// </summary>
         public float TOLERANCE { get; set; } // default: 0.02f
-        public bool NORMALIZE { get; set; } // default: true
+        /// <summary>
+        /// Whether or not scores should be normalized by the VectorSearch.
+        /// </summary>
+        public bool NORMALIZE { get; set; } // default: false
+        /// <summary>
+        /// Whether or not peaks should be modelled as gaussian distributions by the VectorSearch.
+        /// </summary>
         public bool USE_GAUSSIAN { get; set; } // default: true
+        /// <summary>
+        /// The search approach used by the VectorSearch.
+        /// </summary>
         public string MODE { get; set; } // default: CPU_DV
 
+        /// <summary>
+        /// Settings constructor to set the specified search parameters.
+        /// </summary>
+        /// <param name="MaxCleavages">Maximum number of missed cleavages allowed during digestion.</param>
+        /// <param name="MinPepLength">Minimum peptide length.</param>
+        /// <param name="MaxPepLength">Maximum peptide length.</param>
+        /// <param name="MaxPrecursorCharge">Maximum considered precursor ion charge.</param>
+        /// <param name="MaxFragmentCharge">Maximum considered fragment ion charge.</param>
+        /// <param name="MaxNeutralLosses">Maximum number of considered neutral losses.</param>
+        /// <param name="MaxNeutralLossMods">Maximum number of considered neutral loss modifications.</param>
+        /// <param name="DecoySearch">Whether or not decoy search should be performed.</param>
+        /// <param name="TopN">The top n candidates that should be returned by the VectorSearch.</param>
+        /// <param name="Tolerance">The tolerance used for the VectorSearch.</param>
+        /// <param name="Normalize">Whether or not scores should be normalized by the VectorSearch.</param>
+        /// <param name="UseGaussian">Whether or not peaks should be modelled as gaussian distributions by the VectorSearch.</param>
+        /// <param name="Mode">The search approach used by the VectorSearch.</param>
         public Settings(int MaxCleavages = 2, int MinPepLength = 5, int MaxPepLength = 30, 
                         int MaxPrecursorCharge = 4, string MaxFragmentCharge = "+1", int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2,
                         bool DecoySearch = true,
-                        int TopN = 100, float Tolerance = 0.02f, bool Normalize = true, bool UseGaussian = true, string Mode = "CPU_DV")
+                        int TopN = 1000, float Tolerance = 0.02f, bool Normalize = false, bool UseGaussian = true, string Mode = "CPU_DV")
         {
             MAX_CLEAVAGES = MaxCleavages;
             MIN_PEP_LENGTH = MinPepLength;
@@ -52,16 +116,45 @@ namespace CandidateSearch.util
             MODE = Mode;
         }
 
-        public void addFixedModification(string aminoAcid, double mass)
+        /// <summary>
+        /// Add a fixed modification to the fixed modification dictionary.
+        /// </summary>
+        /// <param name="aminoAcid">The amino acid that will be modified.</param>
+        /// <param name="mass">The mass of the modification.</param>
+        /// <returns>True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid.</returns>
+        public bool addFixedModification(string aminoAcid, double mass)
         {
+            if (FIXED_MODIFICATIONS.ContainsKey(aminoAcid))
+            {
+                return false;
+            }
+
             FIXED_MODIFICATIONS.Add(aminoAcid, mass);
+            return true;
         }
 
-        public void addVariableModification(string aminoAcid, double mass)
+        /// <summary>
+        /// Add a variable modification to the variable modification dictionary.
+        /// </summary>
+        /// <param name="aminoAcid">The amino acid that can be modified.</param>
+        /// <param name="mass">The mass of the modification.</param>
+        /// <returns>True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid.</returns>
+        public bool addVariableModification(string aminoAcid, double mass)
         {
+            if (VARIABLE_MODIFICATIONS.ContainsKey(aminoAcid))
+            {
+                return false;
+            }
+
             VARIABLE_MODIFICATIONS.Add(aminoAcid, mass);
+            return true;
         }
 
+        /// <summary>
+        /// Returns a string representation of the modifications.
+        /// </summary>
+        /// <param name="variable">Whether to process fixed or variable modifications.</param>
+        /// <returns>The string representation of the specified modification set.</returns>
         public string modificationsToString(bool variable = false)
         {
             var sb = new StringBuilder();
@@ -82,6 +175,10 @@ namespace CandidateSearch.util
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Returns a string representation of the settings.
+        /// </summary>
+        /// <returns>The string representation of the settings.</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
@@ -107,8 +204,16 @@ namespace CandidateSearch.util
         }
     }
 
+    /// <summary>
+    /// Reader class to read a settings file.
+    /// </summary>
     public static class SettingsReader
     {
+        /// <summary>
+        /// Reads a settings file and returns a settings instance with the adjusted parameters.
+        /// </summary>
+        /// <param name="filename">The name of the settings file.</param>
+        /// <returns>The settings instance generated from the specified settings file.</returns>
         public static Settings readSettings(string filename)
         {
             var settings = new Settings();

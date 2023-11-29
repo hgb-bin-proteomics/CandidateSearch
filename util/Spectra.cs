@@ -1,11 +1,29 @@
 ﻿namespace CandidateSearch.util
 {
+    /// <summary>
+    /// Simplified class implemention of a mass spectrum.
+    /// </summary>
     public class Spectrum
     {
-        public double[] mz;
-        public double[] intensity;
-        public int scanNumber;
+        /// <summary>
+        /// Array containing m/z values of centroid peaks.
+        /// </summary>
+        public double[] mz { get; }
+        /// <summary>
+        /// Array containing intensities of centroid peaks.
+        /// </summary>
+        public double[] intensity { get; }
+        /// <summary>
+        /// The scan number of the spectrum.
+        /// </summary>
+        public int scanNumber { get; }
 
+        /// <summary>
+        /// Constructor to create a new spectrum.
+        /// </summary>
+        /// <param name="Mz">Array containing m/z values of centroid peaks.</param>
+        /// <param name="Intensity">Array containing intensities of centroid peaks.</param>
+        /// <param name="ScanNumber">The scan number of the spectrum.</param>
         public Spectrum(double[] Mz, double[] Intensity, int ScanNumber) 
         {
             mz = Mz;
@@ -14,6 +32,12 @@
             Array.Sort(mz, intensity);
         }
 
+        /// <summary>
+        /// Get the encoding vector of the spectrum.
+        /// </summary>
+        /// <param name="massRange">Maximum m/z that should be considered while encoding. Has to match the specifications of VectorSearch.</param>
+        /// <param name="massMultiplier">Precision of the encoding. Has to match the specifications of VectorSearch.</param>
+        /// <returns>The encoding vector as an integer array.</returns>
         public int[] getEncoding(int massRange = 5000, int massMultiplier = 100)
         {
             var encoding = new List<int>();
@@ -30,24 +54,16 @@
         }
     }
 
-    public class Peak
-    {
-        public double mz { get; set; }
-        public double intensity { get; set; }
-        public int charge { get; set; }
-        public int envelope { get; set; }
-
-        public Peak(double Mz, double Intensity, int Charge, int Envelope)
-        {
-            mz = Mz; 
-            intensity = Intensity; 
-            charge = Charge; 
-            envelope = Envelope;
-        }
-    }
-
+    /// <summary>
+    /// Reader class to read mgf files.
+    /// </summary>
     public static class MGFReader
     {
+        /// <summary>
+        /// Reads the specified mgf file and returns a list of spectra.
+        /// </summary>
+        /// <param name="filename">The name of the mgf file.</param>
+        /// <returns>The list of spectra read from the mgf file.</returns>
         public static List<Spectrum> readMGF(string filename)
         { 
             var MSAMANDA_spectra = MSAMANDA_MGFPARSER.MGFParser.ParseNextSpectra(filename);

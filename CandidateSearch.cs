@@ -2,10 +2,20 @@
 
 namespace CandidateSearch
 {
+    /// <summary>
+    /// Searching for candidates using VectorSearch.
+    /// </summary>
     public class CandidateSearch
     {
+        /// <summary>
+        /// Current version of CandidateSearch.
+        /// </summary>
         public const string version = "1.0.0";
 
+        /// <summary>
+        /// Main function that is executed when CandidateSearch is run.
+        /// </summary>
+        /// <param name="args">Arguments passed via commandline.</param>
         public static void Main(string[] args)
         {
             if (args.Length == 3) {

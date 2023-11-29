@@ -3,8 +3,17 @@ using System.Diagnostics;
 
 namespace CandidateSearch
 {
+    /// <summary>
+    /// Searching for candidates on the GPU.
+    /// </summary>
     public static class CandidateSearchGPU
     {
+        /// <summary>
+        /// Searches the given spectra for peptide candidates of the given database using the given settings on the GPU.
+        /// </summary>
+        /// <param name="spectraFile">Filename of the mgf file containing the MS2 spectra.</param>
+        /// <param name="databaseFile">Filename of the fasta file containing the proteins that should be considered for search.</param>
+        /// <param name="settings">Settings containing parameters for digestion, ion calculation and search.</param>
         public static void Search(string spectraFile, string databaseFile, Settings settings)
         {
             var spectra = MGFReader.readMGF(spectraFile);
@@ -13,6 +22,7 @@ namespace CandidateSearch
             var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: settings.DECOY_SEARCH);
             Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
 
+            // generating the csrColIdx and csrRowoffsets arrays
             int csrColIdxLength = 0;
             foreach (var peptide in peptides)
             {
@@ -39,6 +49,7 @@ namespace CandidateSearch
 
             csrRowoffsets[peptides.Count] = csrColIdxLength;
 
+            // generating the spectraValues and spectraIdx arrays
             int spectraValuesLength = 0;
             foreach (var spectrum in spectra)
             {

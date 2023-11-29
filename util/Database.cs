@@ -2,14 +2,40 @@
 
 namespace CandidateSearch.util
 {
+    /// <summary>
+    /// Simplified peptide class that stores peptide/peptidoform information.
+    /// </summary>
     public class Peptide
     {
-        public string sequence;
-        public double mass;
-        public Dictionary<int, double> modifications;
-        public bool isDecoy;
-        public List<double> ions;
+        /// <summary>
+        /// Amino acid sequence of the peptide.
+        /// </summary>
+        public string sequence { get; }
+        /// <summary>
+        /// Mass of the unmodified peptide.
+        /// </summary>
+        public double mass { get; }
+        /// <summary>
+        /// Dictionary mapping residue positions (0 based) to modification masses.
+        /// </summary>
+        public Dictionary<int, double> modifications { get; }
+        /// <summary>
+        /// Is the peptide a decoy peptide or target peptide.
+        /// </summary>
+        public bool isDecoy { get; }
+        /// <summary>
+        /// List of theoretical ion m/z values.
+        /// </summary>
+        public List<double> ions { get; }
 
+        /// <summary>
+        /// Constructor for a new peptide/pepidoform.
+        /// </summary>
+        /// <param name="Sequence">Sequence of amino acids.</param>
+        /// <param name="Mass">Mass of the unmodified peptide.</param>
+        /// <param name="Modifications">Dictionary that maps amino acid positions (0 based) to modification masses.</param>
+        /// <param name="IonSettings">Settings used for ion calculation.</param>
+        /// <param name="IsDecoy">Whether or not the peptide is a decoy peptide.</param>
         public Peptide(string Sequence, double Mass, Dictionary<int, double> Modifications, Settings IonSettings, bool IsDecoy)
         {
             sequence = Sequence;
@@ -19,6 +45,12 @@ namespace CandidateSearch.util
             ions = getIons(Sequence, Mass, Modifications, IonSettings);
         }
 
+        /// <summary>
+        /// Get the encoding vector of the peptide.
+        /// </summary>
+        /// <param name="massRange">Maximum m/z that should be considered while encoding. Has to match the specifications of VectorSearch.</param>
+        /// <param name="massMultiplier">Precision of the encoding. Has to match the specifications of VectorSearch.</param>
+        /// <returns>The encoding vector as an integer array.</returns>
         public int[] getEnconding(int massRange = 5000, int massMultiplier = 100)
         {
             var encoding = new List<int>();
@@ -34,6 +66,10 @@ namespace CandidateSearch.util
             return encoding.ToArray();
         }
 
+        /// <summary>
+        /// Constructs a string representation of the peptide.
+        /// </summary>
+        /// <returns>The string representation of the peptide.</returns>
         public override string ToString()
         {
             string peptide = sequence + "[";
@@ -52,6 +88,12 @@ namespace CandidateSearch.util
             return peptide + "]";
         }
 
+        /// <summary>
+        /// Adds a modification to the peptide if the peptide isn't already modified at that position.
+        /// </summary>
+        /// <param name="position">The position (0 based) of the modification.</param>
+        /// <param name="mass">The modification mass.</param>
+        /// <returns>True if the modification was added, false if there is already a modification on the specified residue.</returns>
         public bool addModification(int position, double mass)
         {
             if (modifications.ContainsKey(position))
@@ -61,6 +103,14 @@ namespace CandidateSearch.util
             return true;
         }
 
+        /// <summary>
+        /// Calculates theoretical ion m/z values for the peptide.
+        /// </summary>
+        /// <param name="Sequence">Sequence of amino acids.</param>
+        /// <param name="Mass">Mass of the unmodified peptide.</param>
+        /// <param name="Modifications">Dictionary that maps amino acid positions (0 based) to modification masses.</param>
+        /// <param name="IonSettings">Settings used for ion calculation.</param>
+        /// <returns>A list of theoretical ion m/z values.</returns>
         private List<double> getIons(string Sequence, double Mass, Dictionary<int, double> Modifications, Settings IonSettings)
         {
             var ions = new List<double>();
@@ -75,7 +125,7 @@ namespace CandidateSearch.util
                                                                              mono: mod.Value,
                                                                              avg: mod.Value,
                                                                              aa: Sequence[mod.Key],
-                                                                             fix: true,
+                                                                             fix: true, // this should technically be true/false depending on modification
                                                                              neutralLosses: new double[0],
                                                                              nTerminal: false,
                                                                              cTerminal: false,
@@ -102,8 +152,18 @@ namespace CandidateSearch.util
         }
     }
 
+    /// <summary>
+    /// Class for reading a fasta file.
+    /// </summary>
     public static class DatabaseReader
     {
+        /// <summary>
+        /// Reads and (tryptic) digests the given fasta file into a list of peptides.
+        /// </summary>
+        /// <param name="filename">Name of the fasta file.</param>
+        /// <param name="settings">Settings for digestion.</param>
+        /// <param name="generateDecoys">Whether or not decoy peptides should be generated.</param>
+        /// <returns>The list of peptides resulting from the digestion of the fasta file.</returns>
         public static List<Peptide> readFASTA(string filename, Settings settings, bool generateDecoys = false)
         {
             // digestion parameters set in method
