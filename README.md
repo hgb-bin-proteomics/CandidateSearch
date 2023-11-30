@@ -10,7 +10,7 @@ is provided. The aim of *CandidateSearch* is to reduce the search space for a gi
 candidates. It is **NOT** meant to be a standalone search engine for peptide/peptidoform identification.
 
 A simplified break down of the *CandidateSearch* algorithm is given in the following:
-- Reading the given MS2 spectra from the mgf file.
+- Read the given MS2 spectra from the mgf file.
 - Generate the encoding vectors for each spectrum.
 - Transform spectrum encoding vectors into the representation needed for *CandidateVectorSearch*.
 - Read the given fasta file.
@@ -49,9 +49,9 @@ The settings file accepts the following parameters:
 - MAX_FRAGMENT_CHARGE: The maximum considered fragment ion charge. (string, default = +1)
 - MAX_NEUTRAL_LOSSES: The maximum number of neutral losses considered during ion calculation. (integer, default = 1)
 - MAX_NEUTRAL_LOSS_MODS: The maximum number of neutral loss modifications considered during ion calculation. (integer, default = 2)
-- FIXED_MODIFICATIONS: Fixed modifications that should be considered during search given as `(char)amino_acid:(double):modification_mass`. An example
+- FIXED_MODIFICATIONS: Fixed modifications that should be considered during search given as `(char)amino_acid:(double)modification_mass`. An example
 would be carbamidomethylation of cysteine, which would be denoted as `C:57.021464;`. Several fixed modifications can be provided. (string, default = None)
-- VARIABLE_MODIFICATIONS: Variable modifications that should be considered during search given as `(char)amino_acid:(double):modification_mass`. An example
+- VARIABLE_MODIFICATIONS: Variable modifications that should be considered during search given as `(char)amino_acid:(double)modification_mass`. An example
 would be oxidation of methionine, which would be denoted as `M:15.994915;`. Several variable modifications can be provided. If no modifications are
 given, *CandidateSearch* will return the best scoring unmodified peptidoforms for a given spectrum. (string, default = None)
 - DECOY_SEARCH: Whether decoy search should be performed or not. Accepts `true` or `false`. (bool, default = true)
