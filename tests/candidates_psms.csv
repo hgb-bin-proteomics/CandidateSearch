@@ -1,0 +1,9 @@
+﻿top_n,method,coverage,coverage_perc
+1000,peptide,0.979648672,97.96
+500,peptide,0.97229363,97.23
+100,peptide,0.942587832,94.26
+50,peptide,0.926520994,92.65
+1000,peptidoform,0.970936875,97.09
+500,peptidoform,0.959797201,95.98
+100,peptidoform,0.925235647,92.52
+50,peptidoform,0.90367038,90.37
