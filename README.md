@@ -126,6 +126,12 @@ therefore this implementation comes with a few limitations:
 - We currently have only implemented support for one possible modification per amino acid.
 - We only support spectra in centroid mode (we can't really do anything with spectra in profile mode).
 
+## Results
+
+Example results of *CandidateSearch* and results analysis are given in `tests`.
+
+![Results on a HeLa dataset](tests/results.svg)
+
 ## Known Issues
 
 [List of known issues](https://github.com/hgb-bin-proteomics/CandidateSearch/issues)
