@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" kind="class"><name>MSAMANDA_MGFPARSER::AMassCentroid</name>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1aaf474821ab85be2a554631851ffe94f0" kind="property"><name>Position</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1a6d36b227814d1991d6c7cbd0c09a2bab" kind="property"><name>Intensity</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1add51145ced3ae4c1153b1dbd62ab0fcb" kind="property"><name>Charge</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1a7588fb11b3b8d217a340ed7e6850fe5c" kind="function"><name>Clone</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1abb38e0448f7ede9dd802e1d051492ada" kind="function"><name>Clone</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kind="class"><name>MSAMANDA_CHEMICALUTILS::AminoAcid</name>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a35784ba6da357d01de0d5a8c169dd0a4" kind="variable"><name>Name</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a81296bd932a571d4fd040c3d6471bcbe" kind="variable"><name>ThreeLetterCode</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1adb12d357abc667a87591931109208f8c" kind="variable"><name>OneLetterCode</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a8f1d40d1e35e62ecdf4c9014045bb4c1" kind="variable"><name>ImmoniumMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a0a6ee0f098da7f49fb422c5f886acccf" kind="variable"><name>AverageMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a3f216c5747a379270a936c20aa375686" kind="variable"><name>MonoisotopicMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a924850a14d9ab9dd5872a51274c1e464" kind="function"><name>Mass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1acd1f4e1d4b706283fe85fadb7e021fc8" kind="function"><name>AminoAcid</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a5decc5ae3f12c101742ae096be088408" kind="function"><name>AminoAcid</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1_candidate_search" kind="class"><name>CandidateSearch::CandidateSearch</name>
+    <member refid="class_candidate_search_1_1_candidate_search_1abdc2e237c89f801ca9f47ba447710281" kind="variable"><name>version</name></member>
+    <member refid="class_candidate_search_1_1_candidate_search_1a0958147526f9d44e92d4f23315d95d74" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1_candidate_search_c_p_u" kind="class"><name>CandidateSearch::CandidateSearchCPU</name>
+    <member refid="class_candidate_search_1_1_candidate_search_c_p_u_1ac245be7d8f9148ab70f5307e232df628" kind="function"><name>Search</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1_candidate_search_g_p_u" kind="class"><name>CandidateSearch::CandidateSearchGPU</name>
+    <member refid="class_candidate_search_1_1_candidate_search_g_p_u_1a885ff5845f57c03163c58683a57dc684" kind="function"><name>Search</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kind="class"><name>MSAMANDA_CHEMICALUTILS::ChemicalElement</name>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element_1a32555377bb86535a30d37a7633b62020" kind="variable"><name>Name</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element_1af445e5ca22ac34839b77a2dc517cda18" kind="variable"><name>FullName</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element_1a465b4f89cc783dc1080f1d8771daaf30" kind="variable"><name>MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element_1a27f77e2c03d538ba45def320e56c580b" kind="variable"><name>AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element_1a36ff01d081c6c26b38be00da18fcf0fd" kind="function"><name>ChemicalElement</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils" kind="class"><name>MSAMANDA_CHEMICALUTILS::ChemicalUtils</name>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1aa61500f3f5aee2cf89cc91cf37c885f6" kind="variable"><name>Chemicals</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ab5dbb55e2c428b5bbdd6f8356838957d" kind="variable"><name>AminoAcids</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a0df129104e63a5599b0d1ca474c57e02" kind="variable"><name>Combinations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a1e00d0d0dfd04bd3701f359dde5a1a48" kind="function"><name>GetMassIndex</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a8601e190c7f4f10ff9479d7aa9706d1d" kind="function"><name>GetMassDoubleKey</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a0aed075071151e16669bacbf57aa7ee7" kind="function"><name>CalculatePeptideMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ae32cf7044b59e7cc38b4eccc0e60fd92" kind="function"><name>CalculatePrecursorMassToCharge</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a60e26abec5f2ba5e718ece45c7ec9742" kind="function"><name>CalculateUnchargedMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1aa38d4e5b22d5890262b96969148d0133" kind="function"><name>GetAscendingPermutations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ad40303cdd8ccb0e947c64b160267eec2" kind="function"><name>CalculateMassDiffInPPM</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_database_reader" kind="class"><name>CandidateSearch::util::DatabaseReader</name>
+    <member refid="class_candidate_search_1_1util_1_1_database_reader_1ac89bb2fc9af1fa962dcf2ec0ef74f36e" kind="function"><name>readFASTA</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide" kind="class"><name>MSAMANDA_FASTAPARSER::DBPeptide</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1ab41c20ae41623afea0e9b0e474d6e326" kind="property"><name>Mass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1aef0ae83f37968fd1e03bf5066d438f73" kind="property"><name>MassInt</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1a57efa9d0615145197c38bb4e3da0c2f8" kind="property"><name>Sequence</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1a974fd696fd4c86a23e3ef7d9817df0e9" kind="property"><name>ProteinStartFlag</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1adf6f9369be0221380699d241ec49c377" kind="property"><name>DbProtRefs</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1af2b214079d0fba0d1f97c39c3df5d357" kind="property"><name>SequenceOriginal</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1a11321fb97e5ea2a7f341d2b9475f5f54" kind="property"><name>MissedCleavages</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1a260ba8a36178a8e0126b246096f5de0a" kind="property"><name>SeqHash</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1a153c66c1c6f78d19171a0c4294483afb" kind="function"><name>DBPeptide</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1aae0cc901872a32a872e4a157473e18d3" kind="function"><name>DBPeptide</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1ac72c2a87ff1ead73e4fa665ee16d753e" kind="function"><name>CreateMD5</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide_1ac8f973de99bf196b717c6ebcc654a963" kind="function"><name>AddToProtRefs</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein" kind="class"><name>MSAMANDA_FASTAPARSER::DBProtein</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1a1f24d37d7e94b5ec5b6748cca1e211e1" kind="property"><name>Sequence</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1ab3cbba81dbf5bede313d57aef5110459" kind="property"><name>IsDecoy</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1ab85f9d4be84c2d72f1f37144e8bc1b4c" kind="property"><name>DbProtRef</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1a641ea54f39cc99fc70ced79e546c4ed9" kind="function"><name>DBProtein</name></member>
+  </compound>
+  <compound refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref" kind="struct"><name>MSAMANDA_FASTAPARSER::DBProtRef</name>
+    <member refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref_1ab834517a9242bd06ba44af803d2dc632" kind="property"><name>ProtId</name></member>
+    <member refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref_1a9c80fdd3eec4e32a3513cea856cc98ce" kind="property"><name>MappingId</name></member>
+    <member refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref_1a4d315e6b0b3a3fcc26ca4bc994ff3738" kind="property"><name>ProtIdentifier</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_digester_d_b" kind="class"><name>MSAMANDA_FASTAPARSER::DigesterDB</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_digester_d_b_1a0a58dd2995dda503aaed4e9c656c7e00" kind="property"><name>DbPeptidesDictMassKey</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_digester_d_b_1a837d77fd027d6c5910c5629a8fdeb863" kind="function"><name>DigesterDB</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme" kind="class"><name>MSAMANDA_FASTAPARSER::Enzyme</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1ab64a550763e9ae697c63ba7cba6f5049" kind="enum"><name>CLEAVAGE_SPECIFICITY</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1ab64a550763e9ae697c63ba7cba6f5049aba7de5bc6888294e5884b024a4c894f1" kind="enumvalue"><name>FULL</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1ab64a550763e9ae697c63ba7cba6f5049a69465caf22e5d212cbe4bbc87b1bf770" kind="enumvalue"><name>SEMI</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1ab64a550763e9ae697c63ba7cba6f5049a04f723517b551674edbee07eb60db640" kind="enumvalue"><name>SEMI_N</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1ab64a550763e9ae697c63ba7cba6f5049a858bf726ccc22e9b92105192b7af5485" kind="enumvalue"><name>SEMI_C</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1a2591a0ae0036a1823e2db04b77274e5c" kind="property"><name>CleavageSites</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1aa317cff7a350aa738c550ce44adf8596" kind="property"><name>CleavageInhibitors</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1a75280c963dc555c18a64985e9ca75bc9" kind="property"><name>Specificity</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1acb22f23c2aa8320a726b28fdcc0a6d72" kind="property"><name>Offset</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1a5b840594911f34204f3f48d752bdbf3b" kind="property"><name>Name</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1aeba34054c4bb746119bfcc2ec9147733" kind="property"><name>TheRegex</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1aa64af4012d525e728aa663e7e3ed50ce" kind="property"><name>regexInit</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme_1abdd29f6f27999d61f6678835d2d0c562" kind="function"><name>Enzyme</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser" kind="class"><name>MSAMANDA_FASTAPARSER::FASTAParser</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1af19588fb0930e9a734d68d9dfc554be1" kind="function"><name>DigestFasta</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1ab492543db7e3c29406c1f0bb3e6fc76d" kind="function"><name>ReverseSequence</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1a85c1f0ba30f89859af7698111e0e6959" kind="function"><name>DigestProteins</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1acef8b1aa00775f6b8e06b609e94efc7d" kind="function"><name>GetPeptidoforms</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1a82e7522466a734b4db8e137a9f4d458c" kind="function"><name>addPeptidoformsForModification</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1a383054d8279c7edce1f40f61975eba93" kind="function"><name>getAllPossibleCombinations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1a5f37362d1fd6ec8133ffdaf2f03256e5" kind="function"><name>ReadInFasta</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser_1aedc39e973ac5c21feb6ec00369a7da64" kind="function"><name>GenerateDbProtein</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods" kind="class"><name>MSAMANDA_FASTAPARSER::HelperMethods</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods_1ac539d88f569ccf6eea9d4bbdd7f364cd" kind="function"><name>FindPeptideWithSameHash</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods_1ae9c5a59636f290c0b2619bb9b6c092b8" kind="function"><name>IsBetweenExcludeBounds</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods_1ae10d28072250db1d786cde1b4209a314" kind="function"><name>IsBetweenIncludeBounds</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods_1a7c545d4b7d074d602bd627d64f8bbfe1" kind="function"><name>MergeToDBDictionaries</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods_1af488a50efa312e2af4a32908197e2099" kind="function"><name>FindPeptideEqualTo</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_helper_methods_1a518c4af96a3377af46a8276e729bbefb" kind="function"><name>DBPeptideEquals</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting" kind="class"><name>MSAMANDA_IONCALCULATION::InstrumentSetting</name>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a1f07e48c4901a1ebebe33aa6ce7bacc2" kind="property"><name>Name</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ac0b2a1ed419bc2a4497b56a204e3ff9b" kind="property"><name>UseAIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab39d6b2f106936e5447fbeffec522746" kind="property"><name>UseBIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a8c54901d646a7286b80f69df59c72663" kind="property"><name>UseYIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1afbcd23cb8822e51494bb6c65ea5e3499" kind="property"><name>UseWaterLosses</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a0510b0637d862e0656b318998250a8f2" kind="property"><name>UseAmmoniaLosses</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a776b01763f6eb421e35f5ccca7a9eae0" kind="property"><name>UseImmoniumIons</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a2bab214cb33758dbddb0e02b4305fdb6" kind="property"><name>UseZIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a23709fd292fbcab1e5f5416c667169e2" kind="property"><name>UseZPlusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad13b950acfb75d4490452fe5031c58b3" kind="property"><name>UseZPlusTwoHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a683b4e5bb2180c54bb701657658a87c6" kind="property"><name>UseXIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1aa63361c4ab100dba2e96b834cf216bb1" kind="property"><name>UseCIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1aa7d6516e131fef9a4aeb4b270fb168db" kind="property"><name>UseInternalFragments</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab7f371b2d94baaf0cd777ee32155f741" kind="property"><name>UseAPlusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1adf8caa2ceab9104d887f252054f8f3e9" kind="property"><name>UseAMinusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a461c731233a7623df3413969f3dd61cb" kind="property"><name>UseBPlusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a22ec59f75c5cd99386cdadff22a1d778" kind="property"><name>UseBMinusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad4c8473f9fdd59afe82e40230ee7f3f4" kind="property"><name>UseCPlusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a4b54d4cfc1754088eaab9521afdac4e6" kind="property"><name>UseCMinusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad0f355fd26dd4d5722d9f126d01c9667" kind="property"><name>UseXPlusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ac8aedf68d0f49abc91c4e477497efb19" kind="property"><name>UseXMinusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab6487e8fe3650594ddde957f2b40ffb1" kind="property"><name>UseYPlusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a9e3bd361419543cc9700798868553550" kind="property"><name>UseYMinusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a497efb5c5515a019c118930e9773dfd3" kind="property"><name>UseZMinusHIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a4e454bbbe043e39ad486e583cd71e2a4" kind="function"><name>InstrumentSetting</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a451147c24069856babd5e53b10efa90c" kind="function"><name>Clone</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator" kind="class"><name>MSAMANDA_IONCALCULATION::IonCalculator</name>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1adf0d48a17a1805ea59a6dd85197dd038" kind="variable"><name>massH_MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a9cdf292065ec60dea93a6c34d01de914" kind="variable"><name>massProton_MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1aa5c8d0598e9a191b8bd3e621b27a4cb7" kind="variable"><name>massO_MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1ad93c30ff4048a7bd3d0843284036b696" kind="variable"><name>massC_MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1acfa4e2fd9144144923ae9e988e0df754" kind="variable"><name>massN_MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a058d8a33ca6a6138aadc367639daacef" kind="variable"><name>massH_AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a06d92df2cbfaf2af69cb6b900e5f4333" kind="variable"><name>massProton_AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a5730b920e8c7b67e3131bbdb5a2c3dff" kind="variable"><name>massO_AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a7f804c2db2d7880c7dd55c54b07278ad" kind="variable"><name>massC_AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a22d656a1f356a46c132371d221e96e6f" kind="variable"><name>massN_AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1af22e57591f64678ef8b390e1324d4796" kind="function"><name>CalculateIons</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a911d5b286971b60df4617b4102d5b4d4" kind="function"><name>FastSort</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1ac249d363665c241e06b6e3a29dda22d4" kind="function"><name>CalculateAllInternalCombinations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1af6a2071714f082cb54111100e184bb43" kind="function"><name>CalculateIon</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1afaef0cbbcda7f9433697d210652720ff" kind="function"><name>CalculateHigherChargedIons</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a5e7103cb61d0fe10a2e924238bf4afd8" kind="function"><name>AddHigherChargedIons</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1ad2764cfc9ad5a8cfae21504c67aa1dd7" kind="function"><name>CalculatePossibleNeutralLosses</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a2b9823e3de91ef699a7a0153076bb60f" kind="function"><name>InRange</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1ad137b8af36f041739f1701f9eb814759" kind="function"><name>GetUniqueIonsSorted</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator_1a817b47548a7830646c42eaa97e18f1b5" kind="function"><name>doQuicksort</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_mass_stabilizer" kind="class"><name>MSAMANDA_IONCALCULATION::IonMassStabilizer</name>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_mass_stabilizer_1a14e37ed9b170b26923289f0cd6e6e0e1" kind="variable"><name>SignificantBitsStabilizer</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_mass_stabilizer_1a09ec822331295ff1bea85ded4bb76d33" kind="variable"><name>RoundingAdditionStabilizer</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_mass_stabilizer_1a22c3775b3c89afe32a4a7b5ec42048ac" kind="variable"><name>ClearBitsStabilizerMask</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_mass_stabilizer_1a3f40c7638d0b7758e0ce381137180136" kind="function"><name>Stabilize</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_with_n_l" kind="class"><name>MSAMANDA_IONCALCULATION::IonWithNL</name>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_with_n_l_1a51cfddfe54647ec830f83997c2dd5038" kind="property"><name>Mz</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_with_n_l_1a5b38422a20a02d1688593b5cc5f0232b" kind="function"><name>IonWithNL</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser" kind="class"><name>MSAMANDA_MGFPARSER::MGFParser</name>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1af0b65e978df3ea571a6479b02cb50295" kind="function"><name>ParseNextSpectra</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1aa2e270578597bd337e236c013e7a00f3" kind="function"><name>GenerateFragmentPeak</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a722dedf6f4825f4a093a6a0fefa938d8" kind="function"><name>GenerateSpectrum</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a6e3f8aabad7805790c855c28fe6b125b" kind="function"><name>ParseIntensity</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a5c4a77ce9185b36530de075645daa42d" kind="function"><name>ParseMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a3a9ee12a3975fdcd6ed41487ff74d08a" kind="function"><name>ParseCharge</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a69fc9935cd909df789f44547d27790a5" kind="function"><name>ParseRt</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a5d911c81abdd031e073fb892465c2baa" kind="function"><name>ParseScanNumber</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1adb4124bf920cc964f7f3b41e3b451df7" kind="function"><name>ParseMOverZ</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a305564cbdca05ce12219e18e3bea3aa3" kind="function"><name>LineCanBeIgnored</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_m_g_f_reader" kind="class"><name>CandidateSearch::util::MGFReader</name>
+    <member refid="class_candidate_search_1_1util_1_1_m_g_f_reader_1acdbd067692b8d0875fc7f1750d712df8" kind="function"><name>readMGF</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification" kind="class"><name>MSAMANDA_IONCALCULATION::Modification</name>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a72395aa2e0037e4403ab876a12ca2db1" kind="variable"><name>Title</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ae1bdcfdb3a96a987decd1454ed7b1168" kind="variable"><name>FullName</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a363aef0e592c5bb1973ee105023c933c" kind="variable"><name>AA</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abbf1907d006712238bff9a620985f8af" kind="variable"><name>MonoMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1aa037450aa5f895ea09027e79b40bf0ff" kind="variable"><name>AvgMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ade2b3b43343d0afc4923d6457a7d0a3b" kind="property"><name>NeutralLosses</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abbb4f3ea3d278a0c3607df92f25919ac" kind="property"><name>NTerminal</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ad24a270cbad631baedb61b9819e8a4ad" kind="property"><name>CTerminal</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1aac8a22b90d33db30180f724d15d53c45" kind="property"><name>ProteinTerminus</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a555a1e487da7a53b1ddf8eb07f941c67" kind="property"><name>MaxOccurrence</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a1d14e14f87d1dba42095210422e04ca8" kind="property"><name>ID</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a2aac29387c05d35661fdb271ab779d7a" kind="property"><name>Fixed</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abce1d9ff982ffe45ae2a741199c79c67" kind="property"><name>SemiFixed</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a531fd4b21eec8ee13232fc6f69f1ef1a" kind="function"><name>Mass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a167883779fa5b4e1b1fcc18de7961444" kind="function"><name>Modification</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a2d9d0b39d349e130c9acd44c80a401b0" kind="function"><name>Modification</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ab1257ceec44156ec2616f9b9b7937da8" kind="function"><name>Modification</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1af4f09edb552b33c3a2dcffd037c8b0d9" kind="function"><name>ToString</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a8af28f338a1cd3672a497bcf8a105e66" kind="function"><name>GetSaveString</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_peptide" kind="class"><name>CandidateSearch::util::Peptide</name>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a3424bc4212221bf532ce55c28f79d570" kind="property"><name>sequence</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a38491e7ee736c367e8a797e7ae514839" kind="property"><name>mass</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a9fafee00d878be4c9abc9086042fec26" kind="property"><name>modifications</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a2222f189f6f9a88b4b02f933526fa386" kind="property"><name>isDecoy</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1ac412ca5d6a9569cb5add4ccfc7c5b423" kind="property"><name>ions</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a69162c33e1d4143bc2f6cc2854ca0e63" kind="function"><name>Peptide</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a912555eae82d8449966a0cfc00282f06" kind="function"><name>getEnconding</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1ae79e95d2b5cf5fa62545cf9dc8b5cd75" kind="function"><name>ToString</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1a272c3f96bbfe2e1ddcf1b9498e06192c" kind="function"><name>addModification</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_peptide_1aedb4f82d2069a7258c3e656a8c68acf5" kind="function"><name>getIons</name></member>
+  </compound>
+  <compound refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1_1_peptide_info" kind="struct"><name>MSAMANDA_FASTAPARSER::ProteinDigester::PeptideInfo</name>
+    <member refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1_1_peptide_info_1abfb999261620fe524e32a624bf8102cb" kind="variable"><name>Start</name></member>
+    <member refid="struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1_1_peptide_info_1a922804e80a6ab66727f1e3a686a68020" kind="variable"><name>MissedCleavages</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations" kind="class"><name>MSAMANDA_CHEMICALUTILS::Permutations</name>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1aa959f2d0c2657f926daaa018743dddc9" kind="property"><name>N</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a476ea94bd3b4c150d185f883603b9ed5" kind="property"><name>K</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a94fa8662956bc93f25a332ad0409119a" kind="property"><name>Elements</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a887d73ba5900b15bfe1ed87dbf0b79db" kind="function"><name>Permutations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a2b0ef1f6b7618b98d8fbc82d633bf6a1" kind="function"><name>Permutations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a129a5a849da5b6a3fd78dee1e05ef8b1" kind="function"><name>Successor</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a70a82c21124569845555184696145d34" kind="function"><name>CalculatePermutations</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a77e76e3a1d2fefb5eb76d6338d12f518" kind="function"><name>Equals</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor" kind="class"><name>MSAMANDA_MGFPARSER::Precursor</name>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor_1a7398f121b14de28247f32866ae5c001d" kind="property"><name>MOverZ</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor_1a0bba42931da5aa82a6f53e45fcc6d9af" kind="property"><name>UnChargedMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor_1a92c3e86264adeb85b6ad8e00bc7fb18c" kind="property"><name>Intensity</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor_1adec4f9fce0f1b629e5d0731c25fa7d1a" kind="property"><name>Charge</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor_1a621c51dc0003cb747e27752b0c6ed8ee" kind="property"><name>Rank</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor_1ae2cb93a04a5662595b5292979575655b" kind="function"><name>SetMassCharge</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester" kind="class"><name>MSAMANDA_FASTAPARSER::ProteinDigester</name>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a4394806fedde7321d71322634afebdcc" kind="variable"><name>_enzyme</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1aaed2f3a7cf5d275856ada2c3b595629e" kind="variable"><name>_missedCleavages</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1af399230cecc5eaf78fe8744e3dc84ea1" kind="variable"><name>_useMonoisotopicMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1af3180776e559da22b01785a3ec180419" kind="variable"><name>_minPepLength</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a50570ef6e83f633306232fd0e7c0c463" kind="variable"><name>_maxPepLength</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a1388eb6207ea5391b723873c28a1a842" kind="variable"><name>_dbProtein</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a88ba557209d2999a7353446aef4c221f" kind="variable"><name>_dbPeptides</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1ae63bc1852e6075bcfe6be6bbf0ecb2d7" kind="function"><name>ProteinDigester</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a14795bc10bdd58c20b7547802cf84861" kind="function"><name>DigestProteinIntoList</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a84be5f3f6f373b191c2d9547a3c787f4" kind="function"><name>DigestSingleProtein</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a8bd2eb97f90959010483faa12f43e08e" kind="function"><name>DigestSingleProteinWithNoEnzyme</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1abb58f333a68b7aac7fd036a306aeac83" kind="function"><name>SaveSinglePeptide</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a9c63932f6609f703a3fcc4724bbaf16d" kind="function"><name>SavePeptide</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1ac7b2b57bf1ca3d792598e2865d2d1be6" kind="function"><name>CreatePeptide</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1aebce9940050f1f56c207ee1a78f0c854" kind="function"><name>CalculateMass</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a3436a5018c9aad23507f698393c57280" kind="function"><name>FinalCalculation</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a18ff4f00076baea04a6fc8e21d595075" kind="function"><name>GenerateCombinationsForX</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a44c1357faa63b5319453c6a3e76f1ccb" kind="function"><name>SplitProtein</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1acd38720fee230b254e9af02e98135457" kind="function"><name>IsProteinStart</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a50fe21b249e84bf54e72b848cac16a7f" kind="function"><name>IsProteinStart</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_result" kind="class"><name>CandidateSearch::util::Result</name>
+    <member refid="class_candidate_search_1_1util_1_1_result_1a80d0c6d428f395b91034a3d4f14a42b9" kind="property"><name>result</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_result_1a3629c97881b29058d9c800caa3f8e270" kind="function"><name>Result</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_result_1ae88683cd96ea829e0b6f915bd0af4c7c" kind="function"><name>export</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_settings" kind="class"><name>CandidateSearch::util::Settings</name>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a00a142b1e6640660be062ffa36223d4a" kind="property"><name>MAX_CLEAVAGES</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a909e8315b369449767cbea111ce0c02e" kind="property"><name>MIN_PEP_LENGTH</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a9808400ce97d1831df67e5b88e4a11c2" kind="property"><name>MAX_PEP_LENGTH</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1abb4b3918df831cae4454968fd6f4c4af" kind="property"><name>MAX_PRECURSOR_CHARGE</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a3039c976b8c250e0b7c905aa3dce54aa" kind="property"><name>MAX_FRAGMENT_CHARGE</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1ac075b70ec6f765acbd72a1e07bde1b4a" kind="property"><name>MAX_NEUTRAL_LOSSES</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1af269e68fbdc9d6658ed43a9b8573cbb0" kind="property"><name>MAX_NEUTRAL_LOSS_MODS</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a255ab023ca918fb6799dd3fb6a218f14" kind="property"><name>FIXED_MODIFICATIONS</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a8a49143cc4dd41c584106027cf3ad0b6" kind="property"><name>VARIABLE_MODIFICATIONS</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1acd720f20a43d4920aadcefadec7db6b6" kind="property"><name>DECOY_SEARCH</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a03baea82e7985ea28efeb17445fa69c3" kind="property"><name>TOP_N</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a99ffaec52ea40c127141fc394218a190" kind="property"><name>TOLERANCE</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a88eefcbe9bfd476fa4e22bf62db2e21d" kind="property"><name>NORMALIZE</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1ac93b93a3fb5b2e7254a8671ef3de50dc" kind="property"><name>USE_GAUSSIAN</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a4b1c991d1329b6d086f2394c69c6da8a" kind="property"><name>MODE</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1aac628d9be9dcd4b5255a0ff509fc09ec" kind="function"><name>Settings</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1aa8fe5da925a1b23f5b0f5297a68b6845" kind="function"><name>addFixedModification</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a7674e2e0c8ba7884e2cf52c183a3ab6b" kind="function"><name>addVariableModification</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1ae130cd4713873e35368c0dcab29b7a66" kind="function"><name>modificationsToString</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_settings_1a9f6a9eca4f8a69373ab69aefd0963775" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_settings_reader" kind="class"><name>CandidateSearch::util::SettingsReader</name>
+    <member refid="class_candidate_search_1_1util_1_1_settings_reader_1a70b00ccb0bf513988e75ab1c43a230af" kind="function"><name>readSettings</name></member>
+  </compound>
+  <compound refid="class_candidate_search_1_1util_1_1_spectrum" kind="class"><name>CandidateSearch::util::Spectrum</name>
+    <member refid="class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a" kind="property"><name>mz</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1" kind="property"><name>intensity</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_spectrum_1a1ded92c30ea9b3b02890e9adbadf252a" kind="property"><name>scanNumber</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_spectrum_1a492ed6fab0fc563483b38dbbcd93c8cc" kind="function"><name>Spectrum</name></member>
+    <member refid="class_candidate_search_1_1util_1_1_spectrum_1a2f41e1abc5af786703f14a97dd14976c" kind="function"><name>getEncoding</name></member>
+  </compound>
+  <compound refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum" kind="class"><name>MSAMANDA_MGFPARSER::Spectrum</name>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1a695458424ecce4353c3b572ca0641383" kind="property"><name>ScanNumber</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1a87ea5610250d66924691779ac8fb6058" kind="property"><name>SpectrumId</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1adf2dc70ad31a2a9fc11ce83426d63429" kind="property"><name>RT</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1a07fcacf58d0d7484bb5cfb2741e24fdb" kind="property"><name>FragmentsPeaks</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1ab39358522956d06332df053b3fdd5dd1" kind="property"><name>ImmunePeaks</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1aea49c615263a170800a48fe020aa7d59" kind="property"><name>ImmuneMasses</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1a7f4e31d28d45309ab01593837cd4c63d" kind="property"><name>Precursor</name></member>
+    <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum_1ace04a942b9038730412e0f3f7bf7bc6f" kind="function"><name>Spectrum</name></member>
+  </compound>
+  <compound refid="class_vector_search_interface_1_1_vector_search_a_p_i" kind="class"><name>VectorSearchInterface::VectorSearchAPI</name>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a6e00454923077f5eb26360ac93332241" kind="variable"><name>dllCPU</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1abadc76167a1309bf5ee77916f174bbdd" kind="variable"><name>dllGPU</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a30977c3ab923e9975a2323326e8d21e3" kind="function"><name>findTopCandidates</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1ac5baf7499fa021537230c13e3634c8be" kind="function"><name>findTopCandidatesBatched</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1aa6855c79bc3a8d2beb2feea703c9813a" kind="function"><name>findTopCandidates2</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a0aaaeb479c34425b89d7d5a1876633ab" kind="function"><name>findTopCandidatesBatched2</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a174ef2bc90fa4f95f18a678cf8fcf2c9" kind="function"><name>releaseMemory</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a80fd0220d91ef167d622e7d90a0086a3" kind="function"><name>findTopCandidatesCuda</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1aa0676168a6ad16847f474c43eebc5e24" kind="function"><name>findTopCandidatesCudaBatched</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1afcfbf91916d685042bb9732da3f1dd45" kind="function"><name>findTopCandidatesCudaBatched2</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a1360cffb84350bb0edeff9e61ceb6fec" kind="function"><name>releaseMemoryCuda</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a590ce87e625ca1e73c5cd4dfdc4c5a19" kind="function"><name>searchCPU</name></member>
+    <member refid="class_vector_search_interface_1_1_vector_search_a_p_i_1a0f85ff8875e0abb9b00dd5ca4d170aaf" kind="function"><name>searchGPU</name></member>
+  </compound>
+  <compound refid="namespace_candidate_search" kind="namespace"><name>CandidateSearch</name>
+  </compound>
+  <compound refid="namespace_candidate_search_1_1util" kind="namespace"><name>CandidateSearch::util</name>
+  </compound>
+  <compound refid="namespace_message_pack" kind="namespace"><name>MessagePack</name>
+  </compound>
+  <compound refid="namespace_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s" kind="namespace"><name>MSAMANDA_CHEMICALUTILS</name>
+  </compound>
+  <compound refid="namespace_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r" kind="namespace"><name>MSAMANDA_FASTAPARSER</name>
+  </compound>
+  <compound refid="namespace_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n" kind="namespace"><name>MSAMANDA_IONCALCULATION</name>
+  </compound>
+  <compound refid="namespace_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r" kind="namespace"><name>MSAMANDA_MGFPARSER</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_concurrent" kind="namespace"><name>System::Collections::Concurrent</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text_1_1_regular_expressions" kind="namespace"><name>System::Text::RegularExpressions</name>
+  </compound>
+  <compound refid="namespace_vector_search_interface" kind="namespace"><name>VectorSearchInterface</name>
+  </compound>
+  <compound refid="_chemical_utils_8cs" kind="file"><name>ChemicalUtils.cs</name>
+  </compound>
+  <compound refid="_f_a_s_t_a_parser_8cs" kind="file"><name>FASTAParser.cs</name>
+  </compound>
+  <compound refid="_ion_calculator_8cs" kind="file"><name>IonCalculator.cs</name>
+  </compound>
+  <compound refid="_m_g_f_parser_8cs" kind="file"><name>MGFParser.cs</name>
+  </compound>
+  <compound refid="_candidate_search_8cs" kind="file"><name>CandidateSearch.cs</name>
+  </compound>
+  <compound refid="_candidate_search_c_p_u_8cs" kind="file"><name>CandidateSearchCPU.cs</name>
+  </compound>
+  <compound refid="_candidate_search_g_p_u_8cs" kind="file"><name>CandidateSearchGPU.cs</name>
+  </compound>
+  <compound refid="_vector_search_a_p_i_8cs" kind="file"><name>VectorSearchAPI.cs</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_database_8cs" kind="file"><name>Database.cs</name>
+  </compound>
+  <compound refid="_result_8cs" kind="file"><name>Result.cs</name>
+  </compound>
+  <compound refid="_settings_8cs" kind="file"><name>Settings.cs</name>
+  </compound>
+  <compound refid="_spectra_8cs" kind="file"><name>Spectra.cs</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_ccb2c59b54859241351cb850ce38152b" kind="dir"><name>amanda</name>
+  </compound>
+  <compound refid="dir_ea428ec7f6ba2ae08e7b068464ebedf6" kind="dir"><name>dll</name>
+  </compound>
+  <compound refid="dir_23ec12649285f9fabf3a6b7380226c28" kind="dir"><name>util</name>
+  </compound>
+</doxygenindex>

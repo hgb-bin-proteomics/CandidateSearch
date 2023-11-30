@@ -1,0 +1,43 @@
+\doxysection{Candidate\+Search.\+cs}
+\hypertarget{_candidate_search_8cs_source}{}\label{_candidate_search_8cs_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_candidate_search_1_1util}{CandidateSearch.util}};}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00003}\mbox{\hyperlink{namespace_candidate_search}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_candidate_search}{CandidateSearch}}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00010}\mbox{\hyperlink{class_candidate_search_1_1_candidate_search}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{namespace_candidate_search}{CandidateSearch}}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00015}\mbox{\hyperlink{class_candidate_search_1_1_candidate_search_abdc2e237c89f801ca9f47ba447710281}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ version\ =\ \textcolor{stringliteral}{"{}1.0.0"{}};}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00021}\mbox{\hyperlink{class_candidate_search_1_1_candidate_search_a0958147526f9d44e92d4f23315d95d74}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_candidate_search_1_1_candidate_search_a0958147526f9d44e92d4f23315d95d74}{Main}}(\textcolor{keywordtype}{string}[]\ args)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args.Length\ ==\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ spectraFile\ =\ args[0];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ databaseFile\ =\ args[1];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ settingsFile\ =\ args[2];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Starting\ Candidate\ Search\ v\{version\}\ ..."{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ settings\ =\ SettingsReader.readSettings(settingsFile);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Read\ settings\ file\ '\{settingsFile\}'\ with\ the\ following\ settings:"{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(settings.ToString());}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (settings.MODE.Split(\textcolor{stringliteral}{"{}\_"{}}).First().Trim()\ ==\ \textcolor{stringliteral}{"{}GPU"{}})}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CandidateSearchGPU.Search(spectraFile,\ databaseFile,\ settings);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CandidateSearchCPU.Search(spectraFile,\ databaseFile,\ settings);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Incorrect\ number\ of\ arguments!\ CandidateSearch\ needs\ exactly\ 3\ arguments:\ spectra.mgf\ database.fasta\ settings.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_8cs_source_l00050}00050\ \}}
+
+\end{DoxyCode}

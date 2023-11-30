@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_candidate_search_1_1util_1_1_peptide" kind="class" language="C#" prot="public">
+    <compoundname>CandidateSearch::util::Peptide</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_candidate_search_1_1util_1_1_peptide_1a3424bc4212221bf532ce55c28f79d570" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string CandidateSearch.util.Peptide.sequence</definition>
+        <argsstring></argsstring>
+        <name>sequence</name>
+        <qualifiedname>CandidateSearch.util.Peptide.sequence</qualifiedname>
+        <briefdescription>
+<para>Amino acid sequence of the peptide. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="13" column="23" bodyfile="util/Database.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_candidate_search_1_1util_1_1_peptide_1a38491e7ee736c367e8a797e7ae514839" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double CandidateSearch.util.Peptide.mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <qualifiedname>CandidateSearch.util.Peptide.mass</qualifiedname>
+        <briefdescription>
+<para>Mass of the unmodified peptide. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="17" column="23" bodyfile="util/Database.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_candidate_search_1_1util_1_1_peptide_1a9fafee00d878be4c9abc9086042fec26" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; int, double &gt;</type>
+        <definition>Dictionary&lt;int, double&gt; CandidateSearch.util.Peptide.modifications</definition>
+        <argsstring></argsstring>
+        <name>modifications</name>
+        <qualifiedname>CandidateSearch.util.Peptide.modifications</qualifiedname>
+        <briefdescription>
+<para>Dictionary mapping residue positions (0 based) to modification masses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="21" column="27" bodyfile="util/Database.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_candidate_search_1_1util_1_1_peptide_1a2222f189f6f9a88b4b02f933526fa386" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool CandidateSearch.util.Peptide.isDecoy</definition>
+        <argsstring></argsstring>
+        <name>isDecoy</name>
+        <qualifiedname>CandidateSearch.util.Peptide.isDecoy</qualifiedname>
+        <briefdescription>
+<para>Is the peptide a decoy peptide or target peptide. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="25" column="21" bodyfile="util/Database.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_candidate_search_1_1util_1_1_peptide_1ac412ca5d6a9569cb5add4ccfc7c5b423" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; double &gt;</type>
+        <definition>List&lt;double&gt; CandidateSearch.util.Peptide.ions</definition>
+        <argsstring></argsstring>
+        <name>ions</name>
+        <qualifiedname>CandidateSearch.util.Peptide.ions</qualifiedname>
+        <briefdescription>
+<para>List of theoretical ion m/z values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="29" column="21" bodyfile="util/Database.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_peptide_1a69162c33e1d4143bc2f6cc2854ca0e63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CandidateSearch.util.Peptide.Peptide</definition>
+        <argsstring>(string Sequence, double Mass, Dictionary&lt; int, double &gt; Modifications, Settings IonSettings, bool IsDecoy)</argsstring>
+        <name>Peptide</name>
+        <qualifiedname>CandidateSearch.util.Peptide.Peptide</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>Sequence</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Mass</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; int, double &gt;</type>
+          <declname>Modifications</declname>
+        </param>
+        <param>
+          <type><ref refid="class_candidate_search_1_1util_1_1_settings" kindref="compound">Settings</ref></type>
+          <declname>IonSettings</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>IsDecoy</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for a new peptide/pepidoform. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sequence of amino acids.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mass of the unmodified peptide.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Modifications</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary that maps amino acid positions (0 based) to modification masses.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IonSettings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Settings used for ion calculation.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IsDecoy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not the peptide is a decoy peptide.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="39" column="16" bodyfile="util/Database.cs" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_peptide_1a912555eae82d8449966a0cfc00282f06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] CandidateSearch.util.Peptide.getEnconding</definition>
+        <argsstring>(int massRange=5000, int massMultiplier=100)</argsstring>
+        <name>getEnconding</name>
+        <qualifiedname>CandidateSearch.util.Peptide.getEnconding</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>massRange</declname>
+          <defval>5000</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>massMultiplier</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+<para>Get the encoding vector of the peptide. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>massRange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum m/z that should be considered while encoding. Has to match the specifications of VectorSearch.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>massMultiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Precision of the encoding. Has to match the specifications of VectorSearch.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The encoding vector as an integer array.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="54" column="20" bodyfile="util/Database.cs" bodystart="54" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_peptide_1ae79e95d2b5cf5fa62545cf9dc8b5cd75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string CandidateSearch.util.Peptide.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <qualifiedname>CandidateSearch.util.Peptide.ToString</qualifiedname>
+        <briefdescription>
+<para>Constructs a string representation of the peptide. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of the peptide.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="73" column="32" bodyfile="util/Database.cs" bodystart="73" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_peptide_1a272c3f96bbfe2e1ddcf1b9498e06192c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CandidateSearch.util.Peptide.addModification</definition>
+        <argsstring>(int position, double mass)</argsstring>
+        <name>addModification</name>
+        <qualifiedname>CandidateSearch.util.Peptide.addModification</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+<para>Adds a modification to the peptide if the peptide isn&apos;t already modified at that position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position (0 based) of the modification.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The modification mass.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the modification was added, false if there is already a modification on the specified residue.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="97" column="21" bodyfile="util/Database.cs" bodystart="97" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_peptide_1aedb4f82d2069a7258c3e656a8c68acf5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; double &gt;</type>
+        <definition>List&lt; double &gt; CandidateSearch.util.Peptide.getIons</definition>
+        <argsstring>(string Sequence, double Mass, Dictionary&lt; int, double &gt; Modifications, Settings IonSettings)</argsstring>
+        <name>getIons</name>
+        <qualifiedname>CandidateSearch.util.Peptide.getIons</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>Sequence</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Mass</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; int, double &gt;</type>
+          <declname>Modifications</declname>
+        </param>
+        <param>
+          <type><ref refid="class_candidate_search_1_1util_1_1_settings" kindref="compound">Settings</ref></type>
+          <declname>IonSettings</declname>
+        </param>
+        <briefdescription>
+<para>Calculates theoretical ion m/z values for the peptide. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sequence of amino acids.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mass of the unmodified peptide.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Modifications</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary that maps amino acid positions (0 based) to modification masses.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IonSettings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Settings used for ion calculation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of theoretical ion m/z values.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Database.cs" line="114" column="22" bodyfile="util/Database.cs" bodystart="114" bodyend="152"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Simplified peptide class that stores peptide/peptidoform information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="util/Database.cs" line="8" column="11" bodyfile="util/Database.cs" bodystart="9" bodyend="153"/>
+    <listofallmembers>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a272c3f96bbfe2e1ddcf1b9498e06192c" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>addModification</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a912555eae82d8449966a0cfc00282f06" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>getEnconding</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1aedb4f82d2069a7258c3e656a8c68acf5" prot="private" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>getIons</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1ac412ca5d6a9569cb5add4ccfc7c5b423" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>ions</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a2222f189f6f9a88b4b02f933526fa386" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>isDecoy</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a38491e7ee736c367e8a797e7ae514839" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>mass</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a9fafee00d878be4c9abc9086042fec26" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>modifications</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a69162c33e1d4143bc2f6cc2854ca0e63" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>Peptide</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1a3424bc4212221bf532ce55c28f79d570" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>sequence</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_peptide_1ae79e95d2b5cf5fa62545cf9dc8b5cd75" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Peptide</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils" kind="class" language="C#" prot="public">
+    <compoundname>MSAMANDA_CHEMICALUTILS::ChemicalUtils</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1aa61500f3f5aee2cf89cc91cf37c885f6" prot="public" static="yes" mutable="no">
+        <type>Dictionary&lt; string, <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref> &gt;</type>
+        <definition>Dictionary&lt;string, ChemicalElement&gt; MSAMANDA_CHEMICALUTILS.ChemicalUtils.Chemicals</definition>
+        <argsstring></argsstring>
+        <name>Chemicals</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.Chemicals</qualifiedname>
+        <initializer>= new Dictionary&lt;string, <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>&gt;() {
+            {&quot;H&quot;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>(&quot;H&quot;, &quot;Hydrogen&quot;, 1.007825035, 1.00794)},
+            {&quot;C&quot;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>(&quot;C&quot;, &quot;Carbon&quot;, 12.0, 12.0107)},
+            {&quot;N&quot;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>(&quot;N&quot;, &quot;Nitrogen&quot;, 14.003074, 14.0067)},
+            {&quot;O&quot;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>(&quot;O&quot;, &quot;Oxygen&quot;, 15.99491463, 15.9994)},
+            {&quot;p&quot;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>(&quot;p&quot;, &quot;Proton&quot;, 1.007276466812, 1.007276466812)},
+            {&quot;i&quot;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" kindref="compound">ChemicalElement</ref>(&quot;i&quot;, &quot;C13IsotopeDiff&quot;, 1.00335, 1.00335)}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="127" column="34" bodyfile="amanda/ChemicalUtils.cs" bodystart="127" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ab5dbb55e2c428b5bbdd6f8356838957d" prot="public" static="yes" mutable="no">
+        <type>Dictionary&lt; char, <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref> &gt;</type>
+        <definition>Dictionary&lt;char, AminoAcid&gt; MSAMANDA_CHEMICALUTILS.ChemicalUtils.AminoAcids</definition>
+        <argsstring></argsstring>
+        <name>AminoAcids</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.AminoAcids</qualifiedname>
+        <initializer>= new Dictionary&lt;char, <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>&gt;() {
+            {&apos;A&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;A&apos;, &quot;Ala&quot;, &quot;Alanine&quot;, 71.037114, 71.0779)}, 
+            {&apos;R&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;R&apos;, &quot;Arg&quot;, &quot;Arginine&quot;, 156.101111, 156.1857)}, 
+            {&apos;N&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;N&apos;, &quot;Asn&quot;, &quot;Asparagine&quot;, 114.042927, 114.1026)}, 
+            {&apos;D&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;D&apos;, &quot;Asp&quot;, &quot;Aspartic acid&quot;, 115.026943, 115.0874)}, 
+            {&apos;C&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;C&apos;, &quot;Cys&quot;, &quot;Cysteine&quot;, 103.009185, 103.1429)}, 
+            {&apos;E&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;E&apos;, &quot;Glu&quot;, &quot;Glutamic acid&quot;, 129.042593, 129.114)}, 
+            {&apos;Q&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;Q&apos;, &quot;Gln&quot;, &quot;Glutamine&quot;, 128.058578, 128.1292)}, 
+            {&apos;G&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;G&apos;, &quot;Gly&quot;, &quot;Glycine&quot;, 57.021464, 57.0513)}, 
+            {&apos;H&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;H&apos;, &quot;His&quot;, &quot;Histidine&quot;, 137.058912, 137.1393)}, 
+            {&apos;I&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;I&apos;, &quot;Ile&quot;, &quot;Isoleucine&quot;, 113.084064, 113.1576)}, 
+            {&apos;L&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;L&apos;, &quot;Leu&quot;, &quot;Leucine&quot;, 113.084064, 113.1576)},
+            {&apos;K&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;K&apos;, &quot;Lys&quot;, &quot;Lysine&quot;, 128.094963, 128.1723)}, 
+            {&apos;M&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;M&apos;, &quot;Met&quot;, &quot;Methionine&quot;, 131.040485, 131.1961)}, 
+            {&apos;F&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;F&apos;, &quot;Phe&quot;, &quot;Phenylalanine&quot;, 147.068414, 147.1739)}, 
+            {&apos;P&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;P&apos;, &quot;Pro&quot;, &quot;Proline&quot;, 97.052764, 97.1152)}, 
+            {&apos;S&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;S&apos;, &quot;Ser&quot;, &quot;Serine&quot;, 87.032028, 87.0773)}, 
+            {&apos;T&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;T&apos;, &quot;Thr&quot;, &quot;Threonine&quot;, 101.047679, 101.1039)}, 
+            {&apos;U&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;U&apos;, &quot;Sec&quot;, &quot;Selenocysteine&quot;, 150.95363, 150.0379)},
+            {&apos;W&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;W&apos;, &quot;Trp&quot;, &quot;Tryptophane&quot;, 186.079313, 186.2099)}, 
+            {&apos;Y&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;Y&apos;, &quot;Tyr&quot;, &quot;Tyrosine&quot;, 163.06332, 163.1733)}, 
+            {&apos;V&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;V&apos;, &quot;Val&quot;, &quot;Valine&quot;, 99.068414, 99.1311)}, 
+            {&apos;J&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;J&apos;, &quot;LeI&quot;, &quot;Leu_Isoleu&quot;, 113.084064, 113.1576)},
+            {&apos;O&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;O&apos;, &quot;Pyl&quot;, &quot;Pyrrolysin&quot;, 237.14772677, 237.300713363271)},
+            {&apos;$&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;$&apos;, &quot;&quot;, &quot;N-Term&quot;, 0.0, 0.0)},
+            {&apos;^&apos;, new <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" kindref="compound">AminoAcid</ref>(&apos;^&apos;, &quot;&quot;, &quot;C-Term&quot;, 0.0, 0.0)}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="136" column="34" bodyfile="amanda/ChemicalUtils.cs" bodystart="136" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a0df129104e63a5599b0d1ca474c57e02" prot="public" static="yes" mutable="no">
+        <type>Dictionary&lt; string, <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations" kindref="compound">Permutations</ref> &gt;</type>
+        <definition>Dictionary&lt;string, Permutations&gt; MSAMANDA_CHEMICALUTILS.ChemicalUtils.Combinations</definition>
+        <argsstring></argsstring>
+        <name>Combinations</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.Combinations</qualifiedname>
+        <initializer>= new Dictionary&lt;string, <ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations" kindref="compound">Permutations</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="165" column="34" bodyfile="amanda/ChemicalUtils.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a1e00d0d0dfd04bd3701f359dde5a1a48" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int MSAMANDA_CHEMICALUTILS.ChemicalUtils.GetMassIndex</definition>
+        <argsstring>(double mass)</argsstring>
+        <name>GetMassIndex</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.GetMassIndex</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="167" column="27" bodyfile="amanda/ChemicalUtils.cs" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a8601e190c7f4f10ff9479d7aa9706d1d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_CHEMICALUTILS.ChemicalUtils.GetMassDoubleKey</definition>
+        <argsstring>(double moverz)</argsstring>
+        <name>GetMassDoubleKey</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.GetMassDoubleKey</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>moverz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="172" column="30" bodyfile="amanda/ChemicalUtils.cs" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a0aed075071151e16669bacbf57aa7ee7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculatePeptideMass</definition>
+        <argsstring>(string sequence, bool mono)</argsstring>
+        <name>CalculatePeptideMass</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculatePeptideMass</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mono</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="177" column="30" bodyfile="amanda/ChemicalUtils.cs" bodystart="177" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ae32cf7044b59e7cc38b4eccc0e60fd92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculatePrecursorMassToCharge</definition>
+        <argsstring>(int charge, double mass, bool mono)</argsstring>
+        <name>CalculatePrecursorMassToCharge</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculatePrecursorMassToCharge</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>charge</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mono</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="194" column="30" bodyfile="amanda/ChemicalUtils.cs" bodystart="194" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a60e26abec5f2ba5e718ece45c7ec9742" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculateUnchargedMass</definition>
+        <argsstring>(double mass, int charge, bool mono)</argsstring>
+        <name>CalculateUnchargedMass</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculateUnchargedMass</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>charge</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mono</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="202" column="30" bodyfile="amanda/ChemicalUtils.cs" bodystart="202" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1aa38d4e5b22d5890262b96969148d0133" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations" kindref="compound">Permutations</ref></type>
+        <definition>static Permutations MSAMANDA_CHEMICALUTILS.ChemicalUtils.GetAscendingPermutations</definition>
+        <argsstring>(int n, int k)</argsstring>
+        <name>GetAscendingPermutations</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.GetAscendingPermutations</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="210" column="36" bodyfile="amanda/ChemicalUtils.cs" bodystart="210" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ad40303cdd8ccb0e947c64b160267eec2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculateMassDiffInPPM</definition>
+        <argsstring>(double expMass, double theoMass)</argsstring>
+        <name>CalculateMassDiffInPPM</name>
+        <qualifiedname>MSAMANDA_CHEMICALUTILS.ChemicalUtils.CalculateMassDiffInPPM</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>expMass</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theoMass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/ChemicalUtils.cs" line="232" column="30" bodyfile="amanda/ChemicalUtils.cs" bodystart="232" bodyend="236"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="amanda/ChemicalUtils.cs" line="125" column="19" bodyfile="amanda/ChemicalUtils.cs" bodystart="126" bodyend="237"/>
+    <listofallmembers>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ab5dbb55e2c428b5bbdd6f8356838957d" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>AminoAcids</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ad40303cdd8ccb0e947c64b160267eec2" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>CalculateMassDiffInPPM</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a0aed075071151e16669bacbf57aa7ee7" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>CalculatePeptideMass</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1ae32cf7044b59e7cc38b4eccc0e60fd92" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>CalculatePrecursorMassToCharge</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a60e26abec5f2ba5e718ece45c7ec9742" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>CalculateUnchargedMass</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1aa61500f3f5aee2cf89cc91cf37c885f6" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>Chemicals</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a0df129104e63a5599b0d1ca474c57e02" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>Combinations</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1aa38d4e5b22d5890262b96969148d0133" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>GetAscendingPermutations</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a8601e190c7f4f10ff9479d7aa9706d1d" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>GetMassDoubleKey</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils_1a1e00d0d0dfd04bd3701f359dde5a1a48" prot="public" virt="non-virtual"><scope>MSAMANDA_CHEMICALUTILS::ChemicalUtils</scope><name>GetMassIndex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

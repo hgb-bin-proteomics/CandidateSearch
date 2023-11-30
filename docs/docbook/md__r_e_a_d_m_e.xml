@@ -171,11 +171,20 @@ MODE&#32;=&#32;CPU_DV
 </para>
 </section>
 <section xml:id="_md__r_e_a_d_m_e_1autotoc_md5">
+<title>Results</title>
+
+<para>Example results of <emphasis><link linkend="_namespace_candidate_search">CandidateSearch</link></emphasis> and results analysis are given in <computeroutput>tests</computeroutput>.</para>
+
+<para></para>
+
+<para><emphasis role="bold">Figure 1:</emphasis> Identifying peptide candidates and peptidoform candidates with <emphasis><link linkend="_namespace_candidate_search">CandidateSearch</link></emphasis> in a <link xlink:href="https://www.ebi.ac.uk/pride/archive/projects/PXD007750">HeLa dataset</link> using the human swissprot database. The considered ground truth was an <link xlink:href="https://ms.imp.ac.at/?goto=msamanda">MS Amanda</link> search validated with <link xlink:href="https://github.com/percolator/percolator">Percolator</link>. For every high-confidence PSM we checked if the identified peptide/peptidoform was among the top 50/100/500/1000 hits of <emphasis><link linkend="_namespace_candidate_search">CandidateSearch</link></emphasis>. We reach almost 100% coverage within the first 1000 hits of <emphasis><link linkend="_namespace_candidate_search">CandidateSearch</link></emphasis> (for reference: the whole database contained ~4 200 000 peptides or ~10 500 000 peptidoforms).</para>
+</section>
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md6">
 <title>Known Issues</title>
 
 <para><link xlink:href="https://github.com/hgb-bin-proteomics/CandidateSearch/issues">List of known issues</link></para>
 </section>
-<section xml:id="_md__r_e_a_d_m_e_1autotoc_md6">
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md7">
 <title>Citing</title>
 
 <para>If you are using [parts of] <emphasis><link linkend="_namespace_candidate_search">CandidateSearch</link></emphasis> please cite:</para>
@@ -183,7 +192,7 @@ MODE&#32;=&#32;CPU_DV
 <para><literallayout><computeroutput>MS&#32;Annika&#32;3.0&#32;(publication&#32;wip)
 </computeroutput></literallayout></para>
 </section>
-<section xml:id="_md__r_e_a_d_m_e_1autotoc_md7">
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md8">
 <title>License</title>
 
 <para><itemizedlist>
@@ -192,7 +201,7 @@ MODE&#32;=&#32;CPU_DV
 </listitem></itemizedlist>
 </para>
 </section>
-<section xml:id="_md__r_e_a_d_m_e_1autotoc_md8">
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md9">
 <title>Contact</title>
 
 <para><link xlink:href="mailto:micha.birklbauer@fh-hagenberg.at">micha.birklbauer@fh-hagenberg.at</link> </para>

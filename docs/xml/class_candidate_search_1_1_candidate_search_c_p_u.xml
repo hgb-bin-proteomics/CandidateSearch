@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_candidate_search_1_1_candidate_search_c_p_u" kind="class" language="C#" prot="public">
+    <compoundname>CandidateSearch::CandidateSearchCPU</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_candidate_search_1_1_candidate_search_c_p_u_1ac245be7d8f9148ab70f5307e232df628" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CandidateSearch.CandidateSearchCPU.Search</definition>
+        <argsstring>(string spectraFile, string databaseFile, Settings settings)</argsstring>
+        <name>Search</name>
+        <qualifiedname>CandidateSearch.CandidateSearchCPU.Search</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>spectraFile</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>databaseFile</declname>
+        </param>
+        <param>
+          <type><ref refid="class_candidate_search_1_1util_1_1_settings" kindref="compound">Settings</ref></type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+<para>Searches the given spectra for peptide candidates of the given database using the given settings on the CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spectraFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename of the mgf file containing the MS2 spectra.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>databaseFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename of the fasta file containing the proteins that should be considered for search.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Settings containing parameters for digestion, ion calculation and search.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CandidateSearchCPU.cs" line="17" column="28" bodyfile="CandidateSearchCPU.cs" bodystart="17" bodyend="103"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Searching for candidates on the CPU. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CandidateSearchCPU.cs" line="9" column="19" bodyfile="CandidateSearchCPU.cs" bodystart="10" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_candidate_search_1_1_candidate_search_c_p_u_1ac245be7d8f9148ab70f5307e232df628" prot="public" virt="non-virtual"><scope>CandidateSearch::CandidateSearchCPU</scope><name>Search</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

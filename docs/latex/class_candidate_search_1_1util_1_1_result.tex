@@ -1,0 +1,101 @@
+\doxysection{Candidate\+Search.\+util.\+Result Class Reference}
+\hypertarget{class_candidate_search_1_1util_1_1_result}{}\label{class_candidate_search_1_1util_1_1_result}\index{CandidateSearch.util.Result@{CandidateSearch.util.Result}}
+
+
+Result class to transform and store the returned integer array of Vector\+Search.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_candidate_search_1_1util_1_1_result_a3629c97881b29058d9c800caa3f8e270}{Result}} (ref int\mbox{[}$\,$\mbox{]} Search\+Result, ref List$<$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide}{Peptide}} $>$ Peptides, ref List$<$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum}{Spectrum}} $>$ Spectra, int TopN)
+\begin{DoxyCompactList}\small\item\em Constructor creating a result item that stores the processed Vector\+Search result. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_result_ae88683cd96ea829e0b6f915bd0af4c7c}{export}} (string filename)
+\begin{DoxyCompactList}\small\item\em Exports the results to csv format into a file with the given filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ int, List$<$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide}{Peptide}} $>$ $>$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_result_a80d0c6d428f395b91034a3d4f14a42b9}{result}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary that maps scan numbers to lists of peptide candidates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Result class to transform and store the returned integer array of Vector\+Search. 
+
+Definition at line \mbox{\hyperlink{_result_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_result_8cs_source}{Result.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_result_a3629c97881b29058d9c800caa3f8e270}\label{class_candidate_search_1_1util_1_1_result_a3629c97881b29058d9c800caa3f8e270} 
+\index{CandidateSearch.util.Result@{CandidateSearch.util.Result}!Result@{Result}}
+\index{Result@{Result}!CandidateSearch.util.Result@{CandidateSearch.util.Result}}
+\doxysubsubsection{\texorpdfstring{Result()}{Result()}}
+{\footnotesize\ttfamily Candidate\+Search.\+util.\+Result.\+Result (\begin{DoxyParamCaption}\item[{ref int\mbox{[}$\,$\mbox{]}}]{Search\+Result,  }\item[{ref List$<$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide}{Peptide}} $>$}]{Peptides,  }\item[{ref List$<$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum}{Spectrum}} $>$}]{Spectra,  }\item[{int}]{TopN }\end{DoxyParamCaption})}
+
+
+
+Constructor creating a result item that stores the processed Vector\+Search result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Search\+Result} & The search result of the Vector\+Search.\\
+\hline
+{\em Peptides} & The complete list of considered peptides/peptidoforms.\\
+\hline
+{\em Spectra} & The complete list of searched spectra.\\
+\hline
+{\em TopN} & The number of top candidates reported for each spectrum.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_result_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_result_8cs_source}{Result.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_result_ae88683cd96ea829e0b6f915bd0af4c7c}\label{class_candidate_search_1_1util_1_1_result_ae88683cd96ea829e0b6f915bd0af4c7c} 
+\index{CandidateSearch.util.Result@{CandidateSearch.util.Result}!export@{export}}
+\index{export@{export}!CandidateSearch.util.Result@{CandidateSearch.util.Result}}
+\doxysubsubsection{\texorpdfstring{export()}{export()}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Result.\+export (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Exports the results to csv format into a file with the given filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The output filename.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the export was successful, 1 if it was unsuccessful.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_result_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_result_8cs_source}{Result.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_result_a80d0c6d428f395b91034a3d4f14a42b9}\label{class_candidate_search_1_1util_1_1_result_a80d0c6d428f395b91034a3d4f14a42b9} 
+\index{CandidateSearch.util.Result@{CandidateSearch.util.Result}!result@{result}}
+\index{result@{result}!CandidateSearch.util.Result@{CandidateSearch.util.Result}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily Dictionary$<$int, List$<$\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide}{Peptide}}$>$ $>$ Candidate\+Search.\+util.\+Result.\+result\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Dictionary that maps scan numbers to lists of peptide candidates. 
+
+
+
+Definition at line \mbox{\hyperlink{_result_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_result_8cs_source}{Result.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/Result.\+cs\end{DoxyCompactItemize}

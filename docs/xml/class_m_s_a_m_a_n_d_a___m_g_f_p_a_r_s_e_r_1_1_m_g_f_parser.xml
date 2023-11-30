@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser" kind="class" language="C#" prot="public">
+    <compoundname>MSAMANDA_MGFPARSER::MGFParser</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1af0b65e978df3ea571a6479b02cb50295" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum" kindref="compound">Spectrum</ref> &gt;</type>
+        <definition>static List&lt; Spectrum &gt; MSAMANDA_MGFPARSER.MGFParser.ParseNextSpectra</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>ParseNextSpectra</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseNextSpectra</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="60" column="28" bodyfile="amanda/MGFParser.cs" bodystart="60" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1aa2e270578597bd337e236c013e7a00f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" kindref="compound">AMassCentroid</ref></type>
+        <definition>static AMassCentroid MSAMANDA_MGFPARSER.MGFParser.GenerateFragmentPeak</definition>
+        <argsstring>(double position, double intensity, int charge)</argsstring>
+        <name>GenerateFragmentPeak</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.GenerateFragmentPeak</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>intensity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>charge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="327" column="37" bodyfile="amanda/MGFParser.cs" bodystart="327" bodyend="337"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a722dedf6f4825f4a093a6a0fefa938d8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum" kindref="compound">Spectrum</ref></type>
+        <definition>static Spectrum MSAMANDA_MGFPARSER.MGFParser.GenerateSpectrum</definition>
+        <argsstring>(List&lt; AMassCentroid &gt; fragmentsPeaks, int numb, int scanId, double rt, double mOverZ, int charge)</argsstring>
+        <name>GenerateSpectrum</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.GenerateSpectrum</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" kindref="compound">AMassCentroid</ref> &gt;</type>
+          <declname>fragmentsPeaks</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scanId</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rt</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mOverZ</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>charge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="312" column="33" bodyfile="amanda/MGFParser.cs" bodystart="312" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a6e3f8aabad7805790c855c28fe6b125b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_MGFPARSER.MGFParser.ParseIntensity</definition>
+        <argsstring>(string replace, string line)</argsstring>
+        <name>ParseIntensity</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseIntensity</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>replace</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="339" column="31" bodyfile="amanda/MGFParser.cs" bodystart="339" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a5c4a77ce9185b36530de075645daa42d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_MGFPARSER.MGFParser.ParseMass</definition>
+        <argsstring>(string replace, string line)</argsstring>
+        <name>ParseMass</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseMass</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>replace</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="352" column="31" bodyfile="amanda/MGFParser.cs" bodystart="352" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a3a9ee12a3975fdcd6ed41487ff74d08a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int MSAMANDA_MGFPARSER.MGFParser.ParseCharge</definition>
+        <argsstring>(string line)</argsstring>
+        <name>ParseCharge</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseCharge</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="365" column="28" bodyfile="amanda/MGFParser.cs" bodystart="365" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a69fc9935cd909df789f44547d27790a5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_MGFPARSER.MGFParser.ParseRt</definition>
+        <argsstring>(string line)</argsstring>
+        <name>ParseRt</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseRt</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="379" column="31" bodyfile="amanda/MGFParser.cs" bodystart="379" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a5d911c81abdd031e073fb892465c2baa" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int MSAMANDA_MGFPARSER.MGFParser.ParseScanNumber</definition>
+        <argsstring>(string line)</argsstring>
+        <name>ParseScanNumber</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseScanNumber</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="397" column="28" bodyfile="amanda/MGFParser.cs" bodystart="397" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1adb4124bf920cc964f7f3b41e3b451df7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MSAMANDA_MGFPARSER.MGFParser.ParseMOverZ</definition>
+        <argsstring>(string line)</argsstring>
+        <name>ParseMOverZ</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.ParseMOverZ</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="410" column="31" bodyfile="amanda/MGFParser.cs" bodystart="410" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a305564cbdca05ce12219e18e3bea3aa3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool MSAMANDA_MGFPARSER.MGFParser.LineCanBeIgnored</definition>
+        <argsstring>(string line)</argsstring>
+        <name>LineCanBeIgnored</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.MGFParser.LineCanBeIgnored</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="447" column="29" bodyfile="amanda/MGFParser.cs" bodystart="447" bodyend="542"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="amanda/MGFParser.cs" line="58" column="19" bodyfile="amanda/MGFParser.cs" bodystart="59" bodyend="543"/>
+    <listofallmembers>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1aa2e270578597bd337e236c013e7a00f3" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>GenerateFragmentPeak</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a722dedf6f4825f4a093a6a0fefa938d8" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>GenerateSpectrum</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a305564cbdca05ce12219e18e3bea3aa3" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>LineCanBeIgnored</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a3a9ee12a3975fdcd6ed41487ff74d08a" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseCharge</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a6e3f8aabad7805790c855c28fe6b125b" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseIntensity</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a5c4a77ce9185b36530de075645daa42d" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseMass</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1adb4124bf920cc964f7f3b41e3b451df7" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseMOverZ</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1af0b65e978df3ea571a6479b02cb50295" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseNextSpectra</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a69fc9935cd909df789f44547d27790a5" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseRt</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser_1a5d911c81abdd031e073fb892465c2baa" prot="private" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::MGFParser</scope><name>ParseScanNumber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

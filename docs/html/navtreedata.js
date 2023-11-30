@@ -30,10 +30,11 @@ var NAVTREE =
       [ "Settings", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
       [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
       [ "Limitations", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "Known Issues", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-      [ "Citing", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
-      [ "License", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
-      [ "Contact", "md__r_e_a_d_m_e.html#autotoc_md8", null ]
+      [ "Results", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+      [ "Known Issues", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+      [ "Citing", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
+      [ "License", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "Contact", "md__r_e_a_d_m_e.html#autotoc_md9", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]

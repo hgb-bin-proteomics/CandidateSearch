@@ -1,0 +1,310 @@
+.TH "CandidateSearch.util.Settings" 3 "Version 1.0.0" "CandidateSearch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CandidateSearch.util.Settings \- Settings for digestion, ion calculation and VectorSearch\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSettings\fP (int MaxCleavages=2, int MinPepLength=5, int MaxPepLength=30, int MaxPrecursorCharge=4, string MaxFragmentCharge='+1', int MaxNeutralLosses=1, int MaxNeutralLossMods=2, bool DecoySearch=true, int TopN=1000, float Tolerance=0\&.02f, bool Normalize=false, bool UseGaussian=true, string Mode='CPU_DV')"
+.br
+.RI "Settings constructor to set the specified search parameters\&. "
+.ti -1c
+.RI "bool \fBaddFixedModification\fP (string aminoAcid, double mass)"
+.br
+.RI "Add a fixed modification to the fixed modification dictionary\&. "
+.ti -1c
+.RI "bool \fBaddVariableModification\fP (string aminoAcid, double mass)"
+.br
+.RI "Add a variable modification to the variable modification dictionary\&. "
+.ti -1c
+.RI "string \fBmodificationsToString\fP (bool variable=false)"
+.br
+.RI "Returns a string representation of the modifications\&. "
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "Returns a string representation of the settings\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "int \fBMAX_CLEAVAGES\fP\fC [get, set]\fP"
+.br
+.RI "Maximum number of missed cleavages allowed during digestion\&. "
+.ti -1c
+.RI "int \fBMIN_PEP_LENGTH\fP\fC [get, set]\fP"
+.br
+.RI "Minimum peptide length\&. "
+.ti -1c
+.RI "int \fBMAX_PEP_LENGTH\fP\fC [get, set]\fP"
+.br
+.RI "Maximum peptide length\&. "
+.ti -1c
+.RI "int \fBMAX_PRECURSOR_CHARGE\fP\fC [get, set]\fP"
+.br
+.RI "Maximum considered precursor ion charge\&. "
+.ti -1c
+.RI "string \fBMAX_FRAGMENT_CHARGE\fP\fC [get, set]\fP"
+.br
+.RI "Maximum considered fragment ion charge\&. "
+.ti -1c
+.RI "int \fBMAX_NEUTRAL_LOSSES\fP\fC [get, set]\fP"
+.br
+.RI "Maximum number of considered neutral losses\&. "
+.ti -1c
+.RI "int \fBMAX_NEUTRAL_LOSS_MODS\fP\fC [get, set]\fP"
+.br
+.RI "Maximum number of considered neutral loss modifications\&. "
+.ti -1c
+.RI "Dictionary< string, double > \fBFIXED_MODIFICATIONS\fP\fC [get, set]\fP"
+.br
+.RI "Dictionary for fixed modifications that maps amino acids to their possible modification masses\&. "
+.ti -1c
+.RI "Dictionary< string, double > \fBVARIABLE_MODIFICATIONS\fP\fC [get, set]\fP"
+.br
+.RI "Dictionary for variable modifications that maps amino acids to their possible modification masses\&. "
+.ti -1c
+.RI "bool \fBDECOY_SEARCH\fP\fC [get, set]\fP"
+.br
+.RI "Whether or not decoy search should be performed\&. "
+.ti -1c
+.RI "int \fBTOP_N\fP\fC [get, set]\fP"
+.br
+.RI "The top n candidates that should be returned by the VectorSearch\&. "
+.ti -1c
+.RI "float \fBTOLERANCE\fP\fC [get, set]\fP"
+.br
+.RI "The tolerance used for the VectorSearch\&. "
+.ti -1c
+.RI "bool \fBNORMALIZE\fP\fC [get, set]\fP"
+.br
+.RI "Whether or not scores should be normalized by the VectorSearch\&. "
+.ti -1c
+.RI "bool \fBUSE_GAUSSIAN\fP\fC [get, set]\fP"
+.br
+.RI "Whether or not peaks should be modelled as gaussian distributions by the VectorSearch\&. "
+.ti -1c
+.RI "string \fBMODE\fP\fC [get, set]\fP"
+.br
+.RI "The search approach used by the VectorSearch\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Settings for digestion, ion calculation and VectorSearch\&. 
+.PP
+Definition at line \fB8\fP of file \fBSettings\&.cs\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CandidateSearch\&.util\&.Settings\&.Settings (int MaxCleavages = \fC2\fP, int MinPepLength = \fC5\fP, int MaxPepLength = \fC30\fP, int MaxPrecursorCharge = \fC4\fP, string MaxFragmentCharge = \fC'+1'\fP, int MaxNeutralLosses = \fC1\fP, int MaxNeutralLossMods = \fC2\fP, bool DecoySearch = \fCtrue\fP, int TopN = \fC1000\fP, float Tolerance = \fC0::02f\fP, bool Normalize = \fCfalse\fP, bool UseGaussian = \fCtrue\fP, string Mode = \fC'CPU_DV'\fP)"
+
+.PP
+Settings constructor to set the specified search parameters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIMaxCleavages\fP Maximum number of missed cleavages allowed during digestion\&.
+.br
+\fIMinPepLength\fP Minimum peptide length\&.
+.br
+\fIMaxPepLength\fP Maximum peptide length\&.
+.br
+\fIMaxPrecursorCharge\fP Maximum considered precursor ion charge\&.
+.br
+\fIMaxFragmentCharge\fP Maximum considered fragment ion charge\&.
+.br
+\fIMaxNeutralLosses\fP Maximum number of considered neutral losses\&.
+.br
+\fIMaxNeutralLossMods\fP Maximum number of considered neutral loss modifications\&.
+.br
+\fIDecoySearch\fP Whether or not decoy search should be performed\&.
+.br
+\fITopN\fP The top n candidates that should be returned by the VectorSearch\&.
+.br
+\fITolerance\fP The tolerance used for the VectorSearch\&.
+.br
+\fINormalize\fP Whether or not scores should be normalized by the VectorSearch\&.
+.br
+\fIUseGaussian\fP Whether or not peaks should be modelled as gaussian distributions by the VectorSearch\&.
+.br
+\fIMode\fP The search approach used by the VectorSearch\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB94\fP of file \fBSettings\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool CandidateSearch\&.util\&.Settings\&.addFixedModification (string aminoAcid, double mass)"
+
+.PP
+Add a fixed modification to the fixed modification dictionary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaminoAcid\fP The amino acid that will be modified\&.
+.br
+\fImass\fP The mass of the modification\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB125\fP of file \fBSettings\&.cs\fP\&.
+.SS "bool CandidateSearch\&.util\&.Settings\&.addVariableModification (string aminoAcid, double mass)"
+
+.PP
+Add a variable modification to the variable modification dictionary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaminoAcid\fP The amino acid that can be modified\&.
+.br
+\fImass\fP The mass of the modification\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB140\fP of file \fBSettings\&.cs\fP\&.
+.SS "string CandidateSearch\&.util\&.Settings\&.modificationsToString (bool variable = \fCfalse\fP)"
+
+.PP
+Returns a string representation of the modifications\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvariable\fP Whether to process fixed or variable modifications\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The string representation of the specified modification set\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB154\fP of file \fBSettings\&.cs\fP\&.
+.SS "override string CandidateSearch\&.util\&.Settings\&.ToString ()"
+
+.PP
+Returns a string representation of the settings\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The string representation of the settings\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB178\fP of file \fBSettings\&.cs\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "bool CandidateSearch\&.util\&.Settings\&.DECOY_SEARCH\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Whether or not decoy search should be performed\&. 
+.PP
+Definition at line \fB54\fP of file \fBSettings\&.cs\fP\&.
+.SS "Dictionary<string, double> CandidateSearch\&.util\&.Settings\&.FIXED_MODIFICATIONS\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Dictionary for fixed modifications that maps amino acids to their possible modification masses\&. 
+.PP
+Definition at line \fB44\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.MAX_CLEAVAGES\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Maximum number of missed cleavages allowed during digestion\&. 
+.PP
+Definition at line \fB14\fP of file \fBSettings\&.cs\fP\&.
+.SS "string CandidateSearch\&.util\&.Settings\&.MAX_FRAGMENT_CHARGE\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Maximum considered fragment ion charge\&. 
+.PP
+Definition at line \fB32\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.MAX_NEUTRAL_LOSS_MODS\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Maximum number of considered neutral loss modifications\&. 
+.PP
+Definition at line \fB40\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.MAX_NEUTRAL_LOSSES\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Maximum number of considered neutral losses\&. 
+.PP
+Definition at line \fB36\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.MAX_PEP_LENGTH\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Maximum peptide length\&. 
+.PP
+Definition at line \fB22\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.MAX_PRECURSOR_CHARGE\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Maximum considered precursor ion charge\&. 
+.PP
+Definition at line \fB28\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.MIN_PEP_LENGTH\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Minimum peptide length\&. 
+.PP
+Definition at line \fB18\fP of file \fBSettings\&.cs\fP\&.
+.SS "string CandidateSearch\&.util\&.Settings\&.MODE\fC [get]\fP, \fC [set]\fP"
+
+.PP
+The search approach used by the VectorSearch\&. 
+.PP
+Definition at line \fB76\fP of file \fBSettings\&.cs\fP\&.
+.SS "bool CandidateSearch\&.util\&.Settings\&.NORMALIZE\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Whether or not scores should be normalized by the VectorSearch\&. 
+.PP
+Definition at line \fB68\fP of file \fBSettings\&.cs\fP\&.
+.SS "float CandidateSearch\&.util\&.Settings\&.TOLERANCE\fC [get]\fP, \fC [set]\fP"
+
+.PP
+The tolerance used for the VectorSearch\&. 
+.PP
+Definition at line \fB64\fP of file \fBSettings\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Settings\&.TOP_N\fC [get]\fP, \fC [set]\fP"
+
+.PP
+The top n candidates that should be returned by the VectorSearch\&. 
+.PP
+Definition at line \fB60\fP of file \fBSettings\&.cs\fP\&.
+.SS "bool CandidateSearch\&.util\&.Settings\&.USE_GAUSSIAN\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Whether or not peaks should be modelled as gaussian distributions by the VectorSearch\&. 
+.PP
+Definition at line \fB72\fP of file \fBSettings\&.cs\fP\&.
+.SS "Dictionary<string, double> CandidateSearch\&.util\&.Settings\&.VARIABLE_MODIFICATIONS\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Dictionary for variable modifications that maps amino acids to their possible modification masses\&. 
+.PP
+Definition at line \fB48\fP of file \fBSettings\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CandidateSearch from the source code\&.

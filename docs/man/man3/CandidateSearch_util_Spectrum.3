@@ -1,0 +1,107 @@
+.TH "CandidateSearch.util.Spectrum" 3 "Version 1.0.0" "CandidateSearch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CandidateSearch.util.Spectrum \- Simplified spectrum class implemention of a mass spectrum\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpectrum\fP (double[] Mz, double[] Intensity, int ScanNumber)"
+.br
+.RI "Constructor to create a new spectrum\&. "
+.ti -1c
+.RI "int[] \fBgetEncoding\fP (int massRange=5000, int massMultiplier=100)"
+.br
+.RI "Get the encoding vector of the spectrum\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "double[] \fBmz\fP\fC [get]\fP"
+.br
+.RI "Array containing m/z values of centroid peaks\&. "
+.ti -1c
+.RI "double[] \fBintensity\fP\fC [get]\fP"
+.br
+.RI "Array containing intensities of centroid peaks\&. "
+.ti -1c
+.RI "int \fBscanNumber\fP\fC [get]\fP"
+.br
+.RI "The scan number of the spectrum\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Simplified spectrum class implemention of a mass spectrum\&. 
+.PP
+Definition at line \fB6\fP of file \fBSpectra\&.cs\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CandidateSearch\&.util\&.Spectrum\&.Spectrum (double[] Mz, double[] Intensity, int ScanNumber)"
+
+.PP
+Constructor to create a new spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIMz\fP Array containing m/z values of centroid peaks\&.
+.br
+\fIIntensity\fP Array containing intensities of centroid peaks\&.
+.br
+\fIScanNumber\fP The scan number of the spectrum\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB27\fP of file \fBSpectra\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int[] CandidateSearch\&.util\&.Spectrum\&.getEncoding (int massRange = \fC5000\fP, int massMultiplier = \fC100\fP)"
+
+.PP
+Get the encoding vector of the spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImassRange\fP Maximum m/z that should be considered while encoding\&. Has to match the specifications of VectorSearch\&.
+.br
+\fImassMultiplier\fP Precision of the encoding\&. Has to match the specifications of VectorSearch\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The encoding vector as an integer array\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB41\fP of file \fBSpectra\&.cs\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "double [] CandidateSearch\&.util\&.Spectrum\&.intensity\fC [get]\fP"
+
+.PP
+Array containing intensities of centroid peaks\&. 
+.PP
+Definition at line \fB15\fP of file \fBSpectra\&.cs\fP\&.
+.SS "double [] CandidateSearch\&.util\&.Spectrum\&.mz\fC [get]\fP"
+
+.PP
+Array containing m/z values of centroid peaks\&. 
+.PP
+Definition at line \fB11\fP of file \fBSpectra\&.cs\fP\&.
+.SS "int CandidateSearch\&.util\&.Spectrum\&.scanNumber\fC [get]\fP"
+
+.PP
+The scan number of the spectrum\&. 
+.PP
+Definition at line \fB19\fP of file \fBSpectra\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CandidateSearch from the source code\&.

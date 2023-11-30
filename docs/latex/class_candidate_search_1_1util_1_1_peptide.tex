@@ -1,0 +1,214 @@
+\doxysection{Candidate\+Search.\+util.\+Peptide Class Reference}
+\hypertarget{class_candidate_search_1_1util_1_1_peptide}{}\label{class_candidate_search_1_1util_1_1_peptide}\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+
+
+Simplified peptide class that stores peptide/peptidoform information.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a69162c33e1d4143bc2f6cc2854ca0e63}{Peptide}} (string Sequence, double Mass, Dictionary$<$ int, double $>$ Modifications, \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{Settings}} Ion\+Settings, bool Is\+Decoy)
+\begin{DoxyCompactList}\small\item\em Constructor for a new peptide/pepidoform. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a912555eae82d8449966a0cfc00282f06}{get\+Enconding}} (int mass\+Range=5000, int mass\+Multiplier=100)
+\begin{DoxyCompactList}\small\item\em Get the encoding vector of the peptide. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a string representation of the peptide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a272c3f96bbfe2e1ddcf1b9498e06192c}{add\+Modification}} (int position, double \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}})
+\begin{DoxyCompactList}\small\item\em Adds a modification to the peptide if the peptide isn\textquotesingle{}t already modified at that position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}{sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Amino acid sequence of the peptide. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Mass of the unmodified peptide. \end{DoxyCompactList}\item 
+Dictionary$<$ int, double $>$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{modifications}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary mapping residue positions (0 based) to modification masses. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386}{is\+Decoy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is the peptide a decoy peptide or target peptide. \end{DoxyCompactList}\item 
+List$<$ double $>$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of theoretical ion m/z values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simplified peptide class that stores peptide/peptidoform information. 
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a69162c33e1d4143bc2f6cc2854ca0e63}\label{class_candidate_search_1_1util_1_1_peptide_a69162c33e1d4143bc2f6cc2854ca0e63} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!Peptide@{Peptide}}
+\index{Peptide@{Peptide}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{Peptide()}{Peptide()}}
+{\footnotesize\ttfamily Candidate\+Search.\+util.\+Peptide.\+Peptide (\begin{DoxyParamCaption}\item[{string}]{Sequence,  }\item[{double}]{Mass,  }\item[{Dictionary$<$ int, double $>$}]{Modifications,  }\item[{\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{Settings}}}]{Ion\+Settings,  }\item[{bool}]{Is\+Decoy }\end{DoxyParamCaption})}
+
+
+
+Constructor for a new peptide/pepidoform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sequence} & Sequence of amino acids.\\
+\hline
+{\em Mass} & Mass of the unmodified peptide.\\
+\hline
+{\em Modifications} & Dictionary that maps amino acid positions (0 based) to modification masses.\\
+\hline
+{\em Ion\+Settings} & Settings used for ion calculation.\\
+\hline
+{\em Is\+Decoy} & Whether or not the peptide is a decoy peptide.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a272c3f96bbfe2e1ddcf1b9498e06192c}\label{class_candidate_search_1_1util_1_1_peptide_a272c3f96bbfe2e1ddcf1b9498e06192c} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!addModification@{addModification}}
+\index{addModification@{addModification}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{addModification()}{addModification()}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Peptide.\+add\+Modification (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{double}]{mass }\end{DoxyParamCaption})}
+
+
+
+Adds a modification to the peptide if the peptide isn\textquotesingle{}t already modified at that position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position (0 based) of the modification.\\
+\hline
+{\em mass} & The modification mass.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the modification was added, false if there is already a modification on the specified residue.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00097}{97}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a912555eae82d8449966a0cfc00282f06}\label{class_candidate_search_1_1util_1_1_peptide_a912555eae82d8449966a0cfc00282f06} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!getEnconding@{getEnconding}}
+\index{getEnconding@{getEnconding}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{getEnconding()}{getEnconding()}}
+{\footnotesize\ttfamily int\mbox{[}$\,$\mbox{]} Candidate\+Search.\+util.\+Peptide.\+get\+Enconding (\begin{DoxyParamCaption}\item[{int}]{mass\+Range = {\ttfamily 5000},  }\item[{int}]{mass\+Multiplier = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Get the encoding vector of the peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass\+Range} & Maximum m/z that should be considered while encoding. Has to match the specifications of Vector\+Search.\\
+\hline
+{\em mass\+Multiplier} & Precision of the encoding. Has to match the specifications of Vector\+Search.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoding vector as an integer array.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}\label{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!ToString@{ToString}}
+\index{ToString@{ToString}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Candidate\+Search.\+util.\+Peptide.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a string representation of the peptide. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the peptide.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}\label{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!ions@{ions}}
+\index{ions@{ions}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{ions}{ions}}
+{\footnotesize\ttfamily List$<$double$>$ Candidate\+Search.\+util.\+Peptide.\+ions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of theoretical ion m/z values. 
+
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386}\label{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!isDecoy@{isDecoy}}
+\index{isDecoy@{isDecoy}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{isDecoy}{isDecoy}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Peptide.\+is\+Decoy\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Is the peptide a decoy peptide or target peptide. 
+
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}\label{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!mass@{mass}}
+\index{mass@{mass}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{mass}{mass}}
+{\footnotesize\ttfamily double Candidate\+Search.\+util.\+Peptide.\+mass\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Mass of the unmodified peptide. 
+
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}\label{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!modifications@{modifications}}
+\index{modifications@{modifications}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{modifications}{modifications}}
+{\footnotesize\ttfamily Dictionary$<$int, double$>$ Candidate\+Search.\+util.\+Peptide.\+modifications\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Dictionary mapping residue positions (0 based) to modification masses. 
+
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}\label{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570} 
+\index{CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}!sequence@{sequence}}
+\index{sequence@{sequence}!CandidateSearch.util.Peptide@{CandidateSearch.util.Peptide}}
+\doxysubsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily string Candidate\+Search.\+util.\+Peptide.\+sequence\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Amino acid sequence of the peptide. 
+
+
+
+Definition at line \mbox{\hyperlink{_database_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_database_8cs_source}{Database.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/Database.\+cs\end{DoxyCompactItemize}

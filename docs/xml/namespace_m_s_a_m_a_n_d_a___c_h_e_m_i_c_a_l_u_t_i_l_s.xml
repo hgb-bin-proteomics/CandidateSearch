@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s" kind="namespace" language="C#">
+    <compoundname>MSAMANDA_CHEMICALUTILS</compoundname>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" prot="public">MSAMANDA_CHEMICALUTILS::AminoAcid</innerclass>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element" prot="public">MSAMANDA_CHEMICALUTILS::ChemicalElement</innerclass>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_utils" prot="public">MSAMANDA_CHEMICALUTILS::ChemicalUtils</innerclass>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations" prot="public">MSAMANDA_CHEMICALUTILS::Permutations</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="amanda/ChemicalUtils.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

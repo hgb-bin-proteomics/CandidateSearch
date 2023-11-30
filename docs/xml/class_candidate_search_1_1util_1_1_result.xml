@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_candidate_search_1_1util_1_1_result" kind="class" language="C#" prot="public">
+    <compoundname>CandidateSearch::util::Result</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_candidate_search_1_1util_1_1_result_1a80d0c6d428f395b91034a3d4f14a42b9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; int, List&lt; <ref refid="class_candidate_search_1_1util_1_1_peptide" kindref="compound">Peptide</ref> &gt; &gt;</type>
+        <definition>Dictionary&lt;int, List&lt;Peptide&gt; &gt; CandidateSearch.util.Result.result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <qualifiedname>CandidateSearch.util.Result.result</qualifiedname>
+        <briefdescription>
+<para>Dictionary that maps scan numbers to lists of peptide candidates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Result.cs" line="11" column="27" bodyfile="util/Result.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_result_1a3629c97881b29058d9c800caa3f8e270" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CandidateSearch.util.Result.Result</definition>
+        <argsstring>(ref int[] SearchResult, ref List&lt; Peptide &gt; Peptides, ref List&lt; Spectrum &gt; Spectra, int TopN)</argsstring>
+        <name>Result</name>
+        <qualifiedname>CandidateSearch.util.Result.Result</qualifiedname>
+        <param>
+          <type>ref int[]</type>
+          <declname>SearchResult</declname>
+        </param>
+        <param>
+          <type>ref List&lt; <ref refid="class_candidate_search_1_1util_1_1_peptide" kindref="compound">Peptide</ref> &gt;</type>
+          <declname>Peptides</declname>
+        </param>
+        <param>
+          <type>ref List&lt; <ref refid="class_candidate_search_1_1util_1_1_spectrum" kindref="compound">Spectrum</ref> &gt;</type>
+          <declname>Spectra</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>TopN</declname>
+        </param>
+        <briefdescription>
+<para>Constructor creating a result item that stores the processed VectorSearch result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>SearchResult</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The search result of the VectorSearch.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Peptides</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The complete list of considered peptides/peptidoforms.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Spectra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The complete list of searched spectra.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TopN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of top candidates reported for each spectrum.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Result.cs" line="20" column="16" bodyfile="util/Result.cs" bodystart="20" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_candidate_search_1_1util_1_1_result_1ae88683cd96ea829e0b6f915bd0af4c7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CandidateSearch.util.Result.export</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>export</name>
+        <qualifiedname>CandidateSearch.util.Result.export</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Exports the results to csv format into a file with the given filename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output filename.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the export was successful, 1 if it was unsuccessful.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/Result.cs" line="49" column="20" bodyfile="util/Result.cs" bodystart="49" bodyend="85"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Result class to transform and store the returned integer array of VectorSearch. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="util/Result.cs" line="6" column="11" bodyfile="util/Result.cs" bodystart="7" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_candidate_search_1_1util_1_1_result_1ae88683cd96ea829e0b6f915bd0af4c7c" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Result</scope><name>export</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_result_1a80d0c6d428f395b91034a3d4f14a42b9" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Result</scope><name>result</name></member>
+      <member refid="class_candidate_search_1_1util_1_1_result_1a3629c97881b29058d9c800caa3f8e270" prot="public" virt="non-virtual"><scope>CandidateSearch::util::Result</scope><name>Result</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

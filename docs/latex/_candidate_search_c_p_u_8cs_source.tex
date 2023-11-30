@@ -1,0 +1,101 @@
+\doxysection{Candidate\+Search\+CPU.\+cs}
+\hypertarget{_candidate_search_c_p_u_8cs_source}{}\label{_candidate_search_c_p_u_8cs_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_candidate_search_1_1util}{CandidateSearch.util}};}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Diagnostics;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_candidate_search}{CandidateSearch}}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }CandidateSearchCPU}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Search(\textcolor{keywordtype}{string}\ spectraFile,\ \textcolor{keywordtype}{string}\ databaseFile,\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{Settings}}\ settings)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spectra\ =\ MGFReader.readMGF(spectraFile);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Read\ \{spectra.Count\}\ spectra."{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ var\ peptides\ =\ DatabaseReader.readFASTA(databaseFile,\ settings,\ generateDecoys:\ settings.DECOY\_SEARCH);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Generated\ \{peptides.Count\}\ peptides\ from\ fasta\ file."{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generating\ the\ candidateValues\ and\ candidateIdx\ arrays}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ candidateValuesLength\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ peptide\ \textcolor{keywordflow}{in}\ peptides)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ encoding\ =\ peptide.getEnconding();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ candidateValuesLength\ +=\ encoding.Length;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ candidateValues\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[candidateValuesLength];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ var\ candidateIdx\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[peptides.Count];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIdxCV\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIdxCI\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ peptide\ \textcolor{keywordflow}{in}\ peptides)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ candidateIdx[currentIdxCI]\ =\ currentIdxCV;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentIdxCI++;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ encoding\ =\ peptide.getEnconding();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ value\ \textcolor{keywordflow}{in}\ encoding)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ candidateValues[currentIdxCV]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentIdxCV++;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generating\ the\ spectraValues\ and\ spectraIdx\ arrays}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ spectraValuesLength\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ spectrum\ \textcolor{keywordflow}{in}\ spectra)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ encoding\ =\ spectrum.getEncoding();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spectraValuesLength\ +=\ encoding.Length;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spectraValues\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[spectraValuesLength];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spectraIdx\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[spectra.Count];}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIdxSV\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIdxSI\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ spectrum\ \textcolor{keywordflow}{in}\ spectra)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spectraIdx[currentIdxSI]\ =\ currentIdxSV;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentIdxSI++;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ encoding\ =\ spectrum.getEncoding();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ value\ \textcolor{keywordflow}{in}\ encoding)}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spectraValues[currentIdxSV]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentIdxSV++;}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sw\ =\ \textcolor{keyword}{new}\ Stopwatch();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ sw.Start();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ \mbox{\hyperlink{namespace_vector_search_interface}{VectorSearchInterface}}.\mbox{\hyperlink{class_vector_search_interface_1_1_vector_search_a_p_i}{VectorSearchAPI}}.\mbox{\hyperlink{class_vector_search_interface_1_1_vector_search_a_p_i_a590ce87e625ca1e73c5cd4dfdc4c5a19}{searchCPU}}(ref\ candidateValues,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ candidateIdx,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ spectraValues,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ spectraIdx,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ topN:\ settings.TOP\_N,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tolerance:\ settings.TOLERANCE,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ normalize:\ settings.NORMALIZE,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ useGaussianTol:\ settings.USE\_GAUSSIAN,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ batched:\ settings.MODE\ ==\ \textcolor{stringliteral}{"{}CPU\_DM"{}}\ ||\ settings.MODE\ ==\ \textcolor{stringliteral}{"{}CPU\_SM"{}},}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ batchSize:\ 100,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ useSparse:\ settings.MODE\ ==\ \textcolor{stringliteral}{"{}CPU\_SV"{}}\ ||\ settings.MODE\ ==\ \textcolor{stringliteral}{"{}CPU\_SM"{}},}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cores:\ 0,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose:\ 1000,}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memStat:\ out\ int\ memStat);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ sw.Stop();}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}CPU\ search\ finished\ with\ code\ \{memStat\}.\ Search\ took\ \{sw.Elapsed.TotalSeconds\}\ seconds."{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ var\ processedResult\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_result}{Result}}(ref\ result,\ ref\ peptides,\ ref\ spectra,\ TopN:\ settings.TOP\_N);}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ var\ csvStat\ =\ processedResult.\mbox{\hyperlink{class_candidate_search_1_1util_1_1_result_ae88683cd96ea829e0b6f915bd0af4c7c}{export}}(spectraFile\ +\ \textcolor{stringliteral}{"{}\_results.csv"{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Result\ file\ written\ to\ disk\ with\ code\ \{csvStat\}.\ Search\ finished!"{}});}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_candidate_search_c_p_u_8cs_source_l00105}00105\ \}}
+
+\end{DoxyCode}
