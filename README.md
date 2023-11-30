@@ -136,7 +136,7 @@ Example results of *CandidateSearch* and results analysis are given in `tests`.
 [HeLa dataset](https://www.ebi.ac.uk/pride/archive/projects/PXD007750) using the human swissprot database. The considered ground truth was
 an [MS Amanda](https://ms.imp.ac.at/?goto=msamanda) search validated with [Percolator](https://github.com/percolator/percolator). For every
 high-confidence PSM we checked if the identified peptide/peptidoform was among the top 50/100/500/1000 hits of *CandidateSearch*. We reach
-almost 100% coverage within the first 1000 hits of *CandidateSearch*.
+almost 100% coverage within the first 1000 hits of *CandidateSearch* (for reference: the whole database contained ~4 200 000 peptides or ~10 500 000 peptidoforms).
 
 ## Known Issues
 
