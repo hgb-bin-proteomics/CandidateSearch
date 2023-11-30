@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein" xml:lang="en-US">
+<title>MSAMANDA_FASTAPARSER.DBProtein Class Reference</title>
+<indexterm><primary>MSAMANDA_FASTAPARSER.DBProtein</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1a641ea54f39cc99fc70ced79e546c4ed9">DBProtein</link> (string identifier, int id, string sequence, bool isDecoy=false)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1a1f24d37d7e94b5ec5b6748cca1e211e1">Sequence</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1ab3cbba81dbf5bede313d57aef5110459">IsDecoy</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref">DBProtRef</link> <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1ab85f9d4be84c2d72f1f37144e8bc1b4c">DbProtRef</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00296">296</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1a641ea54f39cc99fc70ced79e546c4ed9"/><section>
+    <title>DBProtein()</title>
+<indexterm><primary>DBProtein</primary><secondary>MSAMANDA_FASTAPARSER.DBProtein</secondary></indexterm>
+<indexterm><primary>MSAMANDA_FASTAPARSER.DBProtein</primary><secondary>DBProtein</secondary></indexterm>
+<para><computeroutput>MSAMANDA_FASTAPARSER.DBProtein.DBProtein (string identifier, int id, string sequence, bool isDecoy = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00302">302</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1ab85f9d4be84c2d72f1f37144e8bc1b4c"/><section>
+    <title>DbProtRef</title>
+<indexterm><primary>DbProtRef</primary><secondary>MSAMANDA_FASTAPARSER.DBProtein</secondary></indexterm>
+<indexterm><primary>MSAMANDA_FASTAPARSER.DBProtein</primary><secondary>DbProtRef</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref">DBProtRef</link> MSAMANDA_FASTAPARSER.DBProtein.DbProtRef<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00300">300</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1ab3cbba81dbf5bede313d57aef5110459"/><section>
+    <title>IsDecoy</title>
+<indexterm><primary>IsDecoy</primary><secondary>MSAMANDA_FASTAPARSER.DBProtein</secondary></indexterm>
+<indexterm><primary>MSAMANDA_FASTAPARSER.DBProtein</primary><secondary>IsDecoy</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_FASTAPARSER.DBProtein.IsDecoy<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00299">299</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein_1a1f24d37d7e94b5ec5b6748cca1e211e1"/><section>
+    <title>Sequence</title>
+<indexterm><primary>Sequence</primary><secondary>MSAMANDA_FASTAPARSER.DBProtein</secondary></indexterm>
+<indexterm><primary>MSAMANDA_FASTAPARSER.DBProtein</primary><secondary>Sequence</secondary></indexterm>
+<para><computeroutput>string MSAMANDA_FASTAPARSER.DBProtein.Sequence<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00298">298</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+amanda/FASTAParser.cs</section>
+</section>

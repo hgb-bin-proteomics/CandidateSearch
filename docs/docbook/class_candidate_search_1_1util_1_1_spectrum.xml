@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_candidate_search_1_1util_1_1_spectrum" xml:lang="en-US">
+<title>CandidateSearch.util.Spectrum Class Reference</title>
+<indexterm><primary>CandidateSearch.util.Spectrum</primary></indexterm>
+<para>
+
+<para>Simplified spectrum class implemention of a mass spectrum. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a492ed6fab0fc563483b38dbbcd93c8cc">Spectrum</link> (double[] Mz, double[] Intensity, int ScanNumber)</para>
+
+<para>Constructor to create a new spectrum. </para>
+</listitem>
+            <listitem><para>int[] <link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a2f41e1abc5af786703f14a97dd14976c">getEncoding</link> (int massRange=5000, int massMultiplier=100)</para>
+
+<para>Get the encoding vector of the spectrum. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>double[] <link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Array containing m/z values of centroid peaks. </para>
+</listitem>
+            <listitem><para>double[] <link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1">intensity</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Array containing intensities of centroid peaks. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1ded92c30ea9b3b02890e9adbadf252a">scanNumber</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>The scan number of the spectrum. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Simplified spectrum class implemention of a mass spectrum. </para>
+<para>
+Definition at line <link linkend="__spectra_8cs_source_1l00006">6</link> of file <link linkend="__spectra_8cs_source">Spectra.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_spectrum_1a492ed6fab0fc563483b38dbbcd93c8cc"/><section>
+    <title>Spectrum()</title>
+<indexterm><primary>Spectrum</primary><secondary>CandidateSearch.util.Spectrum</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Spectrum</primary><secondary>Spectrum</secondary></indexterm>
+<para><computeroutput>CandidateSearch.util.Spectrum.Spectrum (double[] Mz, double[] Intensity, int ScanNumber)</computeroutput></para><para>
+
+<para>Constructor to create a new spectrum. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Mz</entry><entry>
+<para>Array containing m/z values of centroid peaks.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>Intensity</entry><entry>
+<para>Array containing intensities of centroid peaks.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>ScanNumber</entry><entry>
+<para>The scan number of the spectrum.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__spectra_8cs_source_1l00027">27</link> of file <link linkend="__spectra_8cs_source">Spectra.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_spectrum_1a2f41e1abc5af786703f14a97dd14976c"/><section>
+    <title>getEncoding()</title>
+<indexterm><primary>getEncoding</primary><secondary>CandidateSearch.util.Spectrum</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Spectrum</primary><secondary>getEncoding</secondary></indexterm>
+<para><computeroutput>int[] CandidateSearch.util.Spectrum.getEncoding (int massRange = <computeroutput>5000</computeroutput>
+, int massMultiplier = <computeroutput>100</computeroutput>
+)</computeroutput></para><para>
+
+<para>Get the encoding vector of the spectrum. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>massRange</entry><entry>
+<para>Maximum m/z that should be considered while encoding. Has to match the specifications of VectorSearch.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>massMultiplier</entry><entry>
+<para>Precision of the encoding. Has to match the specifications of VectorSearch.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoding vector as an integer array.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__spectra_8cs_source_1l00041">41</link> of file <link linkend="__spectra_8cs_source">Spectra.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1"/><section>
+    <title>intensity</title>
+<indexterm><primary>intensity</primary><secondary>CandidateSearch.util.Spectrum</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Spectrum</primary><secondary>intensity</secondary></indexterm>
+<para><computeroutput>double [] CandidateSearch.util.Spectrum.intensity<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>Array containing intensities of centroid peaks. </para>
+</para>
+<para>
+Definition at line <link linkend="__spectra_8cs_source_1l00015">15</link> of file <link linkend="__spectra_8cs_source">Spectra.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a"/><section>
+    <title>mz</title>
+<indexterm><primary>mz</primary><secondary>CandidateSearch.util.Spectrum</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Spectrum</primary><secondary>mz</secondary></indexterm>
+<para><computeroutput>double [] CandidateSearch.util.Spectrum.mz<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>Array containing m/z values of centroid peaks. </para>
+</para>
+<para>
+Definition at line <link linkend="__spectra_8cs_source_1l00011">11</link> of file <link linkend="__spectra_8cs_source">Spectra.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_spectrum_1a1ded92c30ea9b3b02890e9adbadf252a"/><section>
+    <title>scanNumber</title>
+<indexterm><primary>scanNumber</primary><secondary>CandidateSearch.util.Spectrum</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Spectrum</primary><secondary>scanNumber</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Spectrum.scanNumber<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>The scan number of the spectrum. </para>
+</para>
+<para>
+Definition at line <link linkend="__spectra_8cs_source_1l00019">19</link> of file <link linkend="__spectra_8cs_source">Spectra.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+util/Spectra.cs</section>
+</section>

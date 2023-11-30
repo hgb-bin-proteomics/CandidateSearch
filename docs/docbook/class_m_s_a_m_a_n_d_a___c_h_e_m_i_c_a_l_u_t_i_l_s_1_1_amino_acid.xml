@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid" xml:lang="en-US">
+<title>MSAMANDA_CHEMICALUTILS.AminoAcid Class Reference</title>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a924850a14d9ab9dd5872a51274c1e464">Mass</link> (bool mono)</para>
+</listitem>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1acd1f4e1d4b706283fe85fadb7e021fc8">AminoAcid</link> (char oneLetter, string threeLetter, string name, double monoisotopicMass, double avgMass, double immoniumMass)</para>
+</listitem>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a5decc5ae3f12c101742ae096be088408">AminoAcid</link> (char oneLetter, string threeLetter, string name, double monoisotopicMass, double avgMass, bool mono=true)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>readonly string <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a35784ba6da357d01de0d5a8c169dd0a4">Name</link></para>
+</listitem>
+            <listitem><para>readonly string <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a81296bd932a571d4fd040c3d6471bcbe">ThreeLetterCode</link></para>
+</listitem>
+            <listitem><para>readonly char <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1adb12d357abc667a87591931109208f8c">OneLetterCode</link></para>
+</listitem>
+            <listitem><para>readonly double <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a8f1d40d1e35e62ecdf4c9014045bb4c1">ImmoniumMass</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00019">19</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1acd1f4e1d4b706283fe85fadb7e021fc8"/><section>
+    <title>AminoAcid()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>AminoAcid</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>AminoAcid</secondary></indexterm>
+<para><computeroutput>MSAMANDA_CHEMICALUTILS.AminoAcid.AminoAcid (char oneLetter, string threeLetter, string name, double monoisotopicMass, double avgMass, double immoniumMass)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00033">33</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a5decc5ae3f12c101742ae096be088408"/><section>
+    <title>AminoAcid()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>AminoAcid</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>AminoAcid</secondary></indexterm>
+<para><computeroutput>MSAMANDA_CHEMICALUTILS.AminoAcid.AminoAcid (char oneLetter, string threeLetter, string name, double monoisotopicMass, double avgMass, bool mono = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00043">43</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a924850a14d9ab9dd5872a51274c1e464"/><section>
+    <title>Mass()</title>
+<indexterm><primary>Mass</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>Mass</secondary></indexterm>
+<para><computeroutput>double MSAMANDA_CHEMICALUTILS.AminoAcid.Mass (bool mono)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00028">28</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a8f1d40d1e35e62ecdf4c9014045bb4c1"/><section>
+    <title>ImmoniumMass</title>
+<indexterm><primary>ImmoniumMass</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>ImmoniumMass</secondary></indexterm>
+<para><computeroutput>readonly double MSAMANDA_CHEMICALUTILS.AminoAcid.ImmoniumMass</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00026">26</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a35784ba6da357d01de0d5a8c169dd0a4"/><section>
+    <title>Name</title>
+<indexterm><primary>Name</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>readonly string MSAMANDA_CHEMICALUTILS.AminoAcid.Name</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00021">21</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1adb12d357abc667a87591931109208f8c"/><section>
+    <title>OneLetterCode</title>
+<indexterm><primary>OneLetterCode</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>OneLetterCode</secondary></indexterm>
+<para><computeroutput>readonly char MSAMANDA_CHEMICALUTILS.AminoAcid.OneLetterCode</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00023">23</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid_1a81296bd932a571d4fd040c3d6471bcbe"/><section>
+    <title>ThreeLetterCode</title>
+<indexterm><primary>ThreeLetterCode</primary><secondary>MSAMANDA_CHEMICALUTILS.AminoAcid</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.AminoAcid</primary><secondary>ThreeLetterCode</secondary></indexterm>
+<para><computeroutput>readonly string MSAMANDA_CHEMICALUTILS.AminoAcid.ThreeLetterCode</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00022">22</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+amanda/ChemicalUtils.cs</section>
+</section>

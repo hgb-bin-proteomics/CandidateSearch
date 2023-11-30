@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations" xml:lang="en-US">
+<title>MSAMANDA_CHEMICALUTILS.Permutations Class Reference</title>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary></indexterm>
+<para>Inheritance diagram for MSAMANDA_CHEMICALUTILS.Permutations:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a887d73ba5900b15bfe1ed87dbf0b79db">Permutations</link> (int n, int k)</para>
+</listitem>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a2b0ef1f6b7618b98d8fbc82d633bf6a1">Permutations</link> (string key, List&lt; int[]&gt; elems)</para>
+</listitem>
+            <listitem><para>int[] <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a129a5a849da5b6a3fd78dee1e05ef8b1">Successor</link> (int[] previous)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a70a82c21124569845555184696145d34">CalculatePermutations</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a77e76e3a1d2fefb5eb76d6338d12f518">Equals</link> (<link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations">Permutations</link> other)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1aa959f2d0c2657f926daaa018743dddc9">N</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a476ea94bd3b4c150d185f883603b9ed5">K</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>List&lt; int[]&gt; <link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a94fa8662956bc93f25a332ad0409119a">Elements</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00059">59</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a887d73ba5900b15bfe1ed87dbf0b79db"/><section>
+    <title>Permutations()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Permutations</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>Permutations</secondary></indexterm>
+<para><computeroutput>MSAMANDA_CHEMICALUTILS.Permutations.Permutations (int n, int k)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00065">65</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a2b0ef1f6b7618b98d8fbc82d633bf6a1"/><section>
+    <title>Permutations()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Permutations</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>Permutations</secondary></indexterm>
+<para><computeroutput>MSAMANDA_CHEMICALUTILS.Permutations.Permutations (string key, List&lt; int[]&gt; elems)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00078">78</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a70a82c21124569845555184696145d34"/><section>
+    <title>CalculatePermutations()</title>
+<indexterm><primary>CalculatePermutations</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>CalculatePermutations</secondary></indexterm>
+<para><computeroutput>void MSAMANDA_CHEMICALUTILS.Permutations.CalculatePermutations ( )</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00107">107</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a77e76e3a1d2fefb5eb76d6338d12f518"/><section>
+    <title>Equals()</title>
+<indexterm><primary>Equals</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>Equals</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_CHEMICALUTILS.Permutations.Equals (<link linkend="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations">Permutations</link> other)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00119">119</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a129a5a849da5b6a3fd78dee1e05ef8b1"/><section>
+    <title>Successor()</title>
+<indexterm><primary>Successor</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>Successor</secondary></indexterm>
+<para><computeroutput>int[] MSAMANDA_CHEMICALUTILS.Permutations.Successor (int[] previous)</computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00086">86</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a94fa8662956bc93f25a332ad0409119a"/><section>
+    <title>Elements</title>
+<indexterm><primary>Elements</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>Elements</secondary></indexterm>
+<para><computeroutput>List&lt;int[]&gt; MSAMANDA_CHEMICALUTILS.Permutations.Elements<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00063">63</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1a476ea94bd3b4c150d185f883603b9ed5"/><section>
+    <title>K</title>
+<indexterm><primary>K</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>K</secondary></indexterm>
+<para><computeroutput>int MSAMANDA_CHEMICALUTILS.Permutations.K<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00062">62</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations_1aa959f2d0c2657f926daaa018743dddc9"/><section>
+    <title>N</title>
+<indexterm><primary>N</primary><secondary>MSAMANDA_CHEMICALUTILS.Permutations</secondary></indexterm>
+<indexterm><primary>MSAMANDA_CHEMICALUTILS.Permutations</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>int MSAMANDA_CHEMICALUTILS.Permutations.N<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__chemical_utils_8cs_source_1l00061">61</link> of file <link linkend="__chemical_utils_8cs_source">ChemicalUtils.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+amanda/ChemicalUtils.cs</section>
+</section>

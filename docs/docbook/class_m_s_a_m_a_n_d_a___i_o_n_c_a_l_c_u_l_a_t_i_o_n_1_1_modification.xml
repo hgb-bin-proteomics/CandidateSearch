@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification" xml:lang="en-US">
+<title>MSAMANDA_IONCALCULATION.Modification Class Reference</title>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a531fd4b21eec8ee13232fc6f69f1ef1a">Mass</link> (bool mono)</para>
+</listitem>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a167883779fa5b4e1b1fcc18de7961444">Modification</link> (string title, string name, double mono, double avg, char aa, bool fix, double[] neutralLosses, bool nTerminal, bool cTerminal, int id, bool protein, int maxOccurrence, bool semiFixed=false)</para>
+</listitem>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a2d9d0b39d349e130c9acd44c80a401b0">Modification</link> (<link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification">Modification</link> m)</para>
+</listitem>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ab1257ceec44156ec2616f9b9b7937da8">Modification</link> (<link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification">Modification</link> m, bool fix, bool nTerminal, bool cTerminal, bool protein, int maxOccurrence)</para>
+</listitem>
+            <listitem><para>override string <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1af4f09edb552b33c3a2dcffd037c8b0d9">ToString</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static string <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a8af28f338a1cd3672a497bcf8a105e66">GetSaveString</link> (<link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification">Modification</link> modif)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>readonly string <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a72395aa2e0037e4403ab876a12ca2db1">Title</link></para>
+</listitem>
+            <listitem><para>readonly string <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ae1bdcfdb3a96a987decd1454ed7b1168">FullName</link></para>
+</listitem>
+            <listitem><para>readonly char <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a363aef0e592c5bb1973ee105023c933c">AA</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>double[] <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ade2b3b43343d0afc4923d6457a7d0a3b">NeutralLosses</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abbb4f3ea3d278a0c3607df92f25919ac">NTerminal</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ad24a270cbad631baedb61b9819e8a4ad">CTerminal</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1aac8a22b90d33db30180f724d15d53c45">ProteinTerminus</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a555a1e487da7a53b1ddf8eb07f941c67">MaxOccurrence</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a1d14e14f87d1dba42095210422e04ca8">ID</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a2aac29387c05d35661fdb271ab779d7a">Fixed</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abce1d9ff982ffe45ae2a741199c79c67">SemiFixed</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00832">832</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a167883779fa5b4e1b1fcc18de7961444"/><section>
+    <title>Modification()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Modification</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>Modification</secondary></indexterm>
+<para><computeroutput>MSAMANDA_IONCALCULATION.Modification.Modification (string title, string name, double mono, double avg, char aa, bool fix, double[] neutralLosses, bool nTerminal, bool cTerminal, int id, bool protein, int maxOccurrence, bool semiFixed = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00855">855</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a2d9d0b39d349e130c9acd44c80a401b0"/><section>
+    <title>Modification()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Modification</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>Modification</secondary></indexterm>
+<para><computeroutput>MSAMANDA_IONCALCULATION.Modification.Modification (<link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification">Modification</link> m)</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00873">873</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ab1257ceec44156ec2616f9b9b7937da8"/><section>
+    <title>Modification()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Modification</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>Modification</secondary></indexterm>
+<para><computeroutput>MSAMANDA_IONCALCULATION.Modification.Modification (<link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification">Modification</link> m, bool fix, bool nTerminal, bool cTerminal, bool protein, int maxOccurrence)</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00890">890</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a8af28f338a1cd3672a497bcf8a105e66"/><section>
+    <title>GetSaveString()</title>
+<indexterm><primary>GetSaveString</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>GetSaveString</secondary></indexterm>
+<para><computeroutput>static string MSAMANDA_IONCALCULATION.Modification.GetSaveString (<link linkend="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification">Modification</link> modif)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00926">926</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a531fd4b21eec8ee13232fc6f69f1ef1a"/><section>
+    <title>Mass()</title>
+<indexterm><primary>Mass</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>Mass</secondary></indexterm>
+<para><computeroutput>double MSAMANDA_IONCALCULATION.Modification.Mass (bool mono)</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00847">847</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1af4f09edb552b33c3a2dcffd037c8b0d9"/><section>
+    <title>ToString()</title>
+<indexterm><primary>ToString</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>ToString</secondary></indexterm>
+<para><computeroutput>override string MSAMANDA_IONCALCULATION.Modification.ToString ( )</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00907">907</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a363aef0e592c5bb1973ee105023c933c"/><section>
+    <title>AA</title>
+<indexterm><primary>AA</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>AA</secondary></indexterm>
+<para><computeroutput>readonly char MSAMANDA_IONCALCULATION.Modification.AA</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00838">838</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ae1bdcfdb3a96a987decd1454ed7b1168"/><section>
+    <title>FullName</title>
+<indexterm><primary>FullName</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>FullName</secondary></indexterm>
+<para><computeroutput>readonly string MSAMANDA_IONCALCULATION.Modification.FullName</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00835">835</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a72395aa2e0037e4403ab876a12ca2db1"/><section>
+    <title>Title</title>
+<indexterm><primary>Title</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>Title</secondary></indexterm>
+<para><computeroutput>readonly string MSAMANDA_IONCALCULATION.Modification.Title</computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00834">834</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ad24a270cbad631baedb61b9819e8a4ad"/><section>
+    <title>CTerminal</title>
+<indexterm><primary>CTerminal</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>CTerminal</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_IONCALCULATION.Modification.CTerminal<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00841">841</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a2aac29387c05d35661fdb271ab779d7a"/><section>
+    <title>Fixed</title>
+<indexterm><primary>Fixed</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>Fixed</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_IONCALCULATION.Modification.Fixed<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00852">852</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a1d14e14f87d1dba42095210422e04ca8"/><section>
+    <title>ID</title>
+<indexterm><primary>ID</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>ID</secondary></indexterm>
+<para><computeroutput>int MSAMANDA_IONCALCULATION.Modification.ID<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00845">845</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1a555a1e487da7a53b1ddf8eb07f941c67"/><section>
+    <title>MaxOccurrence</title>
+<indexterm><primary>MaxOccurrence</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>MaxOccurrence</secondary></indexterm>
+<para><computeroutput>int MSAMANDA_IONCALCULATION.Modification.MaxOccurrence<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00843">843</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1ade2b3b43343d0afc4923d6457a7d0a3b"/><section>
+    <title>NeutralLosses</title>
+<indexterm><primary>NeutralLosses</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>NeutralLosses</secondary></indexterm>
+<para><computeroutput>double [] MSAMANDA_IONCALCULATION.Modification.NeutralLosses<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00839">839</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abbb4f3ea3d278a0c3607df92f25919ac"/><section>
+    <title>NTerminal</title>
+<indexterm><primary>NTerminal</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>NTerminal</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_IONCALCULATION.Modification.NTerminal<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00840">840</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1aac8a22b90d33db30180f724d15d53c45"/><section>
+    <title>ProteinTerminus</title>
+<indexterm><primary>ProteinTerminus</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>ProteinTerminus</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_IONCALCULATION.Modification.ProteinTerminus<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00842">842</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification_1abce1d9ff982ffe45ae2a741199c79c67"/><section>
+    <title>SemiFixed</title>
+<indexterm><primary>SemiFixed</primary><secondary>MSAMANDA_IONCALCULATION.Modification</secondary></indexterm>
+<indexterm><primary>MSAMANDA_IONCALCULATION.Modification</primary><secondary>SemiFixed</secondary></indexterm>
+<para><computeroutput>bool MSAMANDA_IONCALCULATION.Modification.SemiFixed<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ion_calculator_8cs_source_1l00853">853</link> of file <link linkend="__ion_calculator_8cs_source">IonCalculator.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+amanda/IonCalculator.cs</section>
+</section>

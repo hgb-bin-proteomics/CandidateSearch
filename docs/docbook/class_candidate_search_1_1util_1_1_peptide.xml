@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_candidate_search_1_1util_1_1_peptide" xml:lang="en-US">
+<title>CandidateSearch.util.Peptide Class Reference</title>
+<indexterm><primary>CandidateSearch.util.Peptide</primary></indexterm>
+<para>
+
+<para>Simplified peptide class that stores peptide/peptidoform information. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_candidate_search_1_1util_1_1_peptide_1a69162c33e1d4143bc2f6cc2854ca0e63">Peptide</link> (string Sequence, double Mass, Dictionary&lt; int, double &gt; Modifications, <link linkend="_class_candidate_search_1_1util_1_1_settings">Settings</link> IonSettings, bool IsDecoy)</para>
+
+<para>Constructor for a new peptide/pepidoform. </para>
+</listitem>
+            <listitem><para>int[] <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a912555eae82d8449966a0cfc00282f06">getEnconding</link> (int massRange=5000, int massMultiplier=100)</para>
+
+<para>Get the encoding vector of the peptide. </para>
+</listitem>
+            <listitem><para>override string <link linkend="_class_candidate_search_1_1util_1_1_peptide_1ae79e95d2b5cf5fa62545cf9dc8b5cd75">ToString</link> ()</para>
+
+<para>Constructs a string representation of the peptide. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a272c3f96bbfe2e1ddcf1b9498e06192c">addModification</link> (int position, double <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a38491e7ee736c367e8a797e7ae514839">mass</link>)</para>
+
+<para>Adds a modification to the peptide if the peptide isn&apos;t already modified at that position. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a3424bc4212221bf532ce55c28f79d570">sequence</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Amino acid sequence of the peptide. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a38491e7ee736c367e8a797e7ae514839">mass</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Mass of the unmodified peptide. </para>
+</listitem>
+            <listitem><para>Dictionary&lt; int, double &gt; <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a9fafee00d878be4c9abc9086042fec26">modifications</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Dictionary mapping residue positions (0 based) to modification masses. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_peptide_1a2222f189f6f9a88b4b02f933526fa386">isDecoy</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Is the peptide a decoy peptide or target peptide. </para>
+</listitem>
+            <listitem><para>List&lt; double &gt; <link linkend="_class_candidate_search_1_1util_1_1_peptide_1ac412ca5d6a9569cb5add4ccfc7c5b423">ions</link><computeroutput> [get]</computeroutput>
+</para>
+
+<para>List of theoretical ion m/z values. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Simplified peptide class that stores peptide/peptidoform information. </para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00008">8</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a69162c33e1d4143bc2f6cc2854ca0e63"/><section>
+    <title>Peptide()</title>
+<indexterm><primary>Peptide</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>Peptide</secondary></indexterm>
+<para><computeroutput>CandidateSearch.util.Peptide.Peptide (string Sequence, double Mass, Dictionary&lt; int, double &gt; Modifications, <link linkend="_class_candidate_search_1_1util_1_1_settings">Settings</link> IonSettings, bool IsDecoy)</computeroutput></para><para>
+
+<para>Constructor for a new peptide/pepidoform. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Sequence</entry><entry>
+<para>Sequence of amino acids.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>Mass</entry><entry>
+<para>Mass of the unmodified peptide.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>Modifications</entry><entry>
+<para>Dictionary that maps amino acid positions (0 based) to modification masses.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>IonSettings</entry><entry>
+<para>Settings used for ion calculation.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>IsDecoy</entry><entry>
+<para>Whether or not the peptide is a decoy peptide.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00039">39</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a272c3f96bbfe2e1ddcf1b9498e06192c"/><section>
+    <title>addModification()</title>
+<indexterm><primary>addModification</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>addModification</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Peptide.addModification (int position, double mass)</computeroutput></para><para>
+
+<para>Adds a modification to the peptide if the peptide isn&apos;t already modified at that position. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>position</entry><entry>
+<para>The position (0 based) of the modification.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>mass</entry><entry>
+<para>The modification mass.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the modification was added, false if there is already a modification on the specified residue.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00097">97</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a912555eae82d8449966a0cfc00282f06"/><section>
+    <title>getEnconding()</title>
+<indexterm><primary>getEnconding</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>getEnconding</secondary></indexterm>
+<para><computeroutput>int[] CandidateSearch.util.Peptide.getEnconding (int massRange = <computeroutput>5000</computeroutput>
+, int massMultiplier = <computeroutput>100</computeroutput>
+)</computeroutput></para><para>
+
+<para>Get the encoding vector of the peptide. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>massRange</entry><entry>
+<para>Maximum m/z that should be considered while encoding. Has to match the specifications of VectorSearch.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>massMultiplier</entry><entry>
+<para>Precision of the encoding. Has to match the specifications of VectorSearch.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoding vector as an integer array.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00054">54</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1ae79e95d2b5cf5fa62545cf9dc8b5cd75"/><section>
+    <title>ToString()</title>
+<indexterm><primary>ToString</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>ToString</secondary></indexterm>
+<para><computeroutput>override string CandidateSearch.util.Peptide.ToString ( )</computeroutput></para><para>
+
+<para>Constructs a string representation of the peptide. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The string representation of the peptide.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00073">73</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1ac412ca5d6a9569cb5add4ccfc7c5b423"/><section>
+    <title>ions</title>
+<indexterm><primary>ions</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>ions</secondary></indexterm>
+<para><computeroutput>List&lt;double&gt; CandidateSearch.util.Peptide.ions<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>List of theoretical ion m/z values. </para>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00029">29</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a2222f189f6f9a88b4b02f933526fa386"/><section>
+    <title>isDecoy</title>
+<indexterm><primary>isDecoy</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>isDecoy</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Peptide.isDecoy<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>Is the peptide a decoy peptide or target peptide. </para>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00025">25</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a38491e7ee736c367e8a797e7ae514839"/><section>
+    <title>mass</title>
+<indexterm><primary>mass</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>mass</secondary></indexterm>
+<para><computeroutput>double CandidateSearch.util.Peptide.mass<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>Mass of the unmodified peptide. </para>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00017">17</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a9fafee00d878be4c9abc9086042fec26"/><section>
+    <title>modifications</title>
+<indexterm><primary>modifications</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>modifications</secondary></indexterm>
+<para><computeroutput>Dictionary&lt;int, double&gt; CandidateSearch.util.Peptide.modifications<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>Dictionary mapping residue positions (0 based) to modification masses. </para>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00021">21</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_peptide_1a3424bc4212221bf532ce55c28f79d570"/><section>
+    <title>sequence</title>
+<indexterm><primary>sequence</primary><secondary>CandidateSearch.util.Peptide</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Peptide</primary><secondary>sequence</secondary></indexterm>
+<para><computeroutput>string CandidateSearch.util.Peptide.sequence<computeroutput>[get]</computeroutput></computeroutput></para><para>
+
+<para>Amino acid sequence of the peptide. </para>
+</para>
+<para>
+Definition at line <link linkend="__database_8cs_source_1l00013">13</link> of file <link linkend="__database_8cs_source">Database.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+util/Database.cs</section>
+</section>

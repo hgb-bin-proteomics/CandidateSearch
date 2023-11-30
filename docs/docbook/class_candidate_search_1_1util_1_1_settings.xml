@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_candidate_search_1_1util_1_1_settings" xml:lang="en-US">
+<title>CandidateSearch.util.Settings Class Reference</title>
+<indexterm><primary>CandidateSearch.util.Settings</primary></indexterm>
+<para>
+
+<para>Settings for digestion, ion calculation and VectorSearch. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_candidate_search_1_1util_1_1_settings_1aac628d9be9dcd4b5255a0ff509fc09ec">Settings</link> (int MaxCleavages=2, int MinPepLength=5, int MaxPepLength=30, int MaxPrecursorCharge=4, string MaxFragmentCharge=&quot;+1&quot;, int MaxNeutralLosses=1, int MaxNeutralLossMods=2, bool DecoySearch=true, int TopN=1000, float Tolerance=0.02f, bool Normalize=false, bool UseGaussian=true, string Mode=&quot;CPU_DV&quot;)</para>
+
+<para>Settings constructor to set the specified search parameters. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_settings_1aa8fe5da925a1b23f5b0f5297a68b6845">addFixedModification</link> (string aminoAcid, double mass)</para>
+
+<para>Add a fixed modification to the fixed modification dictionary. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_settings_1a7674e2e0c8ba7884e2cf52c183a3ab6b">addVariableModification</link> (string aminoAcid, double mass)</para>
+
+<para>Add a variable modification to the variable modification dictionary. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_candidate_search_1_1util_1_1_settings_1ae130cd4713873e35368c0dcab29b7a66">modificationsToString</link> (bool variable=false)</para>
+
+<para>Returns a string representation of the modifications. </para>
+</listitem>
+            <listitem><para>override string <link linkend="_class_candidate_search_1_1util_1_1_settings_1a9f6a9eca4f8a69373ab69aefd0963775">ToString</link> ()</para>
+
+<para>Returns a string representation of the settings. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1a00a142b1e6640660be062ffa36223d4a">MAX_CLEAVAGES</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Maximum number of missed cleavages allowed during digestion. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1a909e8315b369449767cbea111ce0c02e">MIN_PEP_LENGTH</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Minimum peptide length. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1a9808400ce97d1831df67e5b88e4a11c2">MAX_PEP_LENGTH</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Maximum peptide length. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1abb4b3918df831cae4454968fd6f4c4af">MAX_PRECURSOR_CHARGE</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Maximum considered precursor ion charge. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_candidate_search_1_1util_1_1_settings_1a3039c976b8c250e0b7c905aa3dce54aa">MAX_FRAGMENT_CHARGE</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Maximum considered fragment ion charge. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1ac075b70ec6f765acbd72a1e07bde1b4a">MAX_NEUTRAL_LOSSES</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Maximum number of considered neutral losses. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1af269e68fbdc9d6658ed43a9b8573cbb0">MAX_NEUTRAL_LOSS_MODS</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Maximum number of considered neutral loss modifications. </para>
+</listitem>
+            <listitem><para>Dictionary&lt; string, double &gt; <link linkend="_class_candidate_search_1_1util_1_1_settings_1a255ab023ca918fb6799dd3fb6a218f14">FIXED_MODIFICATIONS</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Dictionary for fixed modifications that maps amino acids to their possible modification masses. </para>
+</listitem>
+            <listitem><para>Dictionary&lt; string, double &gt; <link linkend="_class_candidate_search_1_1util_1_1_settings_1a8a49143cc4dd41c584106027cf3ad0b6">VARIABLE_MODIFICATIONS</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Dictionary for variable modifications that maps amino acids to their possible modification masses. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_settings_1acd720f20a43d4920aadcefadec7db6b6">DECOY_SEARCH</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Whether or not decoy search should be performed. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_search_1_1util_1_1_settings_1a03baea82e7985ea28efeb17445fa69c3">TOP_N</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>The top n candidates that should be returned by the VectorSearch. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_candidate_search_1_1util_1_1_settings_1a99ffaec52ea40c127141fc394218a190">TOLERANCE</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>The tolerance used for the VectorSearch. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_settings_1a88eefcbe9bfd476fa4e22bf62db2e21d">NORMALIZE</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Whether or not scores should be normalized by the VectorSearch. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_search_1_1util_1_1_settings_1ac93b93a3fb5b2e7254a8671ef3de50dc">USE_GAUSSIAN</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Whether or not peaks should be modelled as gaussian distributions by the VectorSearch. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_candidate_search_1_1util_1_1_settings_1a4b1c991d1329b6d086f2394c69c6da8a">MODE</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>The search approach used by the VectorSearch. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Settings for digestion, ion calculation and VectorSearch. </para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00008">8</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1aac628d9be9dcd4b5255a0ff509fc09ec"/><section>
+    <title>Settings()</title>
+<indexterm><primary>Settings</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>Settings</secondary></indexterm>
+<para><computeroutput>CandidateSearch.util.Settings.Settings (int MaxCleavages = <computeroutput>2</computeroutput>
+, int MinPepLength = <computeroutput>5</computeroutput>
+, int MaxPepLength = <computeroutput>30</computeroutput>
+, int MaxPrecursorCharge = <computeroutput>4</computeroutput>
+, string MaxFragmentCharge = <computeroutput>&quot;+1&quot;</computeroutput>
+, int MaxNeutralLosses = <computeroutput>1</computeroutput>
+, int MaxNeutralLossMods = <computeroutput>2</computeroutput>
+, bool DecoySearch = <computeroutput>true</computeroutput>
+, int TopN = <computeroutput>1000</computeroutput>
+, float Tolerance = <computeroutput>0::02f</computeroutput>
+, bool Normalize = <computeroutput>false</computeroutput>
+, bool UseGaussian = <computeroutput>true</computeroutput>
+, string Mode = <computeroutput>&quot;CPU_DV&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Settings constructor to set the specified search parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>MaxCleavages</entry><entry>
+<para>Maximum number of missed cleavages allowed during digestion.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>MinPepLength</entry><entry>
+<para>Minimum peptide length.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>MaxPepLength</entry><entry>
+<para>Maximum peptide length.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>MaxPrecursorCharge</entry><entry>
+<para>Maximum considered precursor ion charge.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>MaxFragmentCharge</entry><entry>
+<para>Maximum considered fragment ion charge.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>MaxNeutralLosses</entry><entry>
+<para>Maximum number of considered neutral losses.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>MaxNeutralLossMods</entry><entry>
+<para>Maximum number of considered neutral loss modifications.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>DecoySearch</entry><entry>
+<para>Whether or not decoy search should be performed.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>TopN</entry><entry>
+<para>The top n candidates that should be returned by the VectorSearch.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>Tolerance</entry><entry>
+<para>The tolerance used for the VectorSearch.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>Normalize</entry><entry>
+<para>Whether or not scores should be normalized by the VectorSearch.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>UseGaussian</entry><entry>
+<para>Whether or not peaks should be modelled as gaussian distributions by the VectorSearch.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>Mode</entry><entry>
+<para>The search approach used by the VectorSearch.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00094">94</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1aa8fe5da925a1b23f5b0f5297a68b6845"/><section>
+    <title>addFixedModification()</title>
+<indexterm><primary>addFixedModification</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>addFixedModification</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Settings.addFixedModification (string aminoAcid, double mass)</computeroutput></para><para>
+
+<para>Add a fixed modification to the fixed modification dictionary. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aminoAcid</entry><entry>
+<para>The amino acid that will be modified.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>mass</entry><entry>
+<para>The mass of the modification.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00125">125</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a7674e2e0c8ba7884e2cf52c183a3ab6b"/><section>
+    <title>addVariableModification()</title>
+<indexterm><primary>addVariableModification</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>addVariableModification</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Settings.addVariableModification (string aminoAcid, double mass)</computeroutput></para><para>
+
+<para>Add a variable modification to the variable modification dictionary. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>aminoAcid</entry><entry>
+<para>The amino acid that can be modified.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>mass</entry><entry>
+<para>The mass of the modification.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00140">140</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1ae130cd4713873e35368c0dcab29b7a66"/><section>
+    <title>modificationsToString()</title>
+<indexterm><primary>modificationsToString</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>modificationsToString</secondary></indexterm>
+<para><computeroutput>string CandidateSearch.util.Settings.modificationsToString (bool variable = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+
+<para>Returns a string representation of the modifications. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>variable</entry><entry>
+<para>Whether to process fixed or variable modifications.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string representation of the specified modification set.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00154">154</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a9f6a9eca4f8a69373ab69aefd0963775"/><section>
+    <title>ToString()</title>
+<indexterm><primary>ToString</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>ToString</secondary></indexterm>
+<para><computeroutput>override string CandidateSearch.util.Settings.ToString ( )</computeroutput></para><para>
+
+<para>Returns a string representation of the settings. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The string representation of the settings.</para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00178">178</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1acd720f20a43d4920aadcefadec7db6b6"/><section>
+    <title>DECOY_SEARCH</title>
+<indexterm><primary>DECOY_SEARCH</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>DECOY_SEARCH</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Settings.DECOY_SEARCH<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Whether or not decoy search should be performed. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00054">54</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a255ab023ca918fb6799dd3fb6a218f14"/><section>
+    <title>FIXED_MODIFICATIONS</title>
+<indexterm><primary>FIXED_MODIFICATIONS</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>FIXED_MODIFICATIONS</secondary></indexterm>
+<para><computeroutput>Dictionary&lt;string, double&gt; CandidateSearch.util.Settings.FIXED_MODIFICATIONS<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Dictionary for fixed modifications that maps amino acids to their possible modification masses. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00044">44</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a00a142b1e6640660be062ffa36223d4a"/><section>
+    <title>MAX_CLEAVAGES</title>
+<indexterm><primary>MAX_CLEAVAGES</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MAX_CLEAVAGES</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.MAX_CLEAVAGES<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Maximum number of missed cleavages allowed during digestion. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00014">14</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a3039c976b8c250e0b7c905aa3dce54aa"/><section>
+    <title>MAX_FRAGMENT_CHARGE</title>
+<indexterm><primary>MAX_FRAGMENT_CHARGE</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MAX_FRAGMENT_CHARGE</secondary></indexterm>
+<para><computeroutput>string CandidateSearch.util.Settings.MAX_FRAGMENT_CHARGE<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Maximum considered fragment ion charge. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00032">32</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1af269e68fbdc9d6658ed43a9b8573cbb0"/><section>
+    <title>MAX_NEUTRAL_LOSS_MODS</title>
+<indexterm><primary>MAX_NEUTRAL_LOSS_MODS</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MAX_NEUTRAL_LOSS_MODS</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.MAX_NEUTRAL_LOSS_MODS<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Maximum number of considered neutral loss modifications. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00040">40</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1ac075b70ec6f765acbd72a1e07bde1b4a"/><section>
+    <title>MAX_NEUTRAL_LOSSES</title>
+<indexterm><primary>MAX_NEUTRAL_LOSSES</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MAX_NEUTRAL_LOSSES</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.MAX_NEUTRAL_LOSSES<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Maximum number of considered neutral losses. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00036">36</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a9808400ce97d1831df67e5b88e4a11c2"/><section>
+    <title>MAX_PEP_LENGTH</title>
+<indexterm><primary>MAX_PEP_LENGTH</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MAX_PEP_LENGTH</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.MAX_PEP_LENGTH<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Maximum peptide length. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00022">22</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1abb4b3918df831cae4454968fd6f4c4af"/><section>
+    <title>MAX_PRECURSOR_CHARGE</title>
+<indexterm><primary>MAX_PRECURSOR_CHARGE</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MAX_PRECURSOR_CHARGE</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.MAX_PRECURSOR_CHARGE<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Maximum considered precursor ion charge. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00028">28</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a909e8315b369449767cbea111ce0c02e"/><section>
+    <title>MIN_PEP_LENGTH</title>
+<indexterm><primary>MIN_PEP_LENGTH</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MIN_PEP_LENGTH</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.MIN_PEP_LENGTH<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Minimum peptide length. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00018">18</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a4b1c991d1329b6d086f2394c69c6da8a"/><section>
+    <title>MODE</title>
+<indexterm><primary>MODE</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>MODE</secondary></indexterm>
+<para><computeroutput>string CandidateSearch.util.Settings.MODE<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>The search approach used by the VectorSearch. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00076">76</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a88eefcbe9bfd476fa4e22bf62db2e21d"/><section>
+    <title>NORMALIZE</title>
+<indexterm><primary>NORMALIZE</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>NORMALIZE</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Settings.NORMALIZE<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Whether or not scores should be normalized by the VectorSearch. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00068">68</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a99ffaec52ea40c127141fc394218a190"/><section>
+    <title>TOLERANCE</title>
+<indexterm><primary>TOLERANCE</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>TOLERANCE</secondary></indexterm>
+<para><computeroutput>float CandidateSearch.util.Settings.TOLERANCE<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>The tolerance used for the VectorSearch. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00064">64</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a03baea82e7985ea28efeb17445fa69c3"/><section>
+    <title>TOP_N</title>
+<indexterm><primary>TOP_N</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>TOP_N</secondary></indexterm>
+<para><computeroutput>int CandidateSearch.util.Settings.TOP_N<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>The top n candidates that should be returned by the VectorSearch. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00060">60</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1ac93b93a3fb5b2e7254a8671ef3de50dc"/><section>
+    <title>USE_GAUSSIAN</title>
+<indexterm><primary>USE_GAUSSIAN</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>USE_GAUSSIAN</secondary></indexterm>
+<para><computeroutput>bool CandidateSearch.util.Settings.USE_GAUSSIAN<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Whether or not peaks should be modelled as gaussian distributions by the VectorSearch. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00072">72</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_search_1_1util_1_1_settings_1a8a49143cc4dd41c584106027cf3ad0b6"/><section>
+    <title>VARIABLE_MODIFICATIONS</title>
+<indexterm><primary>VARIABLE_MODIFICATIONS</primary><secondary>CandidateSearch.util.Settings</secondary></indexterm>
+<indexterm><primary>CandidateSearch.util.Settings</primary><secondary>VARIABLE_MODIFICATIONS</secondary></indexterm>
+<para><computeroutput>Dictionary&lt;string, double&gt; CandidateSearch.util.Settings.VARIABLE_MODIFICATIONS<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>Dictionary for variable modifications that maps amino acids to their possible modification masses. </para>
+</para>
+<para>
+Definition at line <link linkend="__settings_8cs_source_1l00048">48</link> of file <link linkend="__settings_8cs_source">Settings.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+util/Settings.cs</section>
+</section>

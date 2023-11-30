@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_candidate_search_1_1util" xml:lang="en-US">
+<title>CandidateSearch.util Namespace Reference</title>
+<indexterm><primary>CandidateSearch.util</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">DatabaseReader</emphasis></para>
+
+<para>Reader class to read a fasta file. </para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">MGFReader</emphasis></para>
+
+<para>Reader class to read mgf files. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_candidate_search_1_1util_1_1_peptide">Peptide</link></para>
+
+<para>Simplified peptide class that stores peptide/peptidoform information. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_candidate_search_1_1util_1_1_result">Result</link></para>
+
+<para>Result class to transform and store the returned integer array of VectorSearch. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_candidate_search_1_1util_1_1_settings">Settings</link></para>
+
+<para>Settings for digestion, ion calculation and VectorSearch. </para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">SettingsReader</emphasis></para>
+
+<para>Reader class to read a settings file. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_candidate_search_1_1util_1_1_spectrum">Spectrum</link></para>
+
+<para>Simplified spectrum class implemention of a mass spectrum. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
