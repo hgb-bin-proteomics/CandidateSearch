@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r" xml:lang="en-US">
+<title>MSAMANDA_FASTAPARSER Namespace Reference</title>
+<indexterm><primary>MSAMANDA_FASTAPARSER</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide">DBPeptide</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein">DBProtein</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_prot_ref">DBProtRef</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_digester_d_b">DigesterDB</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme">Enzyme</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser">FASTAParser</link></para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">HelperMethods</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester">ProteinDigester</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

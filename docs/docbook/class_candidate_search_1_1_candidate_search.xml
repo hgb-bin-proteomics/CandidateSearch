@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_candidate_search_1_1_candidate_search" xml:lang="en-US">
+<title>CandidateSearch.CandidateSearch Class Reference</title>
+<indexterm><primary>CandidateSearch.CandidateSearch</primary></indexterm>
+<para>
+
+<para>Searching for candidates using VectorSearch. Requires VectorSearch.dll v1.5.1 Requires VectorSearchCUDA.dll v1.4.7. </para>
+ 
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_candidate_search_1_1_candidate_search_1a0958147526f9d44e92d4f23315d95d74">Main</link> (string[] args)</para>
+
+<para>Main function that is executed when <link linkend="_namespace_candidate_search">CandidateSearch</link> is run. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const string <link linkend="_class_candidate_search_1_1_candidate_search_1abdc2e237c89f801ca9f47ba447710281">version</link> = &quot;1.0.0&quot;</para>
+
+<para>Current version of <link linkend="_namespace_candidate_search">CandidateSearch</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Searching for candidates using VectorSearch. Requires VectorSearch.dll v1.5.1 Requires VectorSearchCUDA.dll v1.4.7. </para>
+<para>
+Definition at line <link linkend="__candidate_search_8cs_source_1l00010">10</link> of file <link linkend="__candidate_search_8cs_source">CandidateSearch.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1_candidate_search_1a0958147526f9d44e92d4f23315d95d74"/><section>
+    <title>Main()</title>
+<indexterm><primary>Main</primary><secondary>CandidateSearch.CandidateSearch</secondary></indexterm>
+<indexterm><primary>CandidateSearch.CandidateSearch</primary><secondary>Main</secondary></indexterm>
+<para><computeroutput>static void CandidateSearch.CandidateSearch.Main (string[] args)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Main function that is executed when <link linkend="_namespace_candidate_search">CandidateSearch</link> is run. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>Arguments passed via commandline.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_search_8cs_source_1l00021">21</link> of file <link linkend="__candidate_search_8cs_source">CandidateSearch.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_candidate_search_1_1_candidate_search_1abdc2e237c89f801ca9f47ba447710281"/><section>
+    <title>version</title>
+<indexterm><primary>version</primary><secondary>CandidateSearch.CandidateSearch</secondary></indexterm>
+<indexterm><primary>CandidateSearch.CandidateSearch</primary><secondary>version</secondary></indexterm>
+<para><computeroutput>const string CandidateSearch.CandidateSearch.version = &quot;1.0.0&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Current version of <link linkend="_namespace_candidate_search">CandidateSearch</link>. </para>
+</para>
+<para>
+Definition at line <link linkend="__candidate_search_8cs_source_1l00015">15</link> of file <link linkend="__candidate_search_8cs_source">CandidateSearch.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+CandidateSearch.cs</section>
+</section>

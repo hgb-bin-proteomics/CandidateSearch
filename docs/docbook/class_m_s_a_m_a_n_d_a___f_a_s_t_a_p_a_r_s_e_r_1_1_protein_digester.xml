@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester" xml:lang="en-US">
+<title>MSAMANDA_FASTAPARSER.ProteinDigester Class Reference</title>
+<indexterm><primary>MSAMANDA_FASTAPARSER.ProteinDigester</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1ae63bc1852e6075bcfe6be6bbf0ecb2d7">ProteinDigester</link> (<link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme">Enzyme</link> enzyme, int missedCleavages, bool useMonoisotopicMass, int minPepLength, int maxPepLength, <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein">DBProtein</link> dbProtein)</para>
+</listitem>
+            <listitem><para>List&lt; <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide">DBPeptide</link> &gt; <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a14795bc10bdd58c20b7547802cf84861">DigestProteinIntoList</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00536">536</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1ae63bc1852e6075bcfe6be6bbf0ecb2d7"/><section>
+    <title>ProteinDigester()</title>
+<indexterm><primary>ProteinDigester</primary><secondary>MSAMANDA_FASTAPARSER.ProteinDigester</secondary></indexterm>
+<indexterm><primary>MSAMANDA_FASTAPARSER.ProteinDigester</primary><secondary>ProteinDigester</secondary></indexterm>
+<para><computeroutput>MSAMANDA_FASTAPARSER.ProteinDigester.ProteinDigester (<link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_enzyme">Enzyme</link> enzyme, int missedCleavages, bool useMonoisotopicMass, int minPepLength, int maxPepLength, <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_protein">DBProtein</link> dbProtein)</computeroutput></para><para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00553">553</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_protein_digester_1a14795bc10bdd58c20b7547802cf84861"/><section>
+    <title>DigestProteinIntoList()</title>
+<indexterm><primary>DigestProteinIntoList</primary><secondary>MSAMANDA_FASTAPARSER.ProteinDigester</secondary></indexterm>
+<indexterm><primary>MSAMANDA_FASTAPARSER.ProteinDigester</primary><secondary>DigestProteinIntoList</secondary></indexterm>
+<para><computeroutput>List&lt; <link linkend="_class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_d_b_peptide">DBPeptide</link> &gt; MSAMANDA_FASTAPARSER.ProteinDigester.DigestProteinIntoList ( )</computeroutput></para><para>
+Definition at line <link linkend="__f_a_s_t_a_parser_8cs_source_1l00564">564</link> of file <link linkend="__f_a_s_t_a_parser_8cs_source">FASTAParser.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+amanda/FASTAParser.cs</section>
+</section>

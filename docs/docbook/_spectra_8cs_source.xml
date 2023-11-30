@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__spectra_8cs_source" xml:lang="en-US">
+<title>Spectra.cs</title>
+<indexterm><primary>util/Spectra.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__spectra_8cs_source_1l00001"/>00001 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_candidate_search_1_1util">CandidateSearch.util</link>
+<anchor xml:id="__spectra_8cs_source_1l00002"/>00002 {
+<anchor xml:id="__spectra_8cs_source_1l00006"/><link linkend="_class_candidate_search_1_1util_1_1_spectrum">00006</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_candidate_search_1_1util_1_1_spectrum">Spectrum</link>
+<anchor xml:id="__spectra_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00011"/><link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">00011</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>[]&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00015"/><link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1">00015</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>[]&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1">intensity</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00019"/><link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1ded92c30ea9b3b02890e9adbadf252a">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1ded92c30ea9b3b02890e9adbadf252a">scanNumber</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00020"/>00020 
+<anchor xml:id="__spectra_8cs_source_1l00027"/><link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a492ed6fab0fc563483b38dbbcd93c8cc">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a492ed6fab0fc563483b38dbbcd93c8cc">Spectrum</link>(<emphasis role="keywordtype">double</emphasis>[]&#32;Mz,&#32;<emphasis role="keywordtype">double</emphasis>[]&#32;Intensity,&#32;<emphasis role="keywordtype">int</emphasis>&#32;ScanNumber)&#32;
+<anchor xml:id="__spectra_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link>&#32;=&#32;Mz;
+<anchor xml:id="__spectra_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1">intensity</link>&#32;=&#32;Intensity;
+<anchor xml:id="__spectra_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1ded92c30ea9b3b02890e9adbadf252a">scanNumber</link>&#32;=&#32;ScanNumber;
+<anchor xml:id="__spectra_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Array.Sort(<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link>,&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a1c8476c3d2d04b016291700b765cbbb1">intensity</link>);
+<anchor xml:id="__spectra_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00034"/>00034 
+<anchor xml:id="__spectra_8cs_source_1l00041"/><link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a2f41e1abc5af786703f14a97dd14976c">00041</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>[]&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1a2f41e1abc5af786703f14a97dd14976c">getEncoding</link>(<emphasis role="keywordtype">int</emphasis>&#32;massRange&#32;=&#32;5000,&#32;<emphasis role="keywordtype">int</emphasis>&#32;massMultiplier&#32;=&#32;100)
+<anchor xml:id="__spectra_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;encoding&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;int&gt;();
+<anchor xml:id="__spectra_8cs_source_1l00044"/>00044 
+<anchor xml:id="__spectra_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link>.Length;&#32;i++)
+<anchor xml:id="__spectra_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link>[i]&#32;&lt;&#32;massRange)
+<anchor xml:id="__spectra_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoding.Add((<emphasis role="keywordtype">int</emphasis>)&#32;Math.Round(<link linkend="_class_candidate_search_1_1util_1_1_spectrum_1aeab26cbf516d8b21832f85fc176c445a">mz</link>[i]&#32;*&#32;massMultiplier));
+<anchor xml:id="__spectra_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00052"/>00052 
+<anchor xml:id="__spectra_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;encoding.ToArray();
+<anchor xml:id="__spectra_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00056"/>00056 
+<anchor xml:id="__spectra_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>MGFReader
+<anchor xml:id="__spectra_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;List&lt;Spectrum&gt;&#32;readMGF(<emphasis role="keywordtype">string</emphasis>&#32;filename)
+<anchor xml:id="__spectra_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;
+<anchor xml:id="__spectra_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;MSAMANDA_spectra&#32;=&#32;<link linkend="_namespace_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r">MSAMANDA_MGFPARSER</link>.<link linkend="_class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser">MGFParser</link>.ParseNextSpectra(filename);
+<anchor xml:id="__spectra_8cs_source_1l00070"/>00070 
+<anchor xml:id="__spectra_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;spectra&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;Spectrum&gt;();
+<anchor xml:id="__spectra_8cs_source_1l00072"/>00072 
+<anchor xml:id="__spectra_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>(var&#32;spectrum&#32;<emphasis role="keywordflow">in</emphasis>&#32;MSAMANDA_spectra)
+<anchor xml:id="__spectra_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;mz&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;double&gt;();
+<anchor xml:id="__spectra_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;intensity&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;double&gt;();
+<anchor xml:id="__spectra_8cs_source_1l00077"/>00077 
+<anchor xml:id="__spectra_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(var&#32;peak&#32;<emphasis role="keywordflow">in</emphasis>&#32;spectrum.FragmentsPeaks)
+<anchor xml:id="__spectra_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__spectra_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mz.Add(peak.Position);
+<anchor xml:id="__spectra_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;intensity.Add(peak.Intensity);
+<anchor xml:id="__spectra_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00083"/>00083 
+<anchor xml:id="__spectra_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spectra.Add(<emphasis role="keyword">new</emphasis>&#32;Spectrum(mz.ToArray(),&#32;intensity.ToArray(),&#32;spectrum.ScanNumber));
+<anchor xml:id="__spectra_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00086"/>00086 
+<anchor xml:id="__spectra_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;spectra;
+<anchor xml:id="__spectra_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__spectra_8cs_source_1l00090"/>00090 }
+<anchor xml:id="__spectra_8cs_source_1l00091"/>00091 
+</programlisting></section>
