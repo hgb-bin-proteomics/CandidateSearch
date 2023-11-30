@@ -22,15 +22,9 @@ namespace MSAMANDA_FASTAPARSER
             trypsin.Offset = 1;
 
             var proteins = ReadInFasta(fastaFileName, false);
-            var missedCleavages = settings.MAX_CLEAVAGES;
-            var minPepLength = settings.MIN_PEP_LENGTH;
-            var maxPepLength = settings.MAX_PEP_LENGTH;
-
-            var modifications = new Dictionary<string, double>();
 
             var peptides = DigestProteins(proteins, 
                                           trypsin, 
-                                          modifications, 
                                           settings,
                                           false, 
                                           coreUsage);
@@ -47,7 +41,6 @@ namespace MSAMANDA_FASTAPARSER
 
                 var decoyPeptides = DigestProteins(decoyProteins,
                                                    trypsin,
-                                                   modifications,
                                                    settings,
                                                    true,
                                                    coreUsage);
@@ -67,7 +60,6 @@ namespace MSAMANDA_FASTAPARSER
 
         private static List<Peptide> DigestProteins(List<DBProtein> proteins, 
                                                     Enzyme enzyme,
-                                                    Dictionary<string, double> modifications,
                                                     Settings settings,
                                                     bool isDecoy,
                                                     double coreUsage)
@@ -89,7 +81,7 @@ namespace MSAMANDA_FASTAPARSER
                 var currentPeptides = item.Value;
                 foreach (var peptide in currentPeptides)
                 {
-                    var peptidoforms = GetPeptidoforms(peptide, modifications, settings, isDecoy);
+                    var peptidoforms = GetPeptidoforms(peptide, settings, isDecoy);
                     peptides.AddRange(peptidoforms);
                 }
             }
@@ -97,19 +89,99 @@ namespace MSAMANDA_FASTAPARSER
             return peptides;
         }
 
-        private static List<Peptide> GetPeptidoforms(DBPeptide dbPeptide, Dictionary<string, double> modifications, Settings settings, bool isDecoy)
+        private static List<Peptide> GetPeptidoforms(DBPeptide dbPeptide, Settings settings, bool isDecoy)
         {
             var peptides = new List<Peptide>();
-            var peptide = new Peptide(dbPeptide.Sequence, dbPeptide.Mass, new Dictionary<int, double>(), settings, isDecoy);
+            var mods = new Dictionary<int, double>();
+
+            if (settings.FIXED_MODIFICATIONS.Count > 0)
+            {
+                for (int i = 0; i < dbPeptide.Sequence.Length; i++)
+                {
+                    if (settings.FIXED_MODIFICATIONS.ContainsKey(dbPeptide.Sequence[i].ToString()))
+                    {
+                        mods.Add(i, settings.FIXED_MODIFICATIONS[dbPeptide.Sequence[i].ToString()]);
+                    }
+                }
+            }
+
+            var peptide = new Peptide(dbPeptide.Sequence, dbPeptide.Mass, mods, settings, isDecoy);
             peptides.Add(peptide);
 
-            if (modifications.Count > 0)
+            if (settings.VARIABLE_MODIFICATIONS.Count > 0)
             {
-                throw new NotImplementedException("Peptidoforms not yet implemented.");
-                // code for peptidoforms
+                foreach (var modification in settings.VARIABLE_MODIFICATIONS)
+                {
+                    addPeptidoformsForModification(peptides, modification, settings);
+                }
             }
 
             return peptides;
+        }
+
+        private static void addPeptidoformsForModification(List<Peptide> peptides,
+                                                           KeyValuePair<string, double> modification,
+                                                           Settings settings)
+        {
+            var peptidoforms = new List<Peptide>();
+
+            foreach (var peptide in peptides)
+            {
+                var possibleModificationSites = new List<int>();
+                for (int i = 0; i < peptide.sequence.Length; i++)
+                {
+                    if (peptide.sequence[i].ToString() == modification.Key)
+                    {
+                        possibleModificationSites.Add(i);
+                    }
+                }
+
+                var possibleCombinations = getAllPossibleCombinations(possibleModificationSites);
+
+                foreach (var combination in possibleCombinations)
+                {
+                    var peptidoform = new Peptide(peptide.sequence,
+                                                  peptide.mass,
+                                                  new Dictionary<int, double>(),
+                                                  settings,
+                                                  peptide.isDecoy);
+
+                    foreach (var mod in peptide.modifications)
+                    {
+                        peptidoform.addModification(mod.Key, mod.Value);
+                    }
+
+
+                    foreach (var position in combination)
+                    {
+                        peptidoform.addModification(position, modification.Value);
+                    }
+
+                    peptidoforms.Add(peptidoform);
+                }
+            }
+
+            peptides.AddRange(peptidoforms);
+        }
+
+        private static List<List<int>> getAllPossibleCombinations(List<int> possibleModificationSites)
+        {
+            var possibleCombinations = new List<List<int>>();
+
+            for (int i = 0; i < (1 << possibleModificationSites.Count); ++i)
+            {
+                var combination = new List<int>();
+                for (int j = 0; j < possibleModificationSites.Count; ++j)
+                {
+                    if ((i & (1 << j)) != 0)
+                    {
+                        combination.Add(possibleModificationSites[j]);
+                    }
+                }
+                possibleCombinations.Add(combination);
+            }
+
+            return possibleCombinations;
         }
 
         private static List<DBProtein> ReadInFasta(string fastaFileName, bool isDecoy)
