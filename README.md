@@ -130,7 +130,13 @@ therefore this implementation comes with a few limitations:
 
 Example results of *CandidateSearch* and results analysis are given in `tests`.
 
-![Results on a HeLa dataset](tests/results.svg)
+![Results on a HeLa dataset](tests/results.png)
+
+**Figure 1:** Identifying peptide candidates and peptidoform candidates with *CandidateSearch* in a
+[HeLa dataset](https://www.ebi.ac.uk/pride/archive/projects/PXD007750) using the human swissprot database. The considered ground truth was
+an [MS Amanda](https://ms.imp.ac.at/?goto=msamanda) search validated with [Percolator](https://github.com/percolator/percolator). For every
+high-confidence PSM we checked if the identified peptide/peptidoform was among the top 50/100/500/1000 hits of *CandidateSearch*. We reach
+almost 100% coverage within the first 1000 hits of *CandidateSearch*.
 
 ## Known Issues
 
