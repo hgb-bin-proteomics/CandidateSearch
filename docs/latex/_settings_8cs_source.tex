@@ -1,0 +1,372 @@
+\doxysection{Settings.\+cs}
+\hypertarget{_settings_8cs_source}{}\label{_settings_8cs_source}\index{util/Settings.cs@{util/Settings.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_candidate_search_1_1util}{CandidateSearch.util}}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00008}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{Settings}}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ config\ digestion}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00014}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a00a142b1e6640660be062ffa36223d4a}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a00a142b1e6640660be062ffa36223d4a}{MAX\_CLEAVAGES}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 2}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00018}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a909e8315b369449767cbea111ce0c02e}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a909e8315b369449767cbea111ce0c02e}{MIN\_PEP\_LENGTH}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 5}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00022}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9808400ce97d1831df67e5b88e4a11c2}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9808400ce97d1831df67e5b88e4a11c2}{MAX\_PEP\_LENGTH}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 30}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ config\ ion\ calculation}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00028}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_abb4b3918df831cae4454968fd6f4c4af}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_abb4b3918df831cae4454968fd6f4c4af}{MAX\_PRECURSOR\_CHARGE}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 4}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00032}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a3039c976b8c250e0b7c905aa3dce54aa}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a3039c976b8c250e0b7c905aa3dce54aa}{MAX\_FRAGMENT\_CHARGE}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ "{}+1"{};}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00036}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac075b70ec6f765acbd72a1e07bde1b4a}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac075b70ec6f765acbd72a1e07bde1b4a}{MAX\_NEUTRAL\_LOSSES}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 1}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00040}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_af269e68fbdc9d6658ed43a9b8573cbb0}{00040}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_af269e68fbdc9d6658ed43a9b8573cbb0}{MAX\_NEUTRAL\_LOSS\_MODS}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 2}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00044}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<string,\ double>\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{FIXED\_MODIFICATIONS}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ empty\ Dictionary}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00048}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<string,\ double>\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{VARIABLE\_MODIFICATIONS}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ empty\ Dictionary}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ config\ search\ parameters}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00054}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_acd720f20a43d4920aadcefadec7db6b6}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_acd720f20a43d4920aadcefadec7db6b6}{DECOY\_SEARCH}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ true}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ config\ vector\ search}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00060}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a03baea82e7985ea28efeb17445fa69c3}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a03baea82e7985ea28efeb17445fa69c3}{TOP\_N}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 1000}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00064}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a99ffaec52ea40c127141fc394218a190}{00064}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a99ffaec52ea40c127141fc394218a190}{TOLERANCE}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ 0.02f}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00068}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a88eefcbe9bfd476fa4e22bf62db2e21d}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a88eefcbe9bfd476fa4e22bf62db2e21d}{NORMALIZE}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ false}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00072}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac93b93a3fb5b2e7254a8671ef3de50dc}{00072}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac93b93a3fb5b2e7254a8671ef3de50dc}{USE\_GAUSSIAN}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ true}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00076}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a4b1c991d1329b6d086f2394c69c6da8a}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a4b1c991d1329b6d086f2394c69c6da8a}{MODE}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ default:\ CPU\_DV}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00094}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_aac628d9be9dcd4b5255a0ff509fc09ec}{00094}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_aac628d9be9dcd4b5255a0ff509fc09ec}{Settings}}(\textcolor{keywordtype}{int}\ MaxCleavages\ =\ 2,\ \textcolor{keywordtype}{int}\ MinPepLength\ =\ 5,\ \textcolor{keywordtype}{int}\ MaxPepLength\ =\ 30,\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ MaxPrecursorCharge\ =\ 4,\ \textcolor{keywordtype}{string}\ MaxFragmentCharge\ =\ \textcolor{stringliteral}{"{}+1"{}},\ \textcolor{keywordtype}{int}\ MaxNeutralLosses\ =\ 1,\ \textcolor{keywordtype}{int}\ MaxNeutralLossMods\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ DecoySearch\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ TopN\ =\ 1000,\ \textcolor{keywordtype}{float}\ Tolerance\ =\ 0.02f,\ \textcolor{keywordtype}{bool}\ Normalize\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ UseGaussian\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{string}\ Mode\ =\ \textcolor{stringliteral}{"{}CPU\_DV"{}})}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a00a142b1e6640660be062ffa36223d4a}{MAX\_CLEAVAGES}}\ =\ MaxCleavages;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a909e8315b369449767cbea111ce0c02e}{MIN\_PEP\_LENGTH}}\ =\ MinPepLength;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9808400ce97d1831df67e5b88e4a11c2}{MAX\_PEP\_LENGTH}}\ =\ MaxPepLength;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_abb4b3918df831cae4454968fd6f4c4af}{MAX\_PRECURSOR\_CHARGE}}\ =\ MaxPrecursorCharge;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a3039c976b8c250e0b7c905aa3dce54aa}{MAX\_FRAGMENT\_CHARGE}}\ =\ MaxFragmentCharge;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac075b70ec6f765acbd72a1e07bde1b4a}{MAX\_NEUTRAL\_LOSSES}}\ =\ MaxNeutralLosses;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_af269e68fbdc9d6658ed43a9b8573cbb0}{MAX\_NEUTRAL\_LOSS\_MODS}}\ =\ MaxNeutralLossMods;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{FIXED\_MODIFICATIONS}}\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ double>();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{VARIABLE\_MODIFICATIONS}}\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ double>();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_acd720f20a43d4920aadcefadec7db6b6}{DECOY\_SEARCH}}\ =\ DecoySearch;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a03baea82e7985ea28efeb17445fa69c3}{TOP\_N}}\ =\ TopN;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a99ffaec52ea40c127141fc394218a190}{TOLERANCE}}\ =\ Tolerance;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a88eefcbe9bfd476fa4e22bf62db2e21d}{NORMALIZE}}\ =\ Normalize;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac93b93a3fb5b2e7254a8671ef3de50dc}{USE\_GAUSSIAN}}\ =\ UseGaussian;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a4b1c991d1329b6d086f2394c69c6da8a}{MODE}}\ =\ Mode;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00125}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_aa8fe5da925a1b23f5b0f5297a68b6845}{00125}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_aa8fe5da925a1b23f5b0f5297a68b6845}{addFixedModification}}(\textcolor{keywordtype}{string}\ aminoAcid,\ \textcolor{keywordtype}{double}\ mass)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{FIXED\_MODIFICATIONS}}.ContainsKey(aminoAcid))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{FIXED\_MODIFICATIONS}}.Add(aminoAcid,\ mass);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00140}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a7674e2e0c8ba7884e2cf52c183a3ab6b}{00140}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a7674e2e0c8ba7884e2cf52c183a3ab6b}{addVariableModification}}(\textcolor{keywordtype}{string}\ aminoAcid,\ \textcolor{keywordtype}{double}\ mass)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{VARIABLE\_MODIFICATIONS}}.ContainsKey(aminoAcid))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{VARIABLE\_MODIFICATIONS}}.Add(aminoAcid,\ mass);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00154}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ae130cd4713873e35368c0dcab29b7a66}{00154}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ae130cd4713873e35368c0dcab29b7a66}{modificationsToString}}(\textcolor{keywordtype}{bool}\ variable\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sb\ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!variable)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ mod\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{FIXED\_MODIFICATIONS}})}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}\{mod.Key.ToString()\}:\{mod.Value.ToString()\};"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ mod\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{VARIABLE\_MODIFICATIONS}})}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}\{mod.Key.ToString()\}:\{mod.Value.ToString()\};"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sb.ToString();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00178}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9f6a9eca4f8a69373ab69aefd0963775}{00178}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9f6a9eca4f8a69373ab69aefd0963775}{ToString}}()}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sb\ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\textcolor{stringliteral}{"{}-\/-\/-\/-\/\ SETTINGS:\ -\/-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MAX\_CLEAVAGES:\ \{MAX\_CLEAVAGES\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MIN\_PEP\_LENGTH:\ \{MIN\_PEP\_LENGTH\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MAX\_PEP\_LENGTH:\ \{MAX\_PEP\_LENGTH\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MAX\_PRECURSOR\_CHARGE:\ \{MAX\_PRECURSOR\_CHARGE\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MAX\_FRAGMENT\_CHARGE:\ \{MAX\_FRAGMENT\_CHARGE\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MAX\_NEUTRAL\_LOSSES:\ \{MAX\_NEUTRAL\_LOSSES\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MAX\_NEUTRAL\_LOSS\_MODS:\ \{MAX\_NEUTRAL\_LOSS\_MODS\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}FIXED\_MODIFICATIONS:\ \{modificationsToString(false)\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}VARIABLE\_MODIFICATIONS:\ \{modificationsToString(true)\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}DECOY\_SEARCH:\ \{DECOY\_SEARCH\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}TOP\_N:\ \{TOP\_N\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}TOLERANCE:\ \{TOLERANCE\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}NORMALIZE:\ \{NORMALIZE\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}USE\_GAUSSIAN:\ \{USE\_GAUSSIAN\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\$\textcolor{stringliteral}{"{}MODE:\ \{MODE\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ sb.Append(\textcolor{stringliteral}{"{}-\/-\/-\/-\/\ SETTINGS\ END\ -\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sb.ToString();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00206}00206\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }SettingsReader}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00207}00207\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Settings\ readSettings(\textcolor{keywordtype}{string}\ filename)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ var\ settings\ =\ \textcolor{keyword}{new}\ Settings();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (StreamReader\ sr\ =\ \textcolor{keyword}{new}\ StreamReader(filename))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!sr.EndOfStream)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ line\ =\ sr.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MAX\_CLEAVAGES"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MAX\_CLEAVAGES\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MIN\_PEP\_LENGTH"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MIN\_PEP\_LENGTH\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MAX\_PEP\_LENGTH"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MAX\_PEP\_LENGTH\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MAX\_PRECURSOR\_CHARGE"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MAX\_PRECURSOR\_CHARGE\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MAX\_FRAGMENT\_CHARGE"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ maxFragmentCharge\ =\ values[1].Trim();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (maxFragmentCharge\ ==\ \textcolor{stringliteral}{"{}+2"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxFragmentCharge\ ==\ \textcolor{stringliteral}{"{}+3"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxFragmentCharge\ ==\ \textcolor{stringliteral}{"{}+4"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxFragmentCharge\ ==\ \textcolor{stringliteral}{"{}Precursor\ -\/\ 1"{}})}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MAX\_FRAGMENT\_CHARGE\ =\ maxFragmentCharge;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MAX\_NEUTRAL\_LOSSES"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MAX\_NEUTRAL\_LOSSES\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MAX\_NEUTRAL\_LOSS\_MODS"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MAX\_NEUTRAL\_LOSS\_MODS\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}FIXED\_MODIFICATIONS"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ mods\ =\ values[1].Split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ mod\ \textcolor{keywordflow}{in}\ mods)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ modProps\ =\ mod.Split(\textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modProps.Length\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modProps[0].Trim().Length\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{double}.TryParse(modProps[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!settings.FIXED\_MODIFICATIONS.ContainsKey(modProps[0]))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.addFixedModification(modProps[0].Trim(),\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00343}00343\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}VARIABLE\_MODIFICATIONS"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ mods\ =\ values[1].Split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ mod\ \textcolor{keywordflow}{in}\ mods)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ modProps\ =\ mod.Split(\textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modProps.Length\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modProps[0].Trim().Length\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{double}.TryParse(modProps[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!settings.VARIABLE\_MODIFICATIONS.ContainsKey(modProps[0]))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.addVariableModification(modProps[0].Trim(),\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}DECOY\_SEARCH"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{bool}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.DECOY\_SEARCH\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00383}00383\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}TOP\_N"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{int}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.TOP\_N\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}TOLERANCE"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{float}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.TOLERANCE\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00409}00409\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}NORMALIZE"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{bool}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.NORMALIZE\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00420}00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00422}00422\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}USE\_GAUSSIAN"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00424}00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00426}00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00427}00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00428}00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ok\ =\ \textcolor{keywordtype}{bool}.TryParse(values[1],\ out\ var\ value);}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00431}00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.USE\_GAUSSIAN\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00432}00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00435}00435\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ !=\ \textcolor{keyword}{null}\ \&\&\ line.StartsWith(\textcolor{stringliteral}{"{}MODE"{}}))}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00438}00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ values\ =\ line.Split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00439}00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.Length\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00440}00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00441}00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ mode\ =\ values[1].Trim();}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mode\ ==\ \textcolor{stringliteral}{"{}CPU\_SV"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ ==\ \textcolor{stringliteral}{"{}CPU\_DM"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ ==\ \textcolor{stringliteral}{"{}CPU\_SM"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ ==\ \textcolor{stringliteral}{"{}GPU\_DV"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ ==\ \textcolor{stringliteral}{"{}GPU\_DM"{}}\ ||}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ ==\ \textcolor{stringliteral}{"{}GPU\_SM"{}})}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ settings.MODE\ =\ mode;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ settings;}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00457}00457\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00458}00458\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_settings_8cs_source_l00459}00459\ \}}
+
+\end{DoxyCode}

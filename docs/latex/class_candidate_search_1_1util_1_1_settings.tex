@@ -1,0 +1,414 @@
+\doxysection{Candidate\+Search.\+util.\+Settings Class Reference}
+\hypertarget{class_candidate_search_1_1util_1_1_settings}{}\label{class_candidate_search_1_1util_1_1_settings}\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+
+
+Settings for digestion, ion calculation and Vector\+Search.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_aac628d9be9dcd4b5255a0ff509fc09ec}{Settings}} (int Max\+Cleavages=2, int Min\+Pep\+Length=5, int Max\+Pep\+Length=30, int Max\+Precursor\+Charge=4, string Max\+Fragment\+Charge="{}+1"{}, int Max\+Neutral\+Losses=1, int Max\+Neutral\+Loss\+Mods=2, bool Decoy\+Search=true, int TopN=1000, float Tolerance=0.\+02f, bool Normalize=false, bool Use\+Gaussian=true, string Mode="{}CPU\+\_\+\+DV"{})
+\begin{DoxyCompactList}\small\item\em Settings constructor to set the specified search parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_aa8fe5da925a1b23f5b0f5297a68b6845}{add\+Fixed\+Modification}} (string amino\+Acid, double mass)
+\begin{DoxyCompactList}\small\item\em Add a fixed modification to the fixed modification dictionary. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a7674e2e0c8ba7884e2cf52c183a3ab6b}{add\+Variable\+Modification}} (string amino\+Acid, double mass)
+\begin{DoxyCompactList}\small\item\em Add a variable modification to the variable modification dictionary. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ae130cd4713873e35368c0dcab29b7a66}{modifications\+To\+String}} (bool variable=false)
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the modifications. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9f6a9eca4f8a69373ab69aefd0963775}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a00a142b1e6640660be062ffa36223d4a}{MAX\+\_\+\+CLEAVAGES}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum number of missed cleavages allowed during digestion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a909e8315b369449767cbea111ce0c02e}{MIN\+\_\+\+PEP\+\_\+\+LENGTH}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum peptide length. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a9808400ce97d1831df67e5b88e4a11c2}{MAX\+\_\+\+PEP\+\_\+\+LENGTH}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum peptide length. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_abb4b3918df831cae4454968fd6f4c4af}{MAX\+\_\+\+PRECURSOR\+\_\+\+CHARGE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum considered precursor ion charge. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a3039c976b8c250e0b7c905aa3dce54aa}{MAX\+\_\+\+FRAGMENT\+\_\+\+CHARGE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum considered fragment ion charge. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac075b70ec6f765acbd72a1e07bde1b4a}{MAX\+\_\+\+NEUTRAL\+\_\+\+LOSSES}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum number of considered neutral losses. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_af269e68fbdc9d6658ed43a9b8573cbb0}{MAX\+\_\+\+NEUTRAL\+\_\+\+LOSS\+\_\+\+MODS}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum number of considered neutral loss modifications. \end{DoxyCompactList}\item 
+Dictionary$<$ string, double $>$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}{FIXED\+\_\+\+MODIFICATIONS}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary for fixed modifications that maps amino acids to their possible modification masses. \end{DoxyCompactList}\item 
+Dictionary$<$ string, double $>$ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}{VARIABLE\+\_\+\+MODIFICATIONS}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary for variable modifications that maps amino acids to their possible modification masses. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_acd720f20a43d4920aadcefadec7db6b6}{DECOY\+\_\+\+SEARCH}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not decoy search should be performed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a03baea82e7985ea28efeb17445fa69c3}{TOP\+\_\+N}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The top n candidates that should be returned by the Vector\+Search. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a99ffaec52ea40c127141fc394218a190}{TOLERANCE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The tolerance used for the Vector\+Search. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a88eefcbe9bfd476fa4e22bf62db2e21d}{NORMALIZE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not scores should be normalized by the Vector\+Search. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_ac93b93a3fb5b2e7254a8671ef3de50dc}{USE\+\_\+\+GAUSSIAN}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not peaks should be modelled as gaussian distributions by the Vector\+Search. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings_a4b1c991d1329b6d086f2394c69c6da8a}{MODE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The search approach used by the Vector\+Search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Settings for digestion, ion calculation and Vector\+Search. 
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_aac628d9be9dcd4b5255a0ff509fc09ec}\label{class_candidate_search_1_1util_1_1_settings_aac628d9be9dcd4b5255a0ff509fc09ec} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!Settings@{Settings}}
+\index{Settings@{Settings}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{Settings()}{Settings()}}
+{\footnotesize\ttfamily Candidate\+Search.\+util.\+Settings.\+Settings (\begin{DoxyParamCaption}\item[{int}]{Max\+Cleavages = {\ttfamily 2},  }\item[{int}]{Min\+Pep\+Length = {\ttfamily 5},  }\item[{int}]{Max\+Pep\+Length = {\ttfamily 30},  }\item[{int}]{Max\+Precursor\+Charge = {\ttfamily 4},  }\item[{string}]{Max\+Fragment\+Charge = {\ttfamily "{}+1"{}},  }\item[{int}]{Max\+Neutral\+Losses = {\ttfamily 1},  }\item[{int}]{Max\+Neutral\+Loss\+Mods = {\ttfamily 2},  }\item[{bool}]{Decoy\+Search = {\ttfamily true},  }\item[{int}]{TopN = {\ttfamily 1000},  }\item[{float}]{Tolerance = {\ttfamily 0\+:\+:02f},  }\item[{bool}]{Normalize = {\ttfamily false},  }\item[{bool}]{Use\+Gaussian = {\ttfamily true},  }\item[{string}]{Mode = {\ttfamily "{}CPU\+\_\+DV"{}} }\end{DoxyParamCaption})}
+
+
+
+Settings constructor to set the specified search parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Max\+Cleavages} & Maximum number of missed cleavages allowed during digestion.\\
+\hline
+{\em Min\+Pep\+Length} & Minimum peptide length.\\
+\hline
+{\em Max\+Pep\+Length} & Maximum peptide length.\\
+\hline
+{\em Max\+Precursor\+Charge} & Maximum considered precursor ion charge.\\
+\hline
+{\em Max\+Fragment\+Charge} & Maximum considered fragment ion charge.\\
+\hline
+{\em Max\+Neutral\+Losses} & Maximum number of considered neutral losses.\\
+\hline
+{\em Max\+Neutral\+Loss\+Mods} & Maximum number of considered neutral loss modifications.\\
+\hline
+{\em Decoy\+Search} & Whether or not decoy search should be performed.\\
+\hline
+{\em TopN} & The top n candidates that should be returned by the Vector\+Search.\\
+\hline
+{\em Tolerance} & The tolerance used for the Vector\+Search.\\
+\hline
+{\em Normalize} & Whether or not scores should be normalized by the Vector\+Search.\\
+\hline
+{\em Use\+Gaussian} & Whether or not peaks should be modelled as gaussian distributions by the Vector\+Search.\\
+\hline
+{\em Mode} & The search approach used by the Vector\+Search.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00094}{94}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_aa8fe5da925a1b23f5b0f5297a68b6845}\label{class_candidate_search_1_1util_1_1_settings_aa8fe5da925a1b23f5b0f5297a68b6845} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!addFixedModification@{addFixedModification}}
+\index{addFixedModification@{addFixedModification}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{addFixedModification()}{addFixedModification()}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Settings.\+add\+Fixed\+Modification (\begin{DoxyParamCaption}\item[{string}]{amino\+Acid,  }\item[{double}]{mass }\end{DoxyParamCaption})}
+
+
+
+Add a fixed modification to the fixed modification dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amino\+Acid} & The amino acid that will be modified.\\
+\hline
+{\em mass} & The mass of the modification.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00125}{125}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a7674e2e0c8ba7884e2cf52c183a3ab6b}\label{class_candidate_search_1_1util_1_1_settings_a7674e2e0c8ba7884e2cf52c183a3ab6b} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!addVariableModification@{addVariableModification}}
+\index{addVariableModification@{addVariableModification}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{addVariableModification()}{addVariableModification()}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Settings.\+add\+Variable\+Modification (\begin{DoxyParamCaption}\item[{string}]{amino\+Acid,  }\item[{double}]{mass }\end{DoxyParamCaption})}
+
+
+
+Add a variable modification to the variable modification dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amino\+Acid} & The amino acid that can be modified.\\
+\hline
+{\em mass} & The mass of the modification.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there is no modification for that amino acid yet, false if there already exists a modification for that amino acid.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00140}{140}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_ae130cd4713873e35368c0dcab29b7a66}\label{class_candidate_search_1_1util_1_1_settings_ae130cd4713873e35368c0dcab29b7a66} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!modificationsToString@{modificationsToString}}
+\index{modificationsToString@{modificationsToString}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{modificationsToString()}{modificationsToString()}}
+{\footnotesize\ttfamily string Candidate\+Search.\+util.\+Settings.\+modifications\+To\+String (\begin{DoxyParamCaption}\item[{bool}]{variable = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Returns a string representation of the modifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & Whether to process fixed or variable modifications.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the specified modification set.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00154}{154}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a9f6a9eca4f8a69373ab69aefd0963775}\label{class_candidate_search_1_1util_1_1_settings_a9f6a9eca4f8a69373ab69aefd0963775} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!ToString@{ToString}}
+\index{ToString@{ToString}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Candidate\+Search.\+util.\+Settings.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a string representation of the settings. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the settings.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00178}{178}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_acd720f20a43d4920aadcefadec7db6b6}\label{class_candidate_search_1_1util_1_1_settings_acd720f20a43d4920aadcefadec7db6b6} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!DECOY\_SEARCH@{DECOY\_SEARCH}}
+\index{DECOY\_SEARCH@{DECOY\_SEARCH}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{DECOY\_SEARCH}{DECOY\_SEARCH}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Settings.\+DECOY\+\_\+\+SEARCH\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether or not decoy search should be performed. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14}\label{class_candidate_search_1_1util_1_1_settings_a255ab023ca918fb6799dd3fb6a218f14} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!FIXED\_MODIFICATIONS@{FIXED\_MODIFICATIONS}}
+\index{FIXED\_MODIFICATIONS@{FIXED\_MODIFICATIONS}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{FIXED\_MODIFICATIONS}{FIXED\_MODIFICATIONS}}
+{\footnotesize\ttfamily Dictionary$<$string, double$>$ Candidate\+Search.\+util.\+Settings.\+FIXED\+\_\+\+MODIFICATIONS\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dictionary for fixed modifications that maps amino acids to their possible modification masses. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a00a142b1e6640660be062ffa36223d4a}\label{class_candidate_search_1_1util_1_1_settings_a00a142b1e6640660be062ffa36223d4a} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MAX\_CLEAVAGES@{MAX\_CLEAVAGES}}
+\index{MAX\_CLEAVAGES@{MAX\_CLEAVAGES}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MAX\_CLEAVAGES}{MAX\_CLEAVAGES}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+MAX\+\_\+\+CLEAVAGES\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum number of missed cleavages allowed during digestion. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a3039c976b8c250e0b7c905aa3dce54aa}\label{class_candidate_search_1_1util_1_1_settings_a3039c976b8c250e0b7c905aa3dce54aa} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MAX\_FRAGMENT\_CHARGE@{MAX\_FRAGMENT\_CHARGE}}
+\index{MAX\_FRAGMENT\_CHARGE@{MAX\_FRAGMENT\_CHARGE}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MAX\_FRAGMENT\_CHARGE}{MAX\_FRAGMENT\_CHARGE}}
+{\footnotesize\ttfamily string Candidate\+Search.\+util.\+Settings.\+MAX\+\_\+\+FRAGMENT\+\_\+\+CHARGE\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum considered fragment ion charge. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_af269e68fbdc9d6658ed43a9b8573cbb0}\label{class_candidate_search_1_1util_1_1_settings_af269e68fbdc9d6658ed43a9b8573cbb0} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MAX\_NEUTRAL\_LOSS\_MODS@{MAX\_NEUTRAL\_LOSS\_MODS}}
+\index{MAX\_NEUTRAL\_LOSS\_MODS@{MAX\_NEUTRAL\_LOSS\_MODS}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MAX\_NEUTRAL\_LOSS\_MODS}{MAX\_NEUTRAL\_LOSS\_MODS}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+MAX\+\_\+\+NEUTRAL\+\_\+\+LOSS\+\_\+\+MODS\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum number of considered neutral loss modifications. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_ac075b70ec6f765acbd72a1e07bde1b4a}\label{class_candidate_search_1_1util_1_1_settings_ac075b70ec6f765acbd72a1e07bde1b4a} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MAX\_NEUTRAL\_LOSSES@{MAX\_NEUTRAL\_LOSSES}}
+\index{MAX\_NEUTRAL\_LOSSES@{MAX\_NEUTRAL\_LOSSES}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MAX\_NEUTRAL\_LOSSES}{MAX\_NEUTRAL\_LOSSES}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+MAX\+\_\+\+NEUTRAL\+\_\+\+LOSSES\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum number of considered neutral losses. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a9808400ce97d1831df67e5b88e4a11c2}\label{class_candidate_search_1_1util_1_1_settings_a9808400ce97d1831df67e5b88e4a11c2} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MAX\_PEP\_LENGTH@{MAX\_PEP\_LENGTH}}
+\index{MAX\_PEP\_LENGTH@{MAX\_PEP\_LENGTH}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MAX\_PEP\_LENGTH}{MAX\_PEP\_LENGTH}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+MAX\+\_\+\+PEP\+\_\+\+LENGTH\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum peptide length. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_abb4b3918df831cae4454968fd6f4c4af}\label{class_candidate_search_1_1util_1_1_settings_abb4b3918df831cae4454968fd6f4c4af} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MAX\_PRECURSOR\_CHARGE@{MAX\_PRECURSOR\_CHARGE}}
+\index{MAX\_PRECURSOR\_CHARGE@{MAX\_PRECURSOR\_CHARGE}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MAX\_PRECURSOR\_CHARGE}{MAX\_PRECURSOR\_CHARGE}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+MAX\+\_\+\+PRECURSOR\+\_\+\+CHARGE\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum considered precursor ion charge. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a909e8315b369449767cbea111ce0c02e}\label{class_candidate_search_1_1util_1_1_settings_a909e8315b369449767cbea111ce0c02e} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MIN\_PEP\_LENGTH@{MIN\_PEP\_LENGTH}}
+\index{MIN\_PEP\_LENGTH@{MIN\_PEP\_LENGTH}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MIN\_PEP\_LENGTH}{MIN\_PEP\_LENGTH}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+MIN\+\_\+\+PEP\+\_\+\+LENGTH\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Minimum peptide length. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a4b1c991d1329b6d086f2394c69c6da8a}\label{class_candidate_search_1_1util_1_1_settings_a4b1c991d1329b6d086f2394c69c6da8a} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!MODE@{MODE}}
+\index{MODE@{MODE}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{MODE}{MODE}}
+{\footnotesize\ttfamily string Candidate\+Search.\+util.\+Settings.\+MODE\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The search approach used by the Vector\+Search. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a88eefcbe9bfd476fa4e22bf62db2e21d}\label{class_candidate_search_1_1util_1_1_settings_a88eefcbe9bfd476fa4e22bf62db2e21d} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!NORMALIZE@{NORMALIZE}}
+\index{NORMALIZE@{NORMALIZE}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{NORMALIZE}{NORMALIZE}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Settings.\+NORMALIZE\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether or not scores should be normalized by the Vector\+Search. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00068}{68}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a99ffaec52ea40c127141fc394218a190}\label{class_candidate_search_1_1util_1_1_settings_a99ffaec52ea40c127141fc394218a190} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!TOLERANCE@{TOLERANCE}}
+\index{TOLERANCE@{TOLERANCE}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{TOLERANCE}{TOLERANCE}}
+{\footnotesize\ttfamily float Candidate\+Search.\+util.\+Settings.\+TOLERANCE\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The tolerance used for the Vector\+Search. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a03baea82e7985ea28efeb17445fa69c3}\label{class_candidate_search_1_1util_1_1_settings_a03baea82e7985ea28efeb17445fa69c3} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!TOP\_N@{TOP\_N}}
+\index{TOP\_N@{TOP\_N}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{TOP\_N}{TOP\_N}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Settings.\+TOP\+\_\+N\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The top n candidates that should be returned by the Vector\+Search. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_ac93b93a3fb5b2e7254a8671ef3de50dc}\label{class_candidate_search_1_1util_1_1_settings_ac93b93a3fb5b2e7254a8671ef3de50dc} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!USE\_GAUSSIAN@{USE\_GAUSSIAN}}
+\index{USE\_GAUSSIAN@{USE\_GAUSSIAN}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{USE\_GAUSSIAN}{USE\_GAUSSIAN}}
+{\footnotesize\ttfamily bool Candidate\+Search.\+util.\+Settings.\+USE\+\_\+\+GAUSSIAN\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether or not peaks should be modelled as gaussian distributions by the Vector\+Search. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00072}{72}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6}\label{class_candidate_search_1_1util_1_1_settings_a8a49143cc4dd41c584106027cf3ad0b6} 
+\index{CandidateSearch.util.Settings@{CandidateSearch.util.Settings}!VARIABLE\_MODIFICATIONS@{VARIABLE\_MODIFICATIONS}}
+\index{VARIABLE\_MODIFICATIONS@{VARIABLE\_MODIFICATIONS}!CandidateSearch.util.Settings@{CandidateSearch.util.Settings}}
+\doxysubsubsection{\texorpdfstring{VARIABLE\_MODIFICATIONS}{VARIABLE\_MODIFICATIONS}}
+{\footnotesize\ttfamily Dictionary$<$string, double$>$ Candidate\+Search.\+util.\+Settings.\+VARIABLE\+\_\+\+MODIFICATIONS\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dictionary for variable modifications that maps amino acids to their possible modification masses. 
+
+
+
+Definition at line \mbox{\hyperlink{_settings_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_settings_8cs_source}{Settings.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/Settings.\+cs\end{DoxyCompactItemize}

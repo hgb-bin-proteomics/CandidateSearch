@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r" kind="namespace" language="C#">
+    <compoundname>MSAMANDA_MGFPARSER</compoundname>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" prot="public">MSAMANDA_MGFPARSER::AMassCentroid</innerclass>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_m_g_f_parser" prot="public">MSAMANDA_MGFPARSER::MGFParser</innerclass>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_precursor" prot="public">MSAMANDA_MGFPARSER::Precursor</innerclass>
+    <innerclass refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_spectrum" prot="public">MSAMANDA_MGFPARSER::Spectrum</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="amanda/MGFParser.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

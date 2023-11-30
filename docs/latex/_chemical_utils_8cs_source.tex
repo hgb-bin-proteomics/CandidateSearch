@@ -1,0 +1,244 @@
+\doxysection{Chemical\+Utils.\+cs}
+\hypertarget{_chemical_utils_8cs_source}{}\label{_chemical_utils_8cs_source}\index{amanda/ChemicalUtils.cs@{amanda/ChemicalUtils.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00001}\mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s}{00001}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s}{MSAMANDA\_CHEMICALUTILS}}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00002}00002\ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00003}\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element}{00003}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element}{ChemicalElement}}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00004}00004\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ Name;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ FullName;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{double}\ MonoMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{double}\ AvgMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element}{ChemicalElement}}(\textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{string}\ fullName,\ \textcolor{keywordtype}{double}\ monoMass,\ \textcolor{keywordtype}{double}\ avgMass)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ FullName\ =\ fullName;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ MonoMass\ =\ monoMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ AvgMass\ =\ avgMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00019}\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid}{AminoAcid}}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ Name;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ ThreeLetterCode;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{char}\ OneLetterCode;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{double}\ AverageMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{double}\ MonoisotopicMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{double}\ ImmoniumMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ Mass(\textcolor{keywordtype}{bool}\ mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mono\ ?\ MonoisotopicMass\ :\ AverageMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid}{AminoAcid}}(\textcolor{keywordtype}{char}\ oneLetter,\ \textcolor{keywordtype}{string}\ threeLetter,\ \textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{double}\ monoisotopicMass,\ \textcolor{keywordtype}{double}\ avgMass,\ \textcolor{keywordtype}{double}\ immoniumMass)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ AverageMass\ =\ avgMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ MonoisotopicMass\ =\ monoisotopicMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ ThreeLetterCode\ =\ threeLetter;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ OneLetterCode\ =\ oneLetter;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ ImmoniumMass\ =\ immoniumMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_amino_acid}{AminoAcid}}(\textcolor{keywordtype}{char}\ oneLetter,\ \textcolor{keywordtype}{string}\ threeLetter,\ \textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{double}\ monoisotopicMass,\ \textcolor{keywordtype}{double}\ avgMass,\ \textcolor{keywordtype}{bool}\ mono\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ AverageMass\ =\ avgMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ MonoisotopicMass\ =\ monoisotopicMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ ThreeLetterCode\ =\ threeLetter;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ OneLetterCode\ =\ oneLetter;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImmoniumMass\ =\ MonoisotopicMass\ +\ ChemicalUtils.Chemicals[\textcolor{stringliteral}{"{}H"{}}].MonoMass\ -\/}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ChemicalUtils.Chemicals[\textcolor{stringliteral}{"{}C"{}}].MonoMass\ -\/\ ChemicalUtils.Chemicals[\textcolor{stringliteral}{"{}O"{}}].MonoMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImmoniumMass\ =\ AverageMass\ +\ ChemicalUtils.Chemicals[\textcolor{stringliteral}{"{}H"{}}].AvgMass\ -\/}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ChemicalUtils.Chemicals[\textcolor{stringliteral}{"{}C"{}}].AvgMass\ -\/\ ChemicalUtils.Chemicals[\textcolor{stringliteral}{"{}O"{}}].AvgMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00059}\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations}{Permutations}}\ :\ IEquatable<Permutations>}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ N\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ K\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<int[]>\ Elements\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations}{Permutations}}(\textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ k)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ N\ =\ n;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ K\ =\ k;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Elements\ =\ \textcolor{keyword}{new}\ List<int[]>();}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ data\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[k];}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ k;\ ++i)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data[i]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ Elements.Add(data);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ CalculatePermutations();}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations}{Permutations}}(\textcolor{keywordtype}{string}\ key,\ List<\textcolor{keywordtype}{int}[]>\ elems)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ s\ =\ key.Split(\textcolor{charliteral}{'\_'});}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ N\ =\ Int32.Parse(s[0]);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ K\ =\ Int32.Parse(s[1]);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ Elements\ =\ elems;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ Successor(\textcolor{keywordtype}{int}[]\ previous)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (previous.Length\ ==\ 0\ ||\ previous[0]\ ==\ \textcolor{keyword}{this}.N\ -\/\ \textcolor{keyword}{this}.K)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ next\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[K];}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ this.K;\ ++i)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ next[i]\ =\ previous[i];}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ this.K\ -\/\ 1;\ i\ >\ 0\ \&\&\ next[i]\ ==\ this.N\ -\/\ this.K\ +\ i;\ -\/-\/i)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ ++next[i];}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i;\ j\ <\ this.K\ -\/\ 1;\ ++j)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ next[j\ +\ 1]\ =\ next[j]\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ next;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ CalculatePermutations()}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ last\ =\ Elements[0];}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ next\ =\ Successor(last);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (next\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Elements.Add(next);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ last\ =\ next;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ next\ =\ Successor(last);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ Equals(\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_permutations}{Permutations}}\ other)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (N\ ==\ other.N\ \&\&\ K\ ==\ other.K);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00125}00125\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }ChemicalUtils}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00126}00126\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Dictionary<string,\ ChemicalElement>\ Chemicals\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ ChemicalElement>()\ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}H"{}},\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_m_s_a_m_a_n_d_a___c_h_e_m_i_c_a_l_u_t_i_l_s_1_1_chemical_element}{ChemicalElement}}(\textcolor{stringliteral}{"{}H"{}},\ \textcolor{stringliteral}{"{}Hydrogen"{}},\ 1.007825035,\ 1.00794)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}C"{}},\ \textcolor{keyword}{new}\ ChemicalElement(\textcolor{stringliteral}{"{}C"{}},\ \textcolor{stringliteral}{"{}Carbon"{}},\ 12.0,\ 12.0107)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}N"{}},\ \textcolor{keyword}{new}\ ChemicalElement(\textcolor{stringliteral}{"{}N"{}},\ \textcolor{stringliteral}{"{}Nitrogen"{}},\ 14.003074,\ 14.0067)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}O"{}},\ \textcolor{keyword}{new}\ ChemicalElement(\textcolor{stringliteral}{"{}O"{}},\ \textcolor{stringliteral}{"{}Oxygen"{}},\ 15.99491463,\ 15.9994)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}p"{}},\ \textcolor{keyword}{new}\ ChemicalElement(\textcolor{stringliteral}{"{}p"{}},\ \textcolor{stringliteral}{"{}Proton"{}},\ 1.007276466812,\ 1.007276466812)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}i"{}},\ \textcolor{keyword}{new}\ ChemicalElement(\textcolor{stringliteral}{"{}i"{}},\ \textcolor{stringliteral}{"{}C13IsotopeDiff"{}},\ 1.00335,\ 1.00335)\}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Dictionary<char,\ AminoAcid>\ AminoAcids\ =\ \textcolor{keyword}{new}\ Dictionary<char,\ AminoAcid>()\ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'A'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'A'},\ \textcolor{stringliteral}{"{}Ala"{}},\ \textcolor{stringliteral}{"{}Alanine"{}},\ 71.037114,\ 71.0779)\},\ \textcolor{comment}{//71.03712}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'R'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'R'},\ \textcolor{stringliteral}{"{}Arg"{}},\ \textcolor{stringliteral}{"{}Arginine"{}},\ 156.101111,\ 156.1857)\},\ \textcolor{comment}{//156.10112}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'N'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'N'},\ \textcolor{stringliteral}{"{}Asn"{}},\ \textcolor{stringliteral}{"{}Asparagine"{}},\ 114.042927,\ 114.1026)\},\ \textcolor{comment}{//114.04293}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'D'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'D'},\ \textcolor{stringliteral}{"{}Asp"{}},\ \textcolor{stringliteral}{"{}Aspartic\ acid"{}},\ 115.026943,\ 115.0874)\},\ \textcolor{comment}{//115.02695}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'C'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'C'},\ \textcolor{stringliteral}{"{}Cys"{}},\ \textcolor{stringliteral}{"{}Cysteine"{}},\ 103.009185,\ 103.1429)\},\ \textcolor{comment}{//103.00919}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'E'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'E'},\ \textcolor{stringliteral}{"{}Glu"{}},\ \textcolor{stringliteral}{"{}Glutamic\ acid"{}},\ 129.042593,\ 129.114)\},\ \textcolor{comment}{//129.0426}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'Q'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'Q'},\ \textcolor{stringliteral}{"{}Gln"{}},\ \textcolor{stringliteral}{"{}Glutamine"{}},\ 128.058578,\ 128.1292)\},\ \textcolor{comment}{//128.05858}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'G'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'G'},\ \textcolor{stringliteral}{"{}Gly"{}},\ \textcolor{stringliteral}{"{}Glycine"{}},\ 57.021464,\ 57.0513)\},\ \textcolor{comment}{//57.02147}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'H'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'H'},\ \textcolor{stringliteral}{"{}His"{}},\ \textcolor{stringliteral}{"{}Histidine"{}},\ 137.058912,\ 137.1393)\},\ \textcolor{comment}{//137.05891}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'I'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'I'},\ \textcolor{stringliteral}{"{}Ile"{}},\ \textcolor{stringliteral}{"{}Isoleucine"{}},\ 113.084064,\ 113.1576)\},\ \textcolor{comment}{//113.08407}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'L'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'L'},\ \textcolor{stringliteral}{"{}Leu"{}},\ \textcolor{stringliteral}{"{}Leucine"{}},\ 113.084064,\ 113.1576)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'K'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'K'},\ \textcolor{stringliteral}{"{}Lys"{}},\ \textcolor{stringliteral}{"{}Lysine"{}},\ 128.094963,\ 128.1723)\},\ \textcolor{comment}{//128.09497}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'M'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'M'},\ \textcolor{stringliteral}{"{}Met"{}},\ \textcolor{stringliteral}{"{}Methionine"{}},\ 131.040485,\ 131.1961)\},\ \textcolor{comment}{//131.0405}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'F'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'F'},\ \textcolor{stringliteral}{"{}Phe"{}},\ \textcolor{stringliteral}{"{}Phenylalanine"{}},\ 147.068414,\ 147.1739)\},\ \textcolor{comment}{//147.06842}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'P'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'P'},\ \textcolor{stringliteral}{"{}Pro"{}},\ \textcolor{stringliteral}{"{}Proline"{}},\ 97.052764,\ 97.1152)\},\ \textcolor{comment}{//97.05277}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'S'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'S'},\ \textcolor{stringliteral}{"{}Ser"{}},\ \textcolor{stringliteral}{"{}Serine"{}},\ 87.032028,\ 87.0773)\},\ \textcolor{comment}{//87.03203}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'T'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'T'},\ \textcolor{stringliteral}{"{}Thr"{}},\ \textcolor{stringliteral}{"{}Threonine"{}},\ 101.047679,\ 101.1039)\},\ \textcolor{comment}{//101.04768}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'U'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'U'},\ \textcolor{stringliteral}{"{}Sec"{}},\ \textcolor{stringliteral}{"{}Selenocysteine"{}},\ 150.95363,\ 150.0379)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'W'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'W'},\ \textcolor{stringliteral}{"{}Trp"{}},\ \textcolor{stringliteral}{"{}Tryptophane"{}},\ 186.079313,\ 186.2099)\},\ \textcolor{comment}{//186.07932}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'Y'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'Y'},\ \textcolor{stringliteral}{"{}Tyr"{}},\ \textcolor{stringliteral}{"{}Tyrosine"{}},\ 163.06332,\ 163.1733)\},\ \textcolor{comment}{//163.06332}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'V'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'V'},\ \textcolor{stringliteral}{"{}Val"{}},\ \textcolor{stringliteral}{"{}Valine"{}},\ 99.068414,\ 99.1311)\},\ \textcolor{comment}{//99.06842}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'J'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'J'},\ \textcolor{stringliteral}{"{}LeI"{}},\ \textcolor{stringliteral}{"{}Leu\_Isoleu"{}},\ 113.084064,\ 113.1576)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'O'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'O'},\ \textcolor{stringliteral}{"{}Pyl"{}},\ \textcolor{stringliteral}{"{}Pyrrolysin"{}},\ 237.14772677,\ 237.300713363271)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\$'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'\$'},\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}N-\/Term"{}},\ 0.0,\ 0.0)\},}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\string^'},\ \textcolor{keyword}{new}\ AminoAcid(\textcolor{charliteral}{'\string^'},\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}C-\/Term"{}},\ 0.0,\ 0.0)\}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Dictionary<string,\ Permutations>\ Combinations\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ Permutations>();}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ GetMassIndex(\textcolor{keywordtype}{double}\ mass)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})(mass\ *\ 10000);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ GetMassDoubleKey(\textcolor{keywordtype}{double}\ moverz)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Math.Round(moverz,\ 7);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ CalculatePeptideMass(\textcolor{keywordtype}{string}\ sequence,\ \textcolor{keywordtype}{bool}\ mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ pepMass\ =\ Chemicals[\textcolor{stringliteral}{"{}H"{}}].MonoMass\ *\ 2\ +\ Chemicals[\textcolor{stringliteral}{"{}O"{}}].MonoMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pepMass\ =\ Chemicals[\textcolor{stringliteral}{"{}H"{}}].AvgMass\ *\ 2\ +\ Chemicals[\textcolor{stringliteral}{"{}O"{}}].AvgMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ sequence.Length;\ ++i)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pepMass\ +=\ AminoAcids[sequence[i]].Mass(mono);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pepMass;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{comment}{//public\ static\ double\ CalculatePeptideMass(string\ sequence,\ bool\ mono)}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\{}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ return\ CalculatePeptideMass(sequence,\ 0,\ sequence.Length,\ mono);}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ CalculatePrecursorMassToCharge(\textcolor{keywordtype}{int}\ charge,\ \textcolor{keywordtype}{double}\ mass,\ \textcolor{keywordtype}{bool}\ mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (mass\ +\ charge\ *\ Chemicals[\textcolor{stringliteral}{"{}p"{}}].MonoMass)\ /\ charge;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (mass\ +\ charge\ *\ Chemicals[\textcolor{stringliteral}{"{}p"{}}].AvgMass)\ /\ charge;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ CalculateUnchargedMass(\textcolor{keywordtype}{double}\ mass,\ \textcolor{keywordtype}{int}\ charge,\ \textcolor{keywordtype}{bool}\ mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mono)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((mass\ *\ charge)\ -\/\ (charge)\ *\ Chemicals[\textcolor{stringliteral}{"{}p"{}}].MonoMass);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((mass\ *\ charge)\ -\/\ (charge)\ *\ Chemicals[\textcolor{stringliteral}{"{}p"{}}].AvgMass);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Permutations\ GetAscendingPermutations(\textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ k)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ key\ =\ n\ +\ \textcolor{stringliteral}{"{}\_"{}}\ +\ k;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (Combinations)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Combinations.ContainsKey(key))}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Combinations[key];}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Permutations\ m\ =\ \textcolor{keyword}{new}\ Permutations(n,\ k);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (Combinations)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Combinations.ContainsKey(key))}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Combinations.Add(key,\ m);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ CalculateMassDiffInPPM(\textcolor{keywordtype}{double}\ expMass,\ \textcolor{keywordtype}{double}\ theoMass)}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ppm\ =\ (Math.Abs(expMass\ -\/\ theoMass)\ /\ theoMass)\ *\ (1000000.0);}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ppm;}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00237}00237\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chemical_utils_8cs_source_l00238}00238\ \}}
+
+\end{DoxyCode}

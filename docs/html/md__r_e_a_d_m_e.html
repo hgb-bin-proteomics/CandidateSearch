@@ -27,7 +27,7 @@
   <td id="projectalign">
    <div id="projectname">CandidateSearch<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Proof-of-concept implementation of a search engine that uses CandidateVectorSearch to identify the best peptide candidates for a given mass spectrum.</div>
+   <div id="projectbrief">Proof-of-concept implementation of a search engine that uses sparse matrix multiplication to identify the best peptide candidates for a given mass spectrum.</div>
   </td>
  </tr>
  </tbody>
@@ -194,18 +194,23 @@ Limitations</h1>
 <li>We only support spectra in centroid mode (we can't really do anything with spectra in profile mode).</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md5"></a>
+Results</h1>
+<p>Example results of <em><a class="el" href="namespace_candidate_search.html">CandidateSearch</a></em> and results analysis are given in <code>tests</code>.</p>
+<p><img src="tests/v1.0.0/results.svg" alt="Results on a HeLa dataset" style="pointer-events: none;" class="inline"/></p>
+<p><b>Figure 1:</b> Identifying peptide candidates and peptidoform candidates with <em><a class="el" href="namespace_candidate_search.html">CandidateSearch</a></em> in a <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD007750">HeLa dataset</a> using the human swissprot database. The considered ground truth was an <a href="https://ms.imp.ac.at/?goto=msamanda">MS Amanda</a> search validated with <a href="https://github.com/percolator/percolator">Percolator</a>. For every high-confidence PSM we checked if the identified peptide/peptidoform was among the top 50/100/500/1000 hits of <em><a class="el" href="namespace_candidate_search.html">CandidateSearch</a></em>. We reach almost 100% coverage within the first 1000 hits of <em><a class="el" href="namespace_candidate_search.html">CandidateSearch</a></em> (for reference: the whole database contained ~4 200 000 peptides or ~10 500 000 peptidoforms).</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Known Issues</h1>
 <p><a href="https://github.com/hgb-bin-proteomics/CandidateSearch/issues">List of known issues</a></p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Citing</h1>
 <p>If you are using [parts of] <em><a class="el" href="namespace_candidate_search.html">CandidateSearch</a></em> please cite:</p>
 <div class="fragment"><div class="line">MS Annika 3.0 (publication wip)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 License</h1>
 <ul>
 <li><a href="https://github.com/hgb-bin-proteomics/CandidateSearch/blob/master/LICENSE">MIT</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Contact</h1>
 <p><a href="#" onclick="location.href='mai'+'lto:'+'mic'+'ha'+'.bi'+'rk'+'lba'+'ue'+'r@f'+'h-'+'hag'+'en'+'ber'+'g.'+'at'; return false;">micha.birklbauer@fh-hagenberg.at</a> </p>
 </div></div><!-- contents -->

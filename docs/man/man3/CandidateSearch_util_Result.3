@@ -1,0 +1,87 @@
+.TH "CandidateSearch.util.Result" 3 "Version 1.0.0" "CandidateSearch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CandidateSearch.util.Result \- Result class to transform and store the returned integer array of VectorSearch\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResult\fP (ref int[] SearchResult, ref List< \fBPeptide\fP > Peptides, ref List< \fBSpectrum\fP > Spectra, int TopN)"
+.br
+.RI "Constructor creating a result item that stores the processed VectorSearch result\&. "
+.ti -1c
+.RI "int \fBexport\fP (string filename)"
+.br
+.RI "Exports the results to csv format into a file with the given filename\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Dictionary< int, List< \fBPeptide\fP > > \fBresult\fP\fC [get]\fP"
+.br
+.RI "Dictionary that maps scan numbers to lists of peptide candidates\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Result class to transform and store the returned integer array of VectorSearch\&. 
+.PP
+Definition at line \fB6\fP of file \fBResult\&.cs\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CandidateSearch\&.util\&.Result\&.Result (ref int[] SearchResult, ref List< \fBPeptide\fP > Peptides, ref List< \fBSpectrum\fP > Spectra, int TopN)"
+
+.PP
+Constructor creating a result item that stores the processed VectorSearch result\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fISearchResult\fP The search result of the VectorSearch\&.
+.br
+\fIPeptides\fP The complete list of considered peptides/peptidoforms\&.
+.br
+\fISpectra\fP The complete list of searched spectra\&.
+.br
+\fITopN\fP The number of top candidates reported for each spectrum\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBResult\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int CandidateSearch\&.util\&.Result\&.export (string filename)"
+
+.PP
+Exports the results to csv format into a file with the given filename\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP The output filename\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+0 if the export was successful, 1 if it was unsuccessful\&.
+.RE
+.PP
+
+.PP
+Definition at line \fB49\fP of file \fBResult\&.cs\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "Dictionary<int, List<\fBPeptide\fP> > CandidateSearch\&.util\&.Result\&.result\fC [get]\fP"
+
+.PP
+Dictionary that maps scan numbers to lists of peptide candidates\&. 
+.PP
+Definition at line \fB11\fP of file \fBResult\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CandidateSearch from the source code\&.

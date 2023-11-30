@@ -1,0 +1,119 @@
+\doxysection{Database.\+cs}
+\hypertarget{_database_8cs_source}{}\label{_database_8cs_source}\index{util/Database.cs@{util/Database.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00003}\mbox{\hyperlink{namespace_candidate_search_1_1util}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_candidate_search_1_1util}{CandidateSearch.util}}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00008}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide}{Peptide}}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00013}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}{sequence}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00017}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00021}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<int,\ double>\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{modifications}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00025}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386}{isDecoy}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00029}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<double>\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00039}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a69162c33e1d4143bc2f6cc2854ca0e63}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a69162c33e1d4143bc2f6cc2854ca0e63}{Peptide}}(\textcolor{keywordtype}{string}\ Sequence,\ \textcolor{keywordtype}{double}\ Mass,\ Dictionary<int,\ double>\ Modifications,\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{Settings}}\ IonSettings,\ \textcolor{keywordtype}{bool}\ IsDecoy)}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}{sequence}}\ =\ Sequence;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}}\ =\ Mass;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{modifications}}\ =\ Modifications;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386}{isDecoy}}\ =\ IsDecoy;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}}\ =\ getIons(Sequence,\ Mass,\ Modifications,\ IonSettings);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00054}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a912555eae82d8449966a0cfc00282f06}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a912555eae82d8449966a0cfc00282f06}{getEnconding}}(\textcolor{keywordtype}{int}\ massRange\ =\ 5000,\ \textcolor{keywordtype}{int}\ massMultiplier\ =\ 100)}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ var\ encoding\ =\ \textcolor{keyword}{new}\ List<int>();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ ion\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}})}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ion\ <\ massRange)}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encoding.Add((\textcolor{keywordtype}{int})\ Math.Round(ion\ *\ massMultiplier));}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ encoding.ToArray();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00073}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{00073}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{ToString}}()}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ peptide\ =\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}{sequence}}\ +\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ modification\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{modifications}})}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ peptide\ =\ peptide\ +\ \$\textcolor{stringliteral}{"{}\{modification.Key\}:\{modification.Value\}+"{}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ peptide\ =\ peptide.TrimEnd(\textcolor{keyword}{new}\ \textcolor{keywordtype}{char}[]\ \{\textcolor{charliteral}{'+'}\});}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a2222f189f6f9a88b4b02f933526fa386}{isDecoy}})}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\_"{}}\ +\ peptide\ +\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ peptide\ +\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00097}\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a272c3f96bbfe2e1ddcf1b9498e06192c}{00097}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a272c3f96bbfe2e1ddcf1b9498e06192c}{addModification}}(\textcolor{keywordtype}{int}\ position,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}})}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{modifications}}.ContainsKey(position))}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a9fafee00d878be4c9abc9086042fec26}{modifications}}.Add(position,\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}});}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<double>\ getIons(\textcolor{keywordtype}{string}\ Sequence,\ \textcolor{keywordtype}{double}\ Mass,\ Dictionary<int,\ double>\ Modifications,\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_settings}{Settings}}\ IonSettings)}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ var\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}}\ =\ \textcolor{keyword}{new}\ List<double>();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}[]\ outIonsNoNL;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n}{MSAMANDA\_IONCALCULATION}}.\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_with_n_l}{IonWithNL}}[]\ outIonsWithNL;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n}{MSAMANDA\_IONCALCULATION}}.\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification}{Modification}}[]\ mods\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n}{MSAMANDA\_IONCALCULATION}}.\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification}{Modification}}[sequence.Length\ +\ 2];}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ mod\ \textcolor{keywordflow}{in}\ Modifications)}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mods[mod.Key\ +\ 1]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n}{MSAMANDA\_IONCALCULATION}}.\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_modification}{Modification}}(title:\ mod.Key.\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{ToString}}()\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ mod.Value.\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{ToString}}(),}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ mod.Key.\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{ToString}}()\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ mod.Value.\mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ae79e95d2b5cf5fa62545cf9dc8b5cd75}{ToString}}(),}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mono:\ mod.Value,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avg:\ mod.Value,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aa:\ Sequence[mod.Key],}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fix:\ true,\ \textcolor{comment}{//\ this\ should\ technically\ be\ true/false\ depending\ on\ modification}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neutralLosses:\ new\ double[0],}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nTerminal:\ false,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cTerminal:\ false,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ id:\ mod.Key.GetHashCode()\ +\ mod.Value.GetHashCode(),}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ protein:\ false,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxOccurrence:\ 3);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n}{MSAMANDA\_IONCALCULATION}}.\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_ion_calculator}{IonCalculator}}.CalculateIons(out\ outIonsNoNL,\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ out\ outIonsWithNL,\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a3424bc4212221bf532ce55c28f79d570}{sequence}}:\ Encoding.ASCII.GetBytes(Sequence),}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_a38491e7ee736c367e8a797e7ae514839}{mass}}:\ Mass,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ charge:\ IonSettings.MAX\_PRECURSOR\_CHARGE,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mods:\ mods,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxNumberNeutralLoss:\ IonSettings.MAX\_NEUTRAL\_LOSSES,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxNumberNeutralLossModifications:\ IonSettings.MAX\_NEUTRAL\_LOSS\_MODS,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lowerBound:\ 0,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ upperBound:\ 5000,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mono:\ true,}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxAllowedChargeState:\ IonSettings.MAX\_FRAGMENT\_CHARGE);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}}.AddRange(outIonsNoNL);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_candidate_search_1_1util_1_1_peptide_ac412ca5d6a9569cb5add4ccfc7c5b423}{ions}}.Distinct().OrderBy(x\ =>\ x).ToList();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00153}00153\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00158}00158\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }DatabaseReader}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00159}00159\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Peptide>\ readFASTA(\textcolor{keywordtype}{string}\ filename,\ Settings\ settings,\ \textcolor{keywordtype}{bool}\ generateDecoys\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ digestion\ parameters\ set\ in\ method}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r}{MSAMANDA\_FASTAPARSER}}.\mbox{\hyperlink{class_m_s_a_m_a_n_d_a___f_a_s_t_a_p_a_r_s_e_r_1_1_f_a_s_t_a_parser}{FASTAParser}}.DigestFasta(filename,\ settings,\ generateDecoys);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00172}00172\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00173}00173\ \}}
+
+\end{DoxyCode}

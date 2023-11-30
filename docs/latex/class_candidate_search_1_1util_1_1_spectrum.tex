@@ -1,0 +1,133 @@
+\doxysection{Candidate\+Search.\+util.\+Spectrum Class Reference}
+\hypertarget{class_candidate_search_1_1util_1_1_spectrum}{}\label{class_candidate_search_1_1util_1_1_spectrum}\index{CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}}
+
+
+Simplified spectrum class implemention of a mass spectrum.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum_a492ed6fab0fc563483b38dbbcd93c8cc}{Spectrum}} (double\mbox{[}$\,$\mbox{]} Mz, double\mbox{[}$\,$\mbox{]} Intensity, int Scan\+Number)
+\begin{DoxyCompactList}\small\item\em Constructor to create a new spectrum. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum_a2f41e1abc5af786703f14a97dd14976c}{get\+Encoding}} (int mass\+Range=5000, int mass\+Multiplier=100)
+\begin{DoxyCompactList}\small\item\em Get the encoding vector of the spectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum_aeab26cbf516d8b21832f85fc176c445a}{mz}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Array containing m/z values of centroid peaks. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum_a1c8476c3d2d04b016291700b765cbbb1}{intensity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Array containing intensities of centroid peaks. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_candidate_search_1_1util_1_1_spectrum_a1ded92c30ea9b3b02890e9adbadf252a}{scan\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The scan number of the spectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simplified spectrum class implemention of a mass spectrum. 
+
+Definition at line \mbox{\hyperlink{_spectra_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_spectra_8cs_source}{Spectra.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_spectrum_a492ed6fab0fc563483b38dbbcd93c8cc}\label{class_candidate_search_1_1util_1_1_spectrum_a492ed6fab0fc563483b38dbbcd93c8cc} 
+\index{CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}!Spectrum@{Spectrum}}
+\index{Spectrum@{Spectrum}!CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}}
+\doxysubsubsection{\texorpdfstring{Spectrum()}{Spectrum()}}
+{\footnotesize\ttfamily Candidate\+Search.\+util.\+Spectrum.\+Spectrum (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{Mz,  }\item[{double\mbox{[}$\,$\mbox{]}}]{Intensity,  }\item[{int}]{Scan\+Number }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a new spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mz} & Array containing m/z values of centroid peaks.\\
+\hline
+{\em Intensity} & Array containing intensities of centroid peaks.\\
+\hline
+{\em Scan\+Number} & The scan number of the spectrum.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_spectra_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_spectra_8cs_source}{Spectra.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_spectrum_a2f41e1abc5af786703f14a97dd14976c}\label{class_candidate_search_1_1util_1_1_spectrum_a2f41e1abc5af786703f14a97dd14976c} 
+\index{CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}!getEncoding@{getEncoding}}
+\index{getEncoding@{getEncoding}!CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}}
+\doxysubsubsection{\texorpdfstring{getEncoding()}{getEncoding()}}
+{\footnotesize\ttfamily int\mbox{[}$\,$\mbox{]} Candidate\+Search.\+util.\+Spectrum.\+get\+Encoding (\begin{DoxyParamCaption}\item[{int}]{mass\+Range = {\ttfamily 5000},  }\item[{int}]{mass\+Multiplier = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Get the encoding vector of the spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass\+Range} & Maximum m/z that should be considered while encoding. Has to match the specifications of Vector\+Search.\\
+\hline
+{\em mass\+Multiplier} & Precision of the encoding. Has to match the specifications of Vector\+Search.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoding vector as an integer array.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_spectra_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_spectra_8cs_source}{Spectra.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_candidate_search_1_1util_1_1_spectrum_a1c8476c3d2d04b016291700b765cbbb1}\label{class_candidate_search_1_1util_1_1_spectrum_a1c8476c3d2d04b016291700b765cbbb1} 
+\index{CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}!intensity@{intensity}}
+\index{intensity@{intensity}!CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}}
+\doxysubsubsection{\texorpdfstring{intensity}{intensity}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Candidate\+Search.\+util.\+Spectrum.\+intensity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Array containing intensities of centroid peaks. 
+
+
+
+Definition at line \mbox{\hyperlink{_spectra_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_spectra_8cs_source}{Spectra.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_spectrum_aeab26cbf516d8b21832f85fc176c445a}\label{class_candidate_search_1_1util_1_1_spectrum_aeab26cbf516d8b21832f85fc176c445a} 
+\index{CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}!mz@{mz}}
+\index{mz@{mz}!CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}}
+\doxysubsubsection{\texorpdfstring{mz}{mz}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} Candidate\+Search.\+util.\+Spectrum.\+mz\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Array containing m/z values of centroid peaks. 
+
+
+
+Definition at line \mbox{\hyperlink{_spectra_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_spectra_8cs_source}{Spectra.\+cs}}.
+
+\Hypertarget{class_candidate_search_1_1util_1_1_spectrum_a1ded92c30ea9b3b02890e9adbadf252a}\label{class_candidate_search_1_1util_1_1_spectrum_a1ded92c30ea9b3b02890e9adbadf252a} 
+\index{CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}!scanNumber@{scanNumber}}
+\index{scanNumber@{scanNumber}!CandidateSearch.util.Spectrum@{CandidateSearch.util.Spectrum}}
+\doxysubsubsection{\texorpdfstring{scanNumber}{scanNumber}}
+{\footnotesize\ttfamily int Candidate\+Search.\+util.\+Spectrum.\+scan\+Number\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The scan number of the spectrum. 
+
+
+
+Definition at line \mbox{\hyperlink{_spectra_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_spectra_8cs_source}{Spectra.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/Spectra.\+cs\end{DoxyCompactItemize}

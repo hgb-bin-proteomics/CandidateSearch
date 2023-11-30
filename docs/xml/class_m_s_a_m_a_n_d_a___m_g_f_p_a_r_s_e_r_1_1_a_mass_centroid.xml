@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" kind="class" language="C#" prot="public">
+    <compoundname>MSAMANDA_MGFPARSER::AMassCentroid</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1aaf474821ab85be2a554631851ffe94f0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double MSAMANDA_MGFPARSER.AMassCentroid.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.AMassCentroid.Position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="8" column="23" bodyfile="amanda/MGFParser.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1a6d36b227814d1991d6c7cbd0c09a2bab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double MSAMANDA_MGFPARSER.AMassCentroid.Intensity</definition>
+        <argsstring></argsstring>
+        <name>Intensity</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.AMassCentroid.Intensity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="9" column="23" bodyfile="amanda/MGFParser.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1add51145ced3ae4c1153b1dbd62ab0fcb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int MSAMANDA_MGFPARSER.AMassCentroid.Charge</definition>
+        <argsstring></argsstring>
+        <name>Charge</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.AMassCentroid.Charge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="10" column="20" bodyfile="amanda/MGFParser.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1a7588fb11b3b8d217a340ed7e6850fe5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" kindref="compound">AMassCentroid</ref></type>
+        <definition>AMassCentroid MSAMANDA_MGFPARSER.AMassCentroid.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.AMassCentroid.Clone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="12" column="30" bodyfile="amanda/MGFParser.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1abb38e0448f7ede9dd802e1d051492ada" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid" kindref="compound">AMassCentroid</ref></type>
+        <definition>AMassCentroid MSAMANDA_MGFPARSER.AMassCentroid.Clone</definition>
+        <argsstring>(int charge)</argsstring>
+        <name>Clone</name>
+        <qualifiedname>MSAMANDA_MGFPARSER.AMassCentroid.Clone</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>charge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/MGFParser.cs" line="17" column="30" bodyfile="amanda/MGFParser.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="amanda/MGFParser.cs" line="6" column="11" bodyfile="amanda/MGFParser.cs" bodystart="7" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1add51145ced3ae4c1153b1dbd62ab0fcb" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::AMassCentroid</scope><name>Charge</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1a7588fb11b3b8d217a340ed7e6850fe5c" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::AMassCentroid</scope><name>Clone</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1abb38e0448f7ede9dd802e1d051492ada" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::AMassCentroid</scope><name>Clone</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1a6d36b227814d1991d6c7cbd0c09a2bab" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::AMassCentroid</scope><name>Intensity</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___m_g_f_p_a_r_s_e_r_1_1_a_mass_centroid_1aaf474821ab85be2a554631851ffe94f0" prot="public" virt="non-virtual"><scope>MSAMANDA_MGFPARSER::AMassCentroid</scope><name>Position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

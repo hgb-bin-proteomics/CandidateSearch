@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting" kind="class" language="C#" prot="public">
+    <compoundname>MSAMANDA_IONCALCULATION::InstrumentSetting</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a1f07e48c4901a1ebebe33aa6ce7bacc2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string MSAMANDA_IONCALCULATION.InstrumentSetting.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.Name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1031" column="23" bodyfile="amanda/IonCalculator.cs" bodystart="1031" bodyend="1031"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ac0b2a1ed419bc2a4497b56a204e3ff9b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseAIon</definition>
+        <argsstring></argsstring>
+        <name>UseAIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseAIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1032" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1032" bodyend="1032"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab39d6b2f106936e5447fbeffec522746" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseBIon</definition>
+        <argsstring></argsstring>
+        <name>UseBIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseBIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1033" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1033" bodyend="1033"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a8c54901d646a7286b80f69df59c72663" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseYIon</definition>
+        <argsstring></argsstring>
+        <name>UseYIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseYIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1034" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1034" bodyend="1034"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1afbcd23cb8822e51494bb6c65ea5e3499" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseWaterLosses</definition>
+        <argsstring></argsstring>
+        <name>UseWaterLosses</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseWaterLosses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1035" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1035" bodyend="1035"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a0510b0637d862e0656b318998250a8f2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseAmmoniaLosses</definition>
+        <argsstring></argsstring>
+        <name>UseAmmoniaLosses</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseAmmoniaLosses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1036" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1036" bodyend="1036"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a776b01763f6eb421e35f5ccca7a9eae0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseImmoniumIons</definition>
+        <argsstring></argsstring>
+        <name>UseImmoniumIons</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseImmoniumIons</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1037" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1037" bodyend="1037"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a2bab214cb33758dbddb0e02b4305fdb6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseZIon</definition>
+        <argsstring></argsstring>
+        <name>UseZIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseZIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1038" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1038" bodyend="1038"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a23709fd292fbcab1e5f5416c667169e2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseZPlusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseZPlusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseZPlusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1039" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1039" bodyend="1039"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad13b950acfb75d4490452fe5031c58b3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseZPlusTwoHIon</definition>
+        <argsstring></argsstring>
+        <name>UseZPlusTwoHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseZPlusTwoHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1040" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1040" bodyend="1040"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a683b4e5bb2180c54bb701657658a87c6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseXIon</definition>
+        <argsstring></argsstring>
+        <name>UseXIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseXIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1041" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1041" bodyend="1041"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1aa63361c4ab100dba2e96b834cf216bb1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseCIon</definition>
+        <argsstring></argsstring>
+        <name>UseCIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseCIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1042" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1042" bodyend="1042"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1aa7d6516e131fef9a4aeb4b270fb168db" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseInternalFragments</definition>
+        <argsstring></argsstring>
+        <name>UseInternalFragments</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseInternalFragments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1043" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1043" bodyend="1043"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab7f371b2d94baaf0cd777ee32155f741" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseAPlusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseAPlusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseAPlusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1046" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1046" bodyend="1046"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1adf8caa2ceab9104d887f252054f8f3e9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseAMinusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseAMinusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseAMinusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1047" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1047" bodyend="1047"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a461c731233a7623df3413969f3dd61cb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseBPlusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseBPlusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseBPlusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1048" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1048" bodyend="1048"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a22ec59f75c5cd99386cdadff22a1d778" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseBMinusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseBMinusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseBMinusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1049" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1049" bodyend="1049"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad4c8473f9fdd59afe82e40230ee7f3f4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseCPlusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseCPlusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseCPlusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1050" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1050" bodyend="1050"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a4b54d4cfc1754088eaab9521afdac4e6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseCMinusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseCMinusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseCMinusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1051" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1051" bodyend="1051"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad0f355fd26dd4d5722d9f126d01c9667" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseXPlusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseXPlusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseXPlusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1052" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1052" bodyend="1052"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ac8aedf68d0f49abc91c4e477497efb19" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseXMinusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseXMinusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseXMinusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1053" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1053" bodyend="1053"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab6487e8fe3650594ddde957f2b40ffb1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseYPlusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseYPlusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseYPlusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1054" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1054" bodyend="1054"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a9e3bd361419543cc9700798868553550" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseYMinusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseYMinusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseYMinusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1055" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1055" bodyend="1055"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a497efb5c5515a019c118930e9773dfd3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MSAMANDA_IONCALCULATION.InstrumentSetting.UseZMinusHIon</definition>
+        <argsstring></argsstring>
+        <name>UseZMinusHIon</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.UseZMinusHIon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="1056" column="21" bodyfile="amanda/IonCalculator.cs" bodystart="1056" bodyend="1056"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a4e454bbbe043e39ad486e583cd71e2a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MSAMANDA_IONCALCULATION.InstrumentSetting.InstrumentSetting</definition>
+        <argsstring>()</argsstring>
+        <name>InstrumentSetting</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.InstrumentSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="970" column="16" bodyfile="amanda/IonCalculator.cs" bodystart="970" bodyend="996"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a451147c24069856babd5e53b10efa90c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting" kindref="compound">InstrumentSetting</ref></type>
+        <definition>InstrumentSetting MSAMANDA_IONCALCULATION.InstrumentSetting.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <qualifiedname>MSAMANDA_IONCALCULATION.InstrumentSetting.Clone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="amanda/IonCalculator.cs" line="998" column="34" bodyfile="amanda/IonCalculator.cs" bodystart="998" bodyend="1029"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="amanda/IonCalculator.cs" line="968" column="11" bodyfile="amanda/IonCalculator.cs" bodystart="969" bodyend="1058"/>
+    <listofallmembers>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a451147c24069856babd5e53b10efa90c" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>Clone</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a4e454bbbe043e39ad486e583cd71e2a4" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>InstrumentSetting</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a1f07e48c4901a1ebebe33aa6ce7bacc2" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>Name</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ac0b2a1ed419bc2a4497b56a204e3ff9b" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseAIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1adf8caa2ceab9104d887f252054f8f3e9" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseAMinusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a0510b0637d862e0656b318998250a8f2" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseAmmoniaLosses</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab7f371b2d94baaf0cd777ee32155f741" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseAPlusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab39d6b2f106936e5447fbeffec522746" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseBIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a22ec59f75c5cd99386cdadff22a1d778" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseBMinusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a461c731233a7623df3413969f3dd61cb" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseBPlusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1aa63361c4ab100dba2e96b834cf216bb1" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseCIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a4b54d4cfc1754088eaab9521afdac4e6" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseCMinusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad4c8473f9fdd59afe82e40230ee7f3f4" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseCPlusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a776b01763f6eb421e35f5ccca7a9eae0" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseImmoniumIons</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1aa7d6516e131fef9a4aeb4b270fb168db" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseInternalFragments</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1afbcd23cb8822e51494bb6c65ea5e3499" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseWaterLosses</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a683b4e5bb2180c54bb701657658a87c6" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseXIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ac8aedf68d0f49abc91c4e477497efb19" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseXMinusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad0f355fd26dd4d5722d9f126d01c9667" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseXPlusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a8c54901d646a7286b80f69df59c72663" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseYIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a9e3bd361419543cc9700798868553550" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseYMinusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ab6487e8fe3650594ddde957f2b40ffb1" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseYPlusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a2bab214cb33758dbddb0e02b4305fdb6" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseZIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a497efb5c5515a019c118930e9773dfd3" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseZMinusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1a23709fd292fbcab1e5f5416c667169e2" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseZPlusHIon</name></member>
+      <member refid="class_m_s_a_m_a_n_d_a___i_o_n_c_a_l_c_u_l_a_t_i_o_n_1_1_instrument_setting_1ad13b950acfb75d4490452fe5031c58b3" prot="public" virt="non-virtual"><scope>MSAMANDA_IONCALCULATION::InstrumentSetting</scope><name>UseZPlusTwoHIon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
