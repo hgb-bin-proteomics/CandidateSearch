@@ -27,7 +27,8 @@ A simplified break down of the *CandidateSearch* algorithm is given in the follo
 ## Usage
 
 Running *CandidateSearch* requires three files:
-- An mgf file containing MS2 spectra. **We highly recommend to deisotope and deconvolute spectra before search!**
+- An mgf file containing MS2 spectra.  
+  **We highly recommend to deisotope and deconvolute spectra before search!**
 - A fasta file containing sample proteins.
 - A settings file containing parameters for digestion, ion calculation and search (see below for an explanation of the settings file).
 
