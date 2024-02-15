@@ -61,14 +61,18 @@ given, *CandidateSearch* will return the best scoring unmodified peptidoforms fo
 (bool, default = false)
 - USE_GAUSSIAN: Whether or not experimental peaks should be modelled as gaussian distributions with `mu = (m/z)` and `sigma = (tolerance/3)`.
 Accepts `true` or `false`. (bool, default = true)  
-- MODE: Search approach used by *CandidateVectorSearch*. One of the following (default = CPU_DV):
-  - CPU_DV: Sparse matrix - dense vector search on the CPU.
-  - CPU_DM: Sparse matrix - dense matrix search on the CPU.
-  - CPU_SV: Sparse matrix - sparse vector search on the CPU.
-  - CPU_SM: Sparse matrix - sparse matrix search on the CPU.
-  - GPU_DV: Sparse matrix - dense vector search on the GPU (see [requirements](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/blob/master/README.md)).
-  - GPU_DM: Sparse matrix - dense matrix search on the GPU (see [requirements](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/blob/master/README.md)).
-  - GPU_SM: Sparse matrix - sparse matrix search on the GPU (see [requirements](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/blob/master/README.md)).
+- MODE: Search approach used by *CandidateVectorSearch*. One of the following (default = CPU_SMi32):
+  - CPU_DVi32: Sparse int matrix - dense int vector search on the CPU.
+  - CPU_DVf32: Sparse float matrix - dense float vector search on the CPU.
+  - CPU_DMi32: Sparse int matrix - dense int matrix search on the CPU.
+  - CPU_DMf32: Sparse float matrix - dense float matrix search on the CPU.
+  - CPU_SVi32: Sparse int matrix - sparse int vector search on the CPU.
+  - CPU_SVf32: Sparse float matrix - sparse float vector search on the CPU.
+  - CPU_SMi32: Sparse int matrix - sparse int matrix search on the CPU.
+  - CPU_SMf32: Sparse float matrix - sparse float matrix search on the CPU.
+  - GPU_DVf32: Sparse float matrix - dense float vector search on the GPU (see [requirements](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/blob/master/README.md)).
+  - GPU_DMf32: Sparse float matrix - dense float matrix search on the GPU (see [requirements](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/blob/master/README.md)).
+  - GPU_SMf32: Sparse float matrix - sparse float matrix search on the GPU (see [requirements](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/blob/master/README.md)).
 
 For the last five parameters you might additionally want to check the documentation of
 [CandidateVectorSearch](https://github.com/hgb-bin-proteomics/CandidateVectorSearch) to get a better understanding of their meaning.
@@ -105,7 +109,7 @@ TOP_N = 1000
 TOLERANCE = 0.02
 NORMALIZE = false
 USE_GAUSSIAN = true
-MODE = CPU_DV
+MODE = CPU_SMi32
 ```
 
 ## Documentation
@@ -125,6 +129,9 @@ therefore this implementation comes with a few limitations:
 - We currently have not implemented support for N- or C-terminal modifications.
 - We currently have only implemented support for one possible modification per amino acid.
 - We only support spectra in centroid mode (we can't really do anything with spectra in profile mode).
+- We only support databases up to a size of 12 500 000 peptides/peptidoforms, beyond that we can't guarantee that the matrix can be allocated anymore.
+  - Consider splitting your fasta into smaller chunks and searching them separately if the generated database size exceeds 12 500 000.
+- The limitations of [*CandidateVectorSearch*](https://github.com/hgb-bin-proteomics/CandidateVectorSearch?tab=readme-ov-file#limitations) also apply here.
 
 ## Results
 

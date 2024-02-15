@@ -22,6 +22,12 @@ namespace CandidateSearch
             var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: settings.DECOY_SEARCH);
             Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
 
+            if (peptides.Count > 12500000)
+            {
+                Console.WriteLine("Database size exceeds 12 500 000, might not be able to allocate a matrix of that size!");
+                Console.WriteLine("Please see 'Limitations' for more info and possible work arounds!");
+            }
+
             // generating the candidateValues and candidateIdx arrays
             int candidateValuesLength = 0;
             foreach (var peptide in peptides)
@@ -72,6 +78,38 @@ namespace CandidateSearch
                 }
             }
 
+            VectorSearchInterface.VectorSearchAPI.CPU_METHODS METHOD;
+            switch (settings.MODE)
+            {
+                case "CPU_DVi32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_DV;
+                    break;
+                case "CPU_DVf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS .f32CPU_DV;
+                    break;
+                case "CPU_SVi32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_SV;
+                    break;
+                case "CPU_SVf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.f32CPU_SV;
+                    break;
+                case "CPU_DMi32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_DM;
+                    break;
+                case "CPU_DMf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.f32CPU_DM;
+                    break;
+                case "CPU_SMi32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_SM;
+                    break;
+                case "CPU_SMf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.f32CPU_SM;
+                    break;
+                default:
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_SM;
+                    break;
+            }
+
             var sw = new Stopwatch();
             sw.Start();
 
@@ -83,9 +121,8 @@ namespace CandidateSearch
                                                                          tolerance: settings.TOLERANCE,
                                                                          normalize: settings.NORMALIZE,
                                                                          useGaussianTol: settings.USE_GAUSSIAN,
-                                                                         batched: settings.MODE == "CPU_DM" || settings.MODE == "CPU_SM",
                                                                          batchSize: 100,
-                                                                         useSparse: settings.MODE == "CPU_SV" || settings.MODE == "CPU_SM",
+                                                                         method: METHOD,
                                                                          cores: 0,
                                                                          verbose: 1000,
                                                                          memStat: out int memStat);

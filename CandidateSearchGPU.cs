@@ -22,6 +22,12 @@ namespace CandidateSearch
             var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: settings.DECOY_SEARCH);
             Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
 
+            if (peptides.Count > 12500000)
+            {
+                Console.WriteLine("Database size exceeds 12 500 000, might not be able to allocate a matrix of that size!");
+                Console.WriteLine("Please see 'Limitations' for more info and possible work arounds!");
+            }
+
             // generating the csrColIdx and csrRowoffsets arrays
             int csrColIdxLength = 0;
             foreach (var peptide in peptides)
@@ -74,6 +80,23 @@ namespace CandidateSearch
                 }
             }
 
+            VectorSearchInterface.VectorSearchAPI.GPU_METHODS METHOD;
+            switch (settings.MODE)
+            {
+                case "GPU_DVf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.GPU_METHODS.f32GPU_DV;
+                    break;
+                case "GPU_DMf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.GPU_METHODS.f32GPU_DM;
+                    break;
+                case "GPU_SMf32":
+                    METHOD = VectorSearchInterface.VectorSearchAPI.GPU_METHODS.f32GPU_SM;
+                    break;
+                default:
+                    METHOD = VectorSearchInterface.VectorSearchAPI.GPU_METHODS.f32GPU_DV;
+                    break;
+            }
+
             var sw = new Stopwatch();
             sw.Start();
 
@@ -85,9 +108,8 @@ namespace CandidateSearch
                                                                          tolerance: settings.TOLERANCE,
                                                                          normalize: settings.NORMALIZE,
                                                                          useGaussianTol: settings.USE_GAUSSIAN,
-                                                                         batched: settings.MODE == "GPU_DM" || settings.MODE == "GPU_SM",
                                                                          batchSize: 100,
-                                                                         useSparse: settings.MODE == "GPU_SM",
+                                                                         method: METHOD,
                                                                          verbose: 1000,
                                                                          memStat: out int memStat);
 
