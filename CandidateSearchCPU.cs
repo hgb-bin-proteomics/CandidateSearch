@@ -20,13 +20,20 @@ namespace CandidateSearch
             Console.WriteLine($"Read {spectra.Count} spectra.");
 
             var peptides = DatabaseReader.readFASTA(databaseFile, settings, generateDecoys: settings.DECOY_SEARCH);
-            Console.WriteLine($"Generated {peptides.Count} peptides from fasta file.");
+            Console.WriteLine($"Generated {peptides.Count} peptides/peptidoforms from fasta file.");
 
             if (peptides.Count > 12500000)
             {
                 Console.WriteLine("Database size exceeds 12 500 000, might not be able to allocate a matrix of that size!");
                 Console.WriteLine("Please see 'Limitations' for more info and possible work arounds!");
             }
+
+            // sorting database
+            Console.WriteLine("Sorting peptides/peptidoforms...");
+            var sortTime = new Stopwatch(); sortTime.Start();
+            peptides.Sort((x, y) => x.ToString().CompareTo(y.ToString()));
+            sortTime.Stop();
+            Console.WriteLine($"Sorted peptides/peptidoforms for search in {sortTime.Elapsed.TotalSeconds} seconds.");
 
             // generating the candidateValues and candidateIdx arrays
             int candidateValuesLength = 0;

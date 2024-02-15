@@ -12,7 +12,7 @@ namespace CandidateSearch
         /// <summary>
         /// Current version of CandidateSearch.
         /// </summary>
-        public const string version = "1.1.0";
+        public const string version = "1.1.1";
 
         /// <summary>
         /// Main function that is executed when CandidateSearch is run.
