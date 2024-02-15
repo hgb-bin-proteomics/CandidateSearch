@@ -141,7 +141,7 @@ therefore this implementation comes with a few limitations:
 - We only support spectra in centroid mode (we can't really do anything with spectra in profile mode).
 - We only support databases up to a size of 12 500 000 peptides/peptidoforms, beyond that we can't guarantee that the matrix can be allocated anymore.
   - Consider splitting your fasta into smaller chunks and searching them separately if the generated database size exceeds 12 500 000.
-- The limitations of [*CandidateVectorSearch*](https://github.com/hgb-bin-proteomics/CandidateVectorSearch?tab=readme-ov-file#limitations) also apply here.
+- The limitations of [CandidateVectorSearch](https://github.com/hgb-bin-proteomics/CandidateVectorSearch?tab=readme-ov-file#limitations) also apply here.
 
 ## Results
 
@@ -149,7 +149,7 @@ Example results of *CandidateSearch* and results analysis are given in `tests`.
 
 ![Results on a HeLa dataset](tests/v1.0.0/results.svg)
 
-**Figure 1:** Identifying peptide candidates and peptidoform candidates with *CandidateSearch* in a
+**Figure 1:** Identifying peptide candidates and peptidoform candidates with *CandidateSearch [v1.0.0]* in a
 [HeLa dataset](https://www.ebi.ac.uk/pride/archive/projects/PXD007750) using the human swissprot database. The considered ground truth was
 an [MS Amanda](https://ms.imp.ac.at/?goto=msamanda) search validated with [Percolator](https://github.com/percolator/percolator). For every
 high-confidence PSM we checked if the identified peptide/peptidoform was among the top 50/100/500/1000 hits of *CandidateSearch*. We reach
