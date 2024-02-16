@@ -4,15 +4,15 @@ namespace CandidateSearch
 {
     /// <summary>
     /// Searching for candidates using VectorSearch.
-    ///     Requires VectorSearch.dll     v1.5.1
-    ///     Requires VectorSearchCUDA.dll v1.4.7
+    ///     Requires VectorSearch.dll     v1.7.2
+    ///     Requires VectorSearchCUDA.dll v1.4.8
     /// </summary>
     public class CandidateSearch
     {
         /// <summary>
         /// Current version of CandidateSearch.
         /// </summary>
-        public const string version = "1.0.0";
+        public const string version = "1.1.1";
 
         /// <summary>
         /// Main function that is executed when CandidateSearch is run.

@@ -94,7 +94,7 @@ namespace CandidateSearch.util
         public Settings(int MaxCleavages = 2, int MinPepLength = 5, int MaxPepLength = 30, 
                         int MaxPrecursorCharge = 4, string MaxFragmentCharge = "+1", int MaxNeutralLosses = 1, int MaxNeutralLossMods = 2,
                         bool DecoySearch = true,
-                        int TopN = 1000, float Tolerance = 0.02f, bool Normalize = false, bool UseGaussian = true, string Mode = "CPU_DV")
+                        int TopN = 1000, float Tolerance = 0.02f, bool Normalize = false, bool UseGaussian = true, string Mode = "CPU_SMi32")
         {
             MAX_CLEAVAGES = MaxCleavages;
             MIN_PEP_LENGTH = MinPepLength;
@@ -327,7 +327,10 @@ namespace CandidateSearch.util
                                 {
                                     if (modProps[0].Trim().Length == 1)
                                     {
-                                        var ok = double.TryParse(modProps[1], out var value);
+                                        var ok = double.TryParse(modProps[1], 
+                                                                 System.Globalization.NumberStyles.AllowDecimalPoint, 
+                                                                 System.Globalization.CultureInfo.InvariantCulture, 
+                                                                 out var value);
                                         if (ok)
                                         {
                                             if (!settings.FIXED_MODIFICATIONS.ContainsKey(modProps[0]))
@@ -354,7 +357,10 @@ namespace CandidateSearch.util
                                 {
                                     if (modProps[0].Trim().Length == 1)
                                     {
-                                        var ok = double.TryParse(modProps[1], out var value);
+                                        var ok = double.TryParse(modProps[1], 
+                                                                 System.Globalization.NumberStyles.AllowDecimalPoint, 
+                                                                 System.Globalization.CultureInfo.InvariantCulture, 
+                                                                 out var value);
                                         if (ok)
                                         {
                                             if (!settings.VARIABLE_MODIFICATIONS.ContainsKey(modProps[0]))
@@ -399,7 +405,10 @@ namespace CandidateSearch.util
                         var values = line.Split("=");
                         if (values.Length > 1)
                         {
-                            var ok = float.TryParse(values[1], out var value);
+                            var ok = float.TryParse(values[1], 
+                                                    System.Globalization.NumberStyles.AllowDecimalPoint,
+                                                    System.Globalization.CultureInfo.InvariantCulture,
+                                                    out var value);
                             if (ok)
                             {
                                 settings.TOLERANCE = value;
@@ -439,14 +448,65 @@ namespace CandidateSearch.util
                         if (values.Length > 1)
                         {
                             var mode = values[1].Trim();
-                            if (mode == "CPU_SV" ||
-                                mode == "CPU_DM" ||
-                                mode == "CPU_SM" ||
-                                mode == "GPU_DV" ||
-                                mode == "GPU_DM" ||
-                                mode == "GPU_SM")
+                            switch (mode)
                             {
-                                settings.MODE = mode;
+                                case "CPU_DV":
+                                    settings.MODE = "CPU_DVi32";
+                                    break;
+                                case "CPU_DVi32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_DVf32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_SV":
+                                    settings.MODE = "CPU_SVi32";
+                                    break;
+                                case "CPU_SVi32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_SVf32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_DM":
+                                    settings.MODE = "CPU_DMi32";
+                                    break;
+                                case "CPU_DMi32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_DMf32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_SM":
+                                    settings.MODE = "CPU_SMi32";
+                                    break;
+                                case "CPU_SMi32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "CPU_SMf32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "GPU_DV":
+                                    settings.MODE = "GPU_DVf32";
+                                    break;
+                                case "GPU_DVf32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "GPU_DM":
+                                    settings.MODE = "GPU_DMf32";
+                                    break;
+                                case "GPU_DMf32":
+                                    settings.MODE = mode;
+                                    break;
+                                case "GPU_SM":
+                                    settings.MODE = "GPU_SMf32";
+                                    break;
+                                case "GPU_SMf32":
+                                    settings.MODE = mode;
+                                    break;
+                                default:
+                                    settings.MODE = "CPU_SMi32";
+                                    break;
                             }
                         }
                     }
