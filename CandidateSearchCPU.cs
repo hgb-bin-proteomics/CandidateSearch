@@ -92,7 +92,7 @@ namespace CandidateSearch
                     METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_DV;
                     break;
                 case "CPU_DVf32":
-                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS .f32CPU_DV;
+                    METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.f32CPU_DV;
                     break;
                 case "CPU_SVi32":
                     METHOD = VectorSearchInterface.VectorSearchAPI.CPU_METHODS.i32CPU_SV;
