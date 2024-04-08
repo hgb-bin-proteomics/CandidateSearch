@@ -120,11 +120,16 @@ implemented [here](https://github.com/hgb-bin-proteomics/CandidateSearch/blob/ma
 [Doxygen](https://github.com/doxygen/doxygen) is also available here:
 [https://hgb-bin-proteomics.github.io/CandidateSearch/](https://hgb-bin-proteomics.github.io/CandidateSearch/)
 
+## Requirements
+
+- \[Optional\] Using GPU based approaches requires a CUDA capable GPU and CUDA version == 12.2.0
+([download here](https://developer.nvidia.com/cuda-12-2-0-download-archive)). Other CUDA versions may or may not produce the desired results
+([see this issue](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/issues/32)).
+
 ## Downloads
 
-Compiled DLLs and an executable for Windows (10+, x64) are available in the `exe` folder or in
+Compiled DLLs and an executable for Windows 10/11 (x86, 64-bit) are available in the `exe` folder or in
 [Releases](https://github.com/hgb-bin-proteomics/CandidateSearch/releases).
-
 
 For other operating systems/architectures please compile the source code yourself!
 You will also need to compile [CandidateVectorSearch](https://github.com/hgb-bin-proteomics/CandidateVectorSearch)!
