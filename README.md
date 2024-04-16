@@ -1,7 +1,12 @@
+![test_state_windows](https://github.com/hgb-bin-proteomics/CandidateSearch/workflows/Test%20for%20Windows/badge.svg)
+![test_state_ubuntu](https://github.com/hgb-bin-proteomics/CandidateSearch/workflows/Test%20for%20Ubuntu%2022.04/badge.svg)
+![test_state_macos](https://github.com/hgb-bin-proteomics/CandidateSearch/workflows/Test%20for%20macOS/badge.svg)
+
 # CandidateSearch
 
 Proof-of-concept implementation of a search engine that uses [CandidateVectorSearch](https://github.com/hgb-bin-proteomics/CandidateVectorSearch)
-to identify the best peptide candidates for a given mass spectrum. *CandidateSearch* creates the vector encodings of peptides and spectra that are
+to identify the best peptide candidates for a given mass spectrum. *CandidateSearch* is also the computational backend of the non-cleavable crosslink
+search in [MS Annika](https://github.com/hgb-bin-proteomics/MSAnnika). *CandidateSearch* creates the vector encodings of peptides and spectra that are
 needed for the sparse matrix search of *CandidateVectorSearch*.
 
 *CandidateSearch* can identify peptide candidates from a given mass spectrum without any precursor ion/mass information and no previous knowledge about
@@ -128,8 +133,13 @@ implemented [here](https://github.com/hgb-bin-proteomics/CandidateSearch/blob/ma
 
 ## Downloads
 
-Compiled DLLs and an executable for Windows 10/11 (x86, 64-bit) are available in the `exe` folder or in
+Compiled DLLs and and executables are available in the `exe` folder or in
 [Releases](https://github.com/hgb-bin-proteomics/CandidateSearch/releases).
+
+We supply compiled executables and DLLs for:
+- Windows 10/11 (x86, 64-bit)
+- Ubuntu 22.04 (x86, 64-bit)
+- macOS 14.4 (arm, 64-bit)
 
 For other operating systems/architectures please compile the source code yourself!
 You will also need to compile [CandidateVectorSearch](https://github.com/hgb-bin-proteomics/CandidateVectorSearch)!
@@ -150,7 +160,7 @@ therefore this implementation comes with a few limitations:
 
 ## Results
 
-Example results of *CandidateSearch* and results analysis are given in `tests`.
+Example results of *CandidateSearch* and results analysis are given in `tests`. An extensive report is given in [results.md](results.md).
 
 ![Results on a HeLa dataset](tests/v1.0.0/results.svg)
 
