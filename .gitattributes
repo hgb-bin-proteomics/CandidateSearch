@@ -1,3 +1,0 @@
-*.mgf filter=lfs diff=lfs merge=lfs -text
-tests/v1.0.0/test_pepf.zip filter=lfs diff=lfs merge=lfs -text
-tests/v1.0.0/test_pept.zip filter=lfs diff=lfs merge=lfs -text
