@@ -63,7 +63,7 @@ namespace CandidateSearch.util
                 }
             }
 
-            return encoding.ToArray();
+            return encoding.Distinct().OrderBy(x => x).ToArray();
         }
 
         /// <summary>
