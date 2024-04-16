@@ -23,7 +23,7 @@ jobs:
         run: |
           cd exe/macos_arm/uncompressed
           chmod +x CandidateSearch
-          ./CandidateSearch test.mgf test.fasta test.txt
+          ./CandidateSearch test_spectra.mgf test_database.fasta test_settings.txt
       - name: Check result
         run: |
-          head test_results.csv
+          head test_spectra.mgf_results.csv
