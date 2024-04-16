@@ -26,4 +26,5 @@ jobs:
           ./CandidateSearch test_spectra.mgf test_database.fasta test_settings.txt
       - name: Check result
         run: |
+          cd exe/macos_arm/uncompressed
           head test_spectra.mgf_results.csv

@@ -1,4 +1,4 @@
-name: Test for Windows
+name: Test for Ubuntu 22.04
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  Test-for-Windows:
-    runs-on: windows-2022
+  Test-for-Ubuntu:
+    runs-on: ubuntu-22.04
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -16,14 +16,18 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y g++
       - name: Copy test data
         run: |
-          copy tests\data\* exe\windows_x64\uncompressed
+          cp tests/data/* exe/ubuntu_x64/uncompressed
       - name: Test
         run: |
-          cd exe/windows_x64/uncompressed
+          cd exe/ubuntu_x64/uncompressed
+          chmod +x CandidateSearch
           ./CandidateSearch test_spectra.mgf test_database.fasta test_settings.txt
       - name: Check result
         run: |
-          cd exe/windows_x64/uncompressed
-          Get-Content test_spectra.mgf_results.csv -TotalCount 10
+          cd exe/ubuntu_x64/uncompressed
+          head test_spectra.mgf_results.csv
