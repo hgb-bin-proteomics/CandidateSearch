@@ -22,7 +22,9 @@ jobs:
       - name: Test
         run: |
           cd exe/windows_x64/uncompressed
+          Get-Content test.mgf -TotalCount 10
           ./CandidateSearch test.mgf test.fasta test.txt
       - name: Check result
         run: |
+          cd exe/windows_x64/uncompressed
           Get-Content test.mgf_results.csv -TotalCount 10
