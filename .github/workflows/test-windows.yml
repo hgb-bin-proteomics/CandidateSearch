@@ -1,0 +1,29 @@
+name: Test for Windows
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  Test-for-Windows:
+    runs-on: windows-2022
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6'
+      - name: Copy test data
+        run: |
+          copy tests\data\* exe\windows_x64\uncompressed
+      - name: Test
+        run: |
+          cd exe/windows_x64/uncompressed
+          ./CandidateSearch test_spectra.mgf test_database.fasta test_settings.txt
+      - name: Check result
+        run: |
+          cd exe/windows_x64/uncompressed
+          Get-Content test_spectra.mgf_results.csv -TotalCount 10
