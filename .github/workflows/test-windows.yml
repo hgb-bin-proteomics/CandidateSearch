@@ -18,7 +18,7 @@ jobs:
           dotnet-version: '6'
       - name: Copy test data
         run: |
-          copyp tests\data\* exe\windows_x64\uncompressed
+          copy tests\data\* exe\windows_x64\uncompressed
       - name: Test
         run: |
           cd exe/windows_x64/uncompressed
