@@ -1,0 +1,31 @@
+name: Build for macOS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Build-for-macOS:
+    runs-on: macos-14
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6'
+      - name: Build CandidateSearch
+        run: |
+          dotnet publish CandidateSearch.sln --runtime osx-arm64 --self-contained --configuration Release
+      - name: Copy VectorSearch.dll to Release
+        run: |
+          cp dll/macos_arm/VectorSearch.dll bin/Release/net6.0/osx-arm64
+          cp dll/macos_arm/VectorSearch.dll bin/Release/net6.0/osx-arm64/publish
+      - name: Zip Release
+        run: |
+          cd bin/
+          zip -r Release.zip Release
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-macos-arm64-cpu-only
+          path: bin/Release.zip
