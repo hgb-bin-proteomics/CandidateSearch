@@ -1,44 +1,44 @@
 # Results
 
-## Normalize = off, Gaussian = on
+## Normalize = off, Gaussian = on [r0a]
 
-### raw
+### raw [r0a1]
 
-### deconvoluted
+### deconvoluted [r0a2]
 
-## Normalize = off, Gaussian = off
+## Normalize = off, Gaussian = off [r0b]
 
-### raw
+### raw [r0b1]
 
-### deconvoluted
+### deconvoluted [r0b2]
 
-## Normalize = on, Gaussian = off
+## Normalize = on, Gaussian = off [r0c]
 
-### raw
+### raw [r0c1]
 
-### deconvoluted
+### deconvoluted [r0c2]
 
-## Normalize = on, Gaussian = on
+## Normalize = on, Gaussian = on [r0d]
 
-### raw
+### raw [r0d1]
 
-### deconvoluted
+### deconvoluted [r0d2]
 
-## HeLa
+## HeLa [r1]
 
-### rep 1
+### rep 1 [r1a]
 
-### rep 2
+### rep 2 [r1b]
 
-### rep 3
+### rep 3 [r1c]
 
-## Beveridge
+## Beveridge [r2]
 
-### rep 1
+### rep 1 [r2a]
 
-### rep 2
+### rep 2 [r2b]
 
-### rep 3
+### rep 3 [r2c]
 
 ## Data Availability
 
