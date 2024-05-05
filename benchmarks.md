@@ -5,16 +5,15 @@ methods of [Eigen](https://eigen.tuxfamily.org/) and
 [cuSPARSE](https://docs.nvidia.com/cuda/cusparse/) that are implemented in
 _CandidateSearch_ using real mass spectrometry data.
 
-We ran every benchmark five times to get a more comprehensive overview of
-computation times. The averages are plotted below, with error bars denoting
-standard deviation.
-
 For all benchmarks we search the spectra from file
 `benchmarks/XLpeplib_Beveridge_QEx-HFX_DSS_R1_deconvoluted.mgf` against the
 database `benchmarks/Cas9+uniprotkb_proteome_UP000005640_AND_revi_2024_03_22.fasta`
-(Cas9 + human SwissProt sequences) with settings `benchmarks/settings.txt`. All
-benchmarks were conducted during light background usage (e.g. open browser, text
-editor, etc.).
+(Cas9 + human SwissProt sequences) with settings `benchmarks/settings.txt`.
+
+We ran every benchmark five times to get a more comprehensive overview of
+computation times. The averages are plotted below, with error bars denoting
+standard deviation. All benchmarks were conducted during light background usage
+(e.g. open browser, text editor, etc.).
 
 ## Abbreviations
 
@@ -43,12 +42,17 @@ The system we tested this on was a desktop PC with the following hardware:
 
 *_Note:_ `Dual` _is part of the name, this is a single graphics card!_
 
-### Normalization = False && Use_Gaussian = False
+## Benchmarks
 
-### Normalization = False && Use_Gaussian = True
+We ran four different parameter sets to also investigate the effects of parameter
+`NORMALIZE` and parameter `USE_GAUSSIAN` on the performance.
 
-### Normalization = True && Use_Gaussian = False
+### NORMALIZE = false && USE_GAUSSIAN = false
 
-### Normalization = True && Use_Gaussian = True
+### NORMALIZE = false && USE_GAUSSIAN = true
+
+### NORMALIZE = true && USE_GAUSSIAN = false
+
+### NORMALIZE = true && USE_GAUSSIAN = true
 
 ## Conclusions
