@@ -127,6 +127,7 @@ implemented [here](https://github.com/hgb-bin-proteomics/CandidateSearch/blob/ma
 
 ## Requirements
 
+- [.NET](https://dotnet.microsoft.com/en-us/) may be required on Windows systems.
 - \[Optional\] Using GPU based approaches requires a CUDA capable GPU and CUDA version == 12.2.0
 ([download here](https://developer.nvidia.com/cuda-12-2-0-download-archive)). Other CUDA versions may or may not produce the desired results
 ([see this issue](https://github.com/hgb-bin-proteomics/CandidateVectorSearch/issues/32)).
