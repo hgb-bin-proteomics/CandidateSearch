@@ -15,7 +15,7 @@ jobs:
           dotnet-version: '6'
       - name: Build CandidateSearch
         run: |
-          dotnet publish CandidateSearch.sln --runtime osx-arm64 --self-contained --configuration Release
+          dotnet publish CandidateSearch.sln --runtime osx-arm64 --self-contained --configuration Release -p:PublishSingleFile=true
       - name: Copy VectorSearch.dll to Release
         run: |
           cp dll/macos_arm/VectorSearch.dll bin/Release/net6.0/osx-arm64
