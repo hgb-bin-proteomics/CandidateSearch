@@ -171,6 +171,16 @@ an [MS Amanda](https://ms.imp.ac.at/?goto=msamanda) search validated with [Perco
 high-confidence PSM we checked if the identified peptide/peptidoform was among the top 50/100/500/1000 hits of *CandidateSearch*. We reach
 almost 100% coverage within the first 1000 hits of *CandidateSearch* (for reference: the whole database contained ~4 200 000 peptides or ~10 500 000 peptidoforms).
 
+## Benchmarks
+
+Benchmarks of the different algorithms can be found in [benchmarks.md](benchmarks.md).
+
+![benchmark_hpc_1A](benchmarks/vis_A/1A.svg)
+
+**Figure 2:** Int32-based sparse matrix * dense matrix search using
+[Eigen](https://eigen.tuxfamily.org/) generally yields the fastest computation
+time on modern CPUs.
+
 ## Known Issues
 
 [List of known issues](https://github.com/hgb-bin-proteomics/CandidateSearch/issues)
