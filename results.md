@@ -34,7 +34,11 @@
 
 ### raw [r0d1]
 
+![r0d1](tests/v1.1.2/r0d1/r0d1.svg)
+
 ### deconvoluted [r0d2]
+
+![r0d2](tests/v1.1.2/r0d2/r0d2.svg)
 
 ## HeLa [r1]
 
