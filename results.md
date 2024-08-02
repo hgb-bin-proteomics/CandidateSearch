@@ -1,5 +1,20 @@
 # Results
 
+CharmeRT: https://www.ebi.ac.uk/pride/archive/projects/PXD007750
+MaxLynx: https://www.ebi.ac.uk/pride/archive/projects/PXD027159
+Beveridge: https://www.ebi.ac.uk/pride/archive/projects/PXD014337
+
+Version MS Amanda: 3.1.21.45, Engine version 3.0.21.45
+Version Percolator: 3.05.0
+
+MS1: 5 ppm
+MS2: 10 ppm
+Cleavages: 2
+Min: 5
+Max: 30
+Static: CarbaC
+Dyn: OxiM
+
 ## Normalize = off, Gaussian = on [r0a]
 
 ### raw [r0a1]
