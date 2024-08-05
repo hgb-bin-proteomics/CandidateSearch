@@ -20,7 +20,7 @@ the *top N* peptide candidates returned by the algorithm.
 The used database was `uniprotkb_proteome_UP000005640_AND_revi_2024_03_22.fasta` (Human SwissProt).
 
 | Parameter              | Value                   |
-|:----------------------:|:-----------------------:|
+|:-----------------------|:------------------------|
 | MS1 Tolerance          | 5 ppm                   |
 | MS2 Tolerance          | 10 ppm                  |
 | Max. Missed Cleavages  | 2                       |
